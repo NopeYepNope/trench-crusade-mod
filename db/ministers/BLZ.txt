@@ -1,0 +1,40 @@
+# BLZ — Ministers
+# db/ministers/BLZ.txt
+
+minister = {
+	name = "Plague-Marshal Baal-Zebul the Pestilent"
+	id = { type = 2 id = 150101 }
+	country = BLZ
+	ideology = fascist
+	position = head_of_government
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { national_unity_advisor }
+}
+
+minister = {
+	name = "Procession-General Adramelech the Diseased"
+	id = { type = 2 id = 150102 }
+	country = BLZ
+	ideology = fascist
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { decisive_battle }
+}
+
+minister = {
+	name = "Plague-Minister Nergal the Spreader"
+	id = { type = 2 id = 150103 }
+	country = BLZ
+	ideology = fascist
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1940
+	traits = { war_industrialist }
+	# Manages Beelzebub's biological weapon production. His workplace requires special precautions.
+}
+

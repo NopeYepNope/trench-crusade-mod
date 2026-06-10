@@ -1,0 +1,12 @@
+# Kingdom of Hungary
+# Central European Holy kingdom
+
+color = { 140 40 40 }
+
+graphical_culture = central_european
+
+capital = 153
+
+government = constitutional_monarchy
+
+ideology = Holy

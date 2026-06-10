@@ -1,0 +1,32 @@
+# TIB — Country History
+# Tzardom of Siberia — unaligned
+# 1905 Start
+
+capital = 500
+manpower = 80
+
+# Policy Sliders
+democratic = 5
+political_left = 5
+freedom = 5
+open_society = 5
+interventionism = 5
+professional_army = 5
+defence_lobby = 5
+market_economy = 5
+
+# Technology
+techteam = {
+	land_tech = 2
+	naval_tech = 1
+	air_tech = 0
+	industry_tech = 1
+	infra_tech = 1
+	supernatural_tech = 1
+}
+
+# Dissent
+dissent = 5
+
+# Industrial Capacity
+industrial_capacity = 8

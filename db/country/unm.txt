@@ -1,0 +1,12 @@
+# The Unmarked
+# Outcasts and heretics from all sides
+
+color = { 80 80 80 }
+
+graphical_culture = western_european
+
+capital = 200
+
+government = tribal_dictatorship
+
+ideology = Unaligned

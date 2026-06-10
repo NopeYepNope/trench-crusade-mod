@@ -1,0 +1,12 @@
+# Kingdom of Perm
+# Remote eastern Holy minor power
+
+color = { 100 80 60 }
+
+graphical_culture = eastern_european
+
+capital = 416
+
+government = tribal_dictatorship
+
+ideology = Holy

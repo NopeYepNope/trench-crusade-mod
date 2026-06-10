@@ -1,0 +1,180 @@
+# Trench Crusade - Air Doctrine Choice
+# events/air_doctrine_choice.txt
+#
+# Fires 1906-1907 for all nations with air tech.
+# Once chosen, the flag is set and cannot be changed.
+# The three paths: Intercept, CAS, Devastation.
+
+###############################################
+# EVENT: THE QUESTION OF THE SKY
+# Fires when a nation reaches air_doctrine tier 4 (triplane)
+###############################################
+
+event = {
+	id = 2000
+	random = no
+
+	# Fires for any nation that has reached triplane tech
+	trigger = {
+		technology = { type = air_doctrine value = 4 }
+		NOT = { has_country_flag = air_doctrine_intercept }
+		NOT = { has_country_flag = air_doctrine_cas }
+		NOT = { has_country_flag = air_doctrine_devastation }
+		NOT = { has_country_flag = air_doctrine_chosen }
+	}
+
+	name = "The Question of the Sky"
+	desc = "The triplane has proven itself. Your pilots are capable. Your ground crews are trained. Your aviation arm is no longer an experiment — it is a weapon.\n\nThe question is: what kind of weapon?\n\nYour air commanders have debated this question for months. Three schools of thought have emerged, each with compelling arguments and powerful advocates. The time has come to decide the doctrine that will define your air power for the duration of the coming war.\n\nChoose carefully. This path, once taken, is not easily reversed."
+
+	picture = "gfx/interface/evt_air_doctrine_choice.bmp"
+
+	# -------------------------
+	# OPTION 1: INTERCEPT
+	# -------------------------
+	option = {
+		name = "The sky above us must be denied to the enemy. We build to defend."
+		
+		set_country_flag = air_doctrine_intercept
+		set_country_flag = air_doctrine_chosen
+
+		# Flavor text differs by ideology
+		# (handled via follow-up events 2001/2002)
+		trigger_event = { id = 2001 days = 3 }
+	}
+
+	# -------------------------
+	# OPTION 2: CAS
+	# -------------------------
+	option = {
+		name = "Our pilots serve our soldiers. Every aircraft is a weapon in the infantry's hands."
+		
+		set_country_flag = air_doctrine_cas
+		set_country_flag = air_doctrine_chosen
+
+		trigger_event = { id = 2002 days = 3 }
+	}
+
+	# -------------------------
+	# OPTION 3: DEVASTATION
+	# -------------------------
+	option = {
+		name = "We strike their heartland. We break their will before they reach our trenches."
+		
+		set_country_flag = air_doctrine_devastation
+		set_country_flag = air_doctrine_chosen
+
+		trigger_event = { id = 2003 days = 3 }
+	}
+}
+
+###############################################
+# EVENT 2001: INTERCEPT CONFIRMED
+# Flavor varies by Holy/Infernal
+###############################################
+
+event = {
+	id = 2001
+	random = no
+
+	trigger = {
+		has_country_flag = air_doctrine_intercept
+		NOT = { has_country_flag = air_intercept_confirmed }
+	}
+
+	name = "The Shield of Heaven"	# Holy version title
+
+	desc = "HOLY:\nThe sky above your cities and your people is sacred ground. No Infernal wing shall cross it without punishment. Your aviation arm is now a shield — blessed, vigilant, and deadly to anything that tests it.\n\nAnti-aircraft batteries are to be consecrated and networked. Standing patrols are to be maintained at all hours. Your pilots are not merely soldiers — they are wardens of the upper air.\n\n###\n\nINFERNAL:\nThe sky above your dominion is yours. What enters without permission will not leave. Your bound demons are to be set at altitude. Your AA crews are to be fed what they need to function. The enemy will learn that your sky is death."
+
+	picture = "gfx/interface/evt_intercept_doctrine.bmp"
+
+	option = {
+		name = "The sky is ours."
+		set_country_flag = air_intercept_confirmed
+		command = { type = air_defence value = 0.1 }
+		dissent = -2
+	}
+}
+
+###############################################
+# EVENT 2002: CAS CONFIRMED
+###############################################
+
+event = {
+	id = 2002
+	random = no
+
+	trigger = {
+		has_country_flag = air_doctrine_cas
+		NOT = { has_country_flag = air_cas_confirmed }
+	}
+
+	name = "Wings Over the Trenches"
+
+	desc = "HOLY:\nYour pilots will fly low. They will know the faces of the infantry they support — or as close to it as altitude allows. Every bombing run is preceded by a blessing. Every pilot carries a relic. The men in the trenches below will know that Heaven watches from above, and that Heaven is armed.\n\n###\n\nINFERNAL:\nYour aircraft are hammers. The infantry advance — the aircraft clear what stands in their way. Hell Bombs open brief portals above enemy strongpoints. Tactical bombers reduce Holy fortifications to rubble and despair before the first soldier reaches the wire."
+
+	picture = "gfx/interface/evt_cas_doctrine.bmp"
+
+	option = {
+		name = "For the soldiers on the ground."
+		set_country_flag = air_cas_confirmed
+		command = { type = close_air_support value = 0.1 }
+		dissent = -2
+	}
+}
+
+###############################################
+# EVENT 2003: DEVASTATION CONFIRMED
+###############################################
+
+event = {
+	id = 2003
+	random = no
+
+	trigger = {
+		has_country_flag = air_doctrine_devastation
+		NOT = { has_country_flag = air_devastation_confirmed }
+	}
+
+	name = "The Long Reach"
+
+	desc = "HOLY:\nThe enemy's factories. Their supply depots. The cities that feed their armies and the people who believe their cause is just. The Daylight of Heaven reaches further than any artillery. Your bombers will fly deep, strike precisely, and return. The enemy will learn that no distance protects them from righteous consequence.\n\n###\n\nINFERNAL:\nWhy fight for every trench when you can open Hell above their capital? The Hell Portal carrier is the most terrifying weapon in the sky. Your enemies will look up one day and see the sky open. What comes through will make them forget the war entirely."
+
+	picture = "gfx/interface/evt_devastation_doctrine.bmp"
+
+	option = {
+		name = "We strike where they cannot defend."
+		set_country_flag = air_devastation_confirmed
+		command = { type = strategic_bombing value = 0.1 }
+		dissent = -2
+	}
+}
+
+###############################################
+# MARID SPECIAL: No doctrine choice
+# Fires instead of 2000 for YUG
+###############################################
+
+event = {
+	id = 2004
+	random = no
+	country = YUG
+
+	trigger = {
+		technology = { type = air_doctrine value = 2 }
+		NOT = { has_country_flag = air_doctrine_chosen }
+	}
+
+	name = "The Wind Needs No Doctrine"
+
+	desc = "The Marid have no use for the air doctrines of land-bound powers. They do not intercept — they prevent. They do not support ground forces — they have almost none. They do not bomb from altitude — they summon storms that make altitude irrelevant.\n\nThe wind-riders are ready. The storms are patient. The sky above the Marid's waters has always been theirs."
+
+	picture = "gfx/interface/evt_marid_air.bmp"
+
+	option = {
+		name = "The sky and sea are one dominion."
+		set_country_flag = air_doctrine_chosen
+		set_country_flag = air_doctrine_marid
+		command = { type = naval_air value = 0.15 }
+		command = { type = air_superiority value = 0.1 }
+	}
+}

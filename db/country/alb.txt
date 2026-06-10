@@ -1,0 +1,12 @@
+# Kingdom of Alba
+# Scottish highland warriors, melee specialists
+
+color = { 80 80 160 }
+
+graphical_culture = western_european
+
+capital = 112
+
+government = constitutional_monarchy
+
+ideology = Holy

@@ -1,0 +1,12 @@
+# LUX — Leaders
+
+leader = {
+	name = "Sultan-General Yusuf ibn Ahmad"
+	id = { type = 1 id = 180000 }
+	country = LUX
+	rank = 4
+	skill = 3
+	traits = { old_guard defensive_doctrine }
+	start_year = 1900
+	end_year = 1930
+}

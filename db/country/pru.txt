@@ -1,0 +1,12 @@
+# Free State of Prussia
+# Secular militaristic Holy power
+
+color = { 60 80 60 }
+
+graphical_culture = central_european
+
+capital = 64
+
+government = military_dictatorship
+
+ideology = Holy

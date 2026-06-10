@@ -1,0 +1,127 @@
+# Trench Crusade - Naval Doctrine Choice
+# events/naval_doctrine_choice.txt
+
+event = {
+	id = 3000
+	random = no
+
+	trigger = {
+		technology = { type = naval_doctrine value = 4 }
+		NOT = { has_country_flag = naval_doctrine_fleet_in_being }
+		NOT = { has_country_flag = naval_doctrine_indirect }
+		NOT = { has_country_flag = naval_doctrine_mystical }
+		NOT = { has_country_flag = naval_doctrine_chosen }
+		NOT = { tag = YUG }
+	}
+
+	name = "The Shape of Your Fleet"
+	desc = "Your submarines have proven the potential of naval warfare beyond the surface. Your admirals debate the fundamental question: what is your fleet for?\n\nThree doctrines have emerged from the debate."
+
+	picture = "gfx/interface/evt_naval_doctrine_choice.bmp"
+
+	option = {
+		name = "We build to be feared. Capital ships so powerful the enemy dares not engage."
+		set_country_flag = naval_doctrine_fleet_in_being
+		set_country_flag = naval_doctrine_chosen
+		trigger_event = { id = 3001 days = 3 }
+	}
+
+	option = {
+		name = "We build to be invisible. Submarines, raiders, patience."
+		set_country_flag = naval_doctrine_indirect
+		set_country_flag = naval_doctrine_chosen
+		trigger_event = { id = 3002 days = 3 }
+	}
+
+	option = {
+		name = "We build relationships. The sea itself will fight for us."
+		trigger = {
+			OR = {
+				tag = TUR
+				tag = GER
+				tag = SOV
+				tag = AFG
+				tag = PER
+				tag = IRQ
+				tag = SAU
+			}
+		}
+		set_country_flag = naval_doctrine_mystical
+		set_country_flag = naval_doctrine_chosen
+		trigger_event = { id = 3003 days = 3 }
+	}
+}
+
+event = {
+	id = 3001
+	random = no
+	trigger = {
+		has_country_flag = naval_doctrine_fleet_in_being
+		NOT = { has_country_flag = naval_fleet_confirmed }
+	}
+	name = "Fleet in Being"
+	desc = "The dreadnought program begins. Capital ships so blessed — or so cursed — that the enemy fleet will not dare engage them in open water."
+	option = {
+		name = "Lay the keels. Make them afraid."
+		set_country_flag = naval_fleet_confirmed
+		command = { type = naval_attack value = 0.1 }
+		command = { type = naval_morale value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 3002
+	random = no
+	trigger = {
+		has_country_flag = naval_doctrine_indirect
+		NOT = { has_country_flag = naval_indirect_confirmed }
+	}
+	name = "The Indirect Approach"
+	desc = "Your submarine commanders receive expanded orders. Your corsair letters are prepared. The enemy will never see your fleet — only their supply lines failing."
+	option = {
+		name = "Hunt everything that flies their flag."
+		set_country_flag = naval_indirect_confirmed
+		command = { type = convoy_attack value = 0.1 }
+		command = { type = submarine_bonus value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 3003
+	random = no
+	trigger = {
+		has_country_flag = naval_doctrine_mystical
+		NOT = { has_country_flag = naval_mystical_confirmed }
+	}
+	name = "The Mystical Path"
+	desc = "Your ritualists receive their naval commissions. The first sea creature agreements are formalised. The sea has opinions about this war. You have decided to ask what they are."
+	option = {
+		name = "The sea has been waiting for someone to ask."
+		set_country_flag = naval_mystical_confirmed
+		command = { type = naval_morale value = 0.1 }
+		command = { type = naval_defence value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 3004
+	random = no
+	country = YUG
+	trigger = {
+		technology = { type = naval_doctrine value = 3 }
+		NOT = { has_country_flag = naval_doctrine_chosen }
+	}
+	name = "The Sea Has Always Been Ours"
+	desc = "The Marid require no doctrine debate. They were born in the deep. The sea is not a battlefield to them. It is home."
+	option = {
+		name = "The sea rises at our command."
+		set_country_flag = naval_doctrine_chosen
+		set_country_flag = naval_doctrine_marid
+		command = { type = naval_attack value = 0.1 }
+		command = { type = naval_defence value = 0.1 }
+		command = { type = naval_morale value = 0.1 }
+	}
+}

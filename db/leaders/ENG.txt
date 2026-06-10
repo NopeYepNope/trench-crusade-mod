@@ -1,0 +1,95 @@
+# England — Leaders
+# db/leaders/ENG.txt
+#
+# England's military tradition is primarily naval — the island
+# fortress survives by controlling the seas. Land forces are
+# professional but smaller than continental powers. Senior commanders
+# are a mix of aristocratic tradition and meritocratic promotion.
+# Junior officers increasingly come from the colonial and holy war
+# volunteer tradition — men and women who have fought Infernal
+# incursions across the empire.
+
+leader = {
+	name = "Field Marshal Sir Aldous Cranworth"
+	id = { type = 1 id = 30001 }
+	country = ENG
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine }
+	start_year = 1900
+	end_year = 1916
+	# Commander of all English ground forces. A product of the old
+	# school — methodical, cautious, and reliably correct. The kind
+	# of general who wins wars by not losing them.
+}
+
+leader = {
+	name = "General Sir Thomas Blackwood-Harker"
+	id = { type = 1 id = 30002 }
+	country = ENG
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine infantry_leader }
+	start_year = 1900
+	end_year = 1926
+	# Commander of the Expeditionary Forces. Has served in three
+	# colonial campaigns and one full Infernal incursion in Gibraltar.
+	# Does not frighten easily.
+}
+
+leader = {
+	name = "Admiral of the Fleet Dame Elspeth Vane"
+	id = { type = 1 id = 30003 }
+	country = ENG
+	rank = 4
+	skill = 5
+	traits = { sea_wolf navy_chief_of_staff brilliant_strategist }
+	start_year = 1900
+	end_year = 1922
+	# The finest naval mind in the Holy world. Has never lost a fleet
+	# engagement. Her standing orders regarding Marid contact are
+	# three pages long and are studied at every naval academy.
+}
+
+leader = {
+	name = "Vice Admiral Lord Percival Greave"
+	id = { type = 1 id = 30004 }
+	country = ENG
+	rank = 3
+	skill = 4
+	traits = { sea_wolf blockade_runner }
+	start_year = 1902
+	end_year = 1930
+	# Commander of the Mediterranean Squadron. His entire career has
+	# been defined by the question of how to operate in waters the
+	# Marid consider their private property. He has several answers.
+}
+
+leader = {
+	name = "Brigadier Constance Ashford-Bell"
+	id = { type = 1 id = 30005 }
+	country = ENG
+	rank = 2
+	skill = 3
+	traits = { guerilla_fighter commando }
+	start_year = 1904
+	end_year = 1932
+	# Commander of the Special Relic Operations Brigade — the unit
+	# that recovers, secures, and deploys holy relics in field conditions.
+	# Her work is classified. Her results are not.
+}
+
+leader = {
+	name = "Colonel Brother-Sergeant William 'Iron Will' Crake"
+	id = { type = 1 id = 30006 }
+	country = ENG
+	rank = 2
+	skill = 3
+	traits = { infantry_leader }
+	start_year = 1906
+	end_year = 1938
+	# A former monastery soldier who transferred to the regular army.
+	# Commands a mixed unit of English infantry and Abyssinian
+	# volunteers. His men would follow him into Hell. They have,
+	# twice, and come back both times.
+}

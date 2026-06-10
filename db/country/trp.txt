@@ -1,0 +1,12 @@
+# Trench Pilgrims
+# Fanatical holy warriors, nominally allied with New Antioch but fiercely independent
+
+color = { 80 60 40 }
+
+graphical_culture = middle_eastern
+
+capital = 798
+
+government = theocracy
+
+ideology = Holy

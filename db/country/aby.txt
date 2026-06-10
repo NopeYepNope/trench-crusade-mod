@@ -1,0 +1,12 @@
+# Abyssinia
+# Ethiopian Orthodox empire
+
+color = { 180 100 20 }
+
+graphical_culture = middle_eastern
+
+capital = 620
+
+government = absolute_monarchy
+
+ideology = Holy

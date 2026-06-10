@@ -1,0 +1,26 @@
+# Trench Crusade - Scenario List
+# scenarios/scenarios.txt
+#
+# Registers mod scenarios and disables vanilla DH scenarios
+# so only Trench Crusade appears in the scenario selection screen.
+
+# ============================================================
+# TRENCH CRUSADE SCENARIOS
+# ============================================================
+
+scenario = {
+	filename = "scenarios/1905_gathering_dark.eug"
+}
+
+# ============================================================
+# DISABLE VANILLA SCENARIOS
+# Comment these back in if you want vanilla scenarios available
+# ============================================================
+
+# These entries override vanilla scenario availability
+disable_scenario = { filename = "scenarios/1914.eug" }
+disable_scenario = { filename = "scenarios/1936.eug" }
+disable_scenario = { filename = "scenarios/1939.eug" }
+disable_scenario = { filename = "scenarios/1941.eug" }
+disable_scenario = { filename = "scenarios/1944.eug" }
+disable_scenario = { filename = "scenarios/tutorial.eug" }

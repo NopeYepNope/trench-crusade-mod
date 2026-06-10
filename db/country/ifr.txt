@@ -1,0 +1,12 @@
+# Ifrit Warlords
+# Fire djinn warlords of the desert
+
+color = { 180 60 20 }
+
+graphical_culture = middle_eastern
+
+capital = 830
+
+government = tribal_dictatorship
+
+ideology = Infernal

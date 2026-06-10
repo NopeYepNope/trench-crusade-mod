@@ -1,0 +1,92 @@
+# Free State of Prussia — Leaders
+# db/leaders/PRU.txt
+#
+# The finest conventional army in the Holy world.
+# Prussian officers are products of a military academy system
+# that has been running for two hundred years. Senior commanders
+# are professional to the bone. Junior officers are increasingly
+# drawn from the Stoßtruppen volunteer tradition — aggressive,
+# unconventional, and frighteningly effective.
+
+leader = {
+	name = "Generalfeldmarschall Heinrich von Steyr"
+	id = { type = 1 id = 20001 }
+	country = PRU
+	rank = 4
+	skill = 5
+	traits = { old_guard brilliant_strategist offensive_doctrine }
+	start_year = 1900
+	end_year = 1918
+	# The architect of Stoßtruppen doctrine. Seventy-two years old,
+	# still rides to the front. The Heretic Legion has a standing
+	# bounty on his head. He considers this a professional compliment.
+}
+
+leader = {
+	name = "General Konrad von Falkenrath"
+	id = { type = 1 id = 20002 }
+	country = PRU
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine armor_officer }
+	start_year = 1900
+	end_year = 1928
+	# Commander of the Western Front. Obsessed with breakthrough tactics.
+	# Has broken through the Heretic Legion line seven times. Has been
+	# pushed back six of those times. Working on the problem.
+}
+
+leader = {
+	name = "General Marta von Kreuzberg"
+	id = { type = 1 id = 20003 }
+	country = PRU
+	rank = 3
+	skill = 4
+	traits = { defensive_doctrine artillery_specialist }
+	start_year = 1902
+	end_year = 1932
+	# Chief of Artillery. The most feared artillerist in the Holy world.
+	# Her firing solutions account for Infernal terrain corruption
+	# in ways that no other gunner has systematised.
+}
+
+leader = {
+	name = "Oberst Jakob Brennkind"
+	id = { type = 1 id = 20004 }
+	country = PRU
+	rank = 2
+	skill = 4
+	traits = { commando guerilla_fighter infantry_leader }
+	start_year = 1905
+	end_year = 1935
+	# First commander of the 1st Stoßtruppen Brigade. His name means
+	# roughly "burning child" — a nickname from the Academy that he
+	# has long since made his own. Leads from the front. Somehow still alive.
+}
+
+leader = {
+	name = "Vizeadmiral Ernst von Seeklinge"
+	id = { type = 1 id = 20005 }
+	country = PRU
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1925
+	# Commander of the Baltic Fleet. His primary concern is keeping
+	# Marid influence out of the North Sea approaches.
+}
+
+leader = {
+	name = "Hauptmann Liesel Graugesicht"
+	id = { type = 1 id = 20006 }
+	country = PRU
+	rank = 1
+	skill = 3
+	traits = { commando }
+	start_year = 1908
+	end_year = 1940
+	# 'Greyface' — a young Stoßtruppen officer who has seen things in
+	# the corrupted zones that she does not discuss. Operates with the
+	# supernatural intelligence units. Very good at her work.
+}

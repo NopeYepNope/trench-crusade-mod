@@ -1,0 +1,32 @@
+# Dominion of Beelzebub — Leaders
+# The Lord of Flies commands through plague and decay.
+# His generals carry his essence — they rot slowly, visibly,
+# and their armies follow their example.
+
+leader = {
+	name = "Plague-Marshal Baal-Zebul the Pestilent"
+	id = { type = 1 id = 150001 }
+	country = GRE
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine }
+	start_year = 1900
+	end_year = 1940
+	# Beelzebub's senior military commander. His presence on the
+	# battlefield has documented effects on air quality and food
+	# spoilage within a three-mile radius.
+}
+
+leader = {
+	name = "Procession-General Adramelech the Diseased"
+	id = { type = 1 id = 150002 }
+	country = GRE
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine guerilla_fighter }
+	start_year = 1900
+	end_year = 1940
+	# Commands the Procession of the Sacred Affliction — Beelzebub's
+	# elite biological warfare unit. His campaigns contaminate
+	# territory for years after his passing.
+}

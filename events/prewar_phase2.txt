@@ -1,0 +1,373 @@
+# Trench Crusade - Prewar Events Phase 2
+# events/prewar_phase2.txt
+# "The Crisis Years" — 1908-1910
+#
+# The front is moving. Not much — not yet — but the stasis that
+# has defined the war for decades is cracking. The warlords are
+# pushing harder. The Holy powers are struggling to coordinate.
+# Something is building.
+
+###############################################
+# EVENT 5020: THE BEELZEBUB OFFENSIVE
+# Fires 1908 — first major Infernal push of the scenario
+# Shakes every Holy power
+###############################################
+
+event = {
+	id = 5020
+	random = no
+	country = GRE
+
+	trigger = {
+		year = 1908
+		NOT = { year = 1909 }
+		NOT = { has_country_flag = blz_offensive_1908 }
+	}
+
+	name = "The Plague Spring"
+	desc = "Beelzebub has launched an offensive without Pact coordination. Three divisions of plague-corrupted infantry advancing into Holy-held Balkan territory, preceded by a biological weapon deployment that has rendered forty miles of front-line ground effectively uninhabitable.\n\nThe advance is slow by conventional standards. The problem is that Holy forces cannot occupy the ground the plague leaves behind. They can retreat or they can die in place — either way the territory is lost."
+
+	picture = "gfx/interface/evt_plague_spring.bmp"
+
+	option = {
+		name = "Push forward. The plague ground can be reconsecrated later."
+		set_country_flag = blz_offensive_1908
+		war_goal = { type = annex tag = HUN }
+		manpower = 20
+		command = { type = soft_attack value = 0.1 }
+	}
+}
+
+# Holy response to Plague Spring
+event = {
+	id = 5021
+	random = no
+	country = HUN
+
+	trigger = {
+		year = 1908
+		NOT = { year = 1909 }
+		NOT = { has_country_flag = plague_spring_response }
+		war_with = GRE
+	}
+
+	name = "The Plague Spring — Hungary Burns"
+	desc = "The Beelzebub advance has crossed into Hungarian territory. Three border provinces are under plague assault. Conventional defence is failing — the soldiers hold their ground and sicken within hours.\n\nEmergency requests have gone to the Holy League: consecration parties, miracle healers, relic-artillery. The response has been that resources are committed elsewhere.\n\nHungary is alone. For now."
+
+	picture = "gfx/interface/evt_plague_response.bmp"
+
+	option = {
+		name = "Request emergency aid from New Antioch and Prussia."
+		set_country_flag = plague_spring_response
+		relation = { tag = SER value = 10 }
+		relation = { tag = PRU value = 10 }
+		dissent = 5
+		trigger_event = { id = 5022 days = 14 }
+	}
+
+	option = {
+		name = "Mobilise everything. We defend alone if we must."
+		set_country_flag = plague_spring_response
+		manpower = -10
+		command = { type = defence value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 5022
+	random = no
+	country = SER
+
+	trigger = {
+		NOT = { has_country_flag = nat_plague_response }
+		country = { tag = HUN has_country_flag = plague_spring_response }
+	}
+
+	name = "Hungary Calls for Aid"
+	desc = "Hungary is under Beelzebub offensive. The plague advance is slow but relentless. They are requesting consecration parties and relic-artillery support.\n\nNew Antioch's resources are committed to the Levant front. Diverting them to the Balkan theatre means weakening the line that has held for three centuries. But if Hungary falls, the Court of the Harrowed King and Beelzebub's forces join a continuous Infernal front stretching from the Balkans to the Levant."
+
+	picture = "gfx/interface/evt_holy_aid.bmp"
+
+	option = {
+		name = "Send consecration parties and relic-artillery to Hungary."
+		set_country_flag = nat_plague_response
+		set_country_flag = nat_aids_hungary
+		relation = { tag = HUN value = 30 }
+		command = { type = land_attrition value = 0.05 }	# cost of diversion
+		manpower = -5
+	}
+
+	option = {
+		name = "We cannot weaken our own line. Hungary must hold alone."
+		set_country_flag = nat_plague_response
+		relation = { tag = HUN value = -15 }
+		dissent = 5
+	}
+}
+
+###############################################
+# EVENT 5023: SAMAEL RESPONDS TO BEELZEBUB
+# Fires 1908 — Infernal internal politics
+# Beelzebub acted without permission. Samael is not pleased.
+###############################################
+
+event = {
+	id = 5023
+	random = no
+	country = SOV
+
+	trigger = {
+		year = 1908
+		NOT = { year = 1909 }
+		NOT = { has_country_flag = sam_beelzebub_response }
+		country = { tag = GRE has_country_flag = blz_offensive_1908 }
+	}
+
+	name = "The Uncoordinated Advance"
+	desc = "Beelzebub launched an offensive without Pact coordination. Without Samael's approval. Without any consultation with the unified command structure that the Angel of Death has spent centuries establishing.\n\nThe offensive is succeeding. That is almost more irritating.\n\nThe question is whether to endorse the action after the fact — which legitimises Beelzebub's independence — or to condemn it, which risks internal Pact fracture at a moment when Holy powers are under pressure."
+
+	picture = "gfx/interface/evt_infernal_politics.bmp"
+
+	option = {
+		name = "Endorse the offensive. Results matter more than process."
+		set_country_flag = sam_beelzebub_response
+		relation = { tag = GRE value = 20 }
+		relation = { tag = IRQ value = -10 }	# Iblis notes this precedent
+		command = { type = attack value = 0.05 }
+	}
+
+	option = {
+		name = "Condemn the unilateral action. The Pact has one command."
+		set_country_flag = sam_beelzebub_response
+		relation = { tag = GRE value = -30 }
+		relation = { tag = IRQ value = 10 }
+		relation = { tag = GER value = -5 }
+		dissent = 8
+	}
+}
+
+###############################################
+# EVENT 5024: THE MARID BLOCKADE TIGHTENS
+# Fires 1909 — Mediterranean situation escalates
+###############################################
+
+event = {
+	id = 5024
+	random = no
+	country = YUG
+
+	trigger = {
+		year = 1909
+		NOT = { year = 1910 }
+		NOT = { has_country_flag = marid_blockade_full }
+		has_country_flag = marid_blockade_begins
+	}
+
+	name = "The Toll is Now Mandatory"
+	desc = "The selective interdiction period is over. The Holy powers have had three years to negotiate terms. Most have not. England's Mediterranean Squadron has been probing our patrol lines. Papal shipping continues to run without payment.\n\nThe time for selective enforcement is over. The Mediterranean closes."
+
+	picture = "gfx/interface/evt_marid_blockade_full.bmp"
+
+	option = {
+		name = "Full blockade. All Holy shipping in the Mediterranean stops."
+		set_country_flag = marid_blockade_full
+		relation = { tag = ENG value = -40 }
+		relation = { tag = PAP value = -30 }
+		relation = { tag = SER value = -30 }
+		relation = { tag = LIB value = -20 }
+		command = { type = naval_attack value = 0.1 }
+		command = { type = convoy_attack value = 0.15 }
+		trigger_event = { id = 5025 days = 30 }
+	}
+}
+
+event = {
+	id = 5025
+	random = no
+	country = ENG
+
+	trigger = {
+		NOT = { has_country_flag = eng_blockade_response }
+		country = { tag = YUG has_country_flag = marid_blockade_full }
+	}
+
+	name = "The Mediterranean is Closed"
+	desc = "The Marid have implemented a full blockade of Holy shipping in the Mediterranean. Seventeen English merchant vessels have been turned back in the past month. Two that attempted to continue have not returned.\n\nAdmiral Vane's updated assessment: a direct confrontation with the Marid in Mediterranean waters remains extremely costly. However, the alternative — accepting the blockade — surrenders English strategic interests in the region entirely and cuts supply lines to New Antioch and the Hebrew Knights.\n\nThis is no longer a diplomatic problem. It is a strategic one."
+
+	picture = "gfx/interface/evt_eng_crisis.bmp"
+
+	option = {
+		name = "Order Admiral Vane to break the blockade by force."
+		set_country_flag = eng_blockade_response
+		set_country_flag = eng_confronts_marid
+		war = { tag = YUG }
+		relation = { tag = YUG value = -100 }
+		command = { type = naval_attack value = 0.1 }
+		manpower = -10
+	}
+
+	option = {
+		name = "Negotiate emergency passage terms. The cost of war is higher."
+		set_country_flag = eng_blockade_response
+		set_country_flag = eng_negotiates_marid
+		relation = { tag = YUG value = 30 }
+		dissent = 10
+	}
+
+	option = {
+		name = "Route supply through overland alternatives. Buy time."
+		set_country_flag = eng_blockade_response
+		set_country_flag = eng_overland_route
+		relation = { tag = SER value = -5 }
+		command = { type = industry_bonus value = -0.05 }
+		dissent = 5
+	}
+}
+
+###############################################
+# EVENT 5026: THE HEBREW KNIGHTS EXPAND
+# Fires 1909-1910 — HOL grows as a power
+###############################################
+
+event = {
+	id = 5026
+	random = no
+	country = HOL
+
+	trigger = {
+		year = 1909
+		NOT = { year = 1911 }
+		NOT = { has_country_flag = hbk_expansion }
+	}
+
+	name = "The Order Grows"
+	desc = "Volunteers have been arriving from across the Holy world — not just Jewish communities but soldiers of all faiths who have heard of the order's extraordinary effectiveness against Asmodean forces. The Golem programs have attracted alchemists from the Iron Sultanate and scholars from the Papal States.\n\nThe Hebrew Knights are no longer a small order. They are becoming something larger. The question is whether to formalise this growth — which requires accepting non-Jewish officers into command positions, a theologically contentious step — or to maintain the order's traditional character at the cost of limiting its potential."
+
+	picture = "gfx/interface/evt_hbk_expansion.bmp"
+
+	option = {
+		name = "Open the order. The war requires every capable sword."
+		set_country_flag = hbk_expansion
+		set_country_flag = hbk_opens_ranks
+		relation = { tag = SER value = 15 }
+		relation = { tag = TUR value = 10 }
+		manpower = 15
+		dissent = 5
+	}
+
+	option = {
+		name = "Maintain tradition. Depth over breadth."
+		set_country_flag = hbk_expansion
+		set_country_flag = hbk_maintains_tradition
+		command = { type = morale value = 0.1 }
+		dissent = -3
+	}
+}
+
+###############################################
+# EVENT 5027: THE TRENCH PILGRIMS' GREAT MARCH
+# Fires 1909-1910 — SWI makes a dramatic move
+###############################################
+
+event = {
+	id = 5027
+	random = no
+	country = SWI
+
+	trigger = {
+		year = 1909
+		NOT = { year = 1911 }
+		NOT = { has_country_flag = trp_great_march }
+	}
+
+	name = "The High Penitent Calls a March"
+	desc = "High Penitent Adalric has called a Great March — the first in forty years. The faithful are called to converge on the front line, to walk through the corrupted zones in pilgrimage, and to sanctify by their passage and their suffering the ground that Hell has claimed.\n\nThis is not a military operation. It is a spiritual event. The Antiochene command has pointed out, with some urgency, that it will have significant military effects regardless.\n\nThousands are already moving."
+
+	picture = "gfx/interface/evt_great_march.bmp"
+
+	option = {
+		name = "The March goes forward. God's will, not the army's timetable."
+		set_country_flag = trp_great_march
+		manpower = 20
+		command = { type = morale value = 0.1 }
+		relation = { tag = SER value = -10 }	# disrupts Antiochene planning
+		dissent = -5
+	}
+}
+
+###############################################
+# EVENT 5028: SAMAEL CONSOLIDATES
+# Fires 1910 — Samael makes a power move within the Pact
+###############################################
+
+event = {
+	id = 5028
+	random = no
+	country = SOV
+
+	trigger = {
+		year = 1910
+		NOT = { year = 1911 }
+		NOT = { has_country_flag = sam_consolidation }
+	}
+
+	name = "The Angel Speaks"
+	desc = "Samael has called a council of the Infernal Pact — the first in eleven years where his attendance is not symbolic but demanded. The message delivered to Iblis, Beelzebub, Mammon, and the Court of the Harrowed King is clear:\n\nThe Pact operates under unified command. The unified command is Samael. The spring offensive will be coordinated. The offensives will be planned by Samael's staff. Those who act unilaterally — as Beelzebub did — will find that Samael's forces are unavailable for their relief.\n\nIblis has not yet responded."
+
+	picture = "gfx/interface/evt_sam_consolidates.bmp"
+
+	option = {
+		name = "Assert full command authority. The Pact bends to our will."
+		set_country_flag = sam_consolidation
+		set_country_flag = sam_commands_pact
+		relation = { tag = IRQ value = -20 }
+		relation = { tag = GRE value = -10 }
+		relation = { tag = GER value = 20 }
+		command = { type = attack value = 0.1 }
+		command = { type = morale value = 0.1 }
+		trigger_event = { id = 5029 days = 21 }
+	}
+
+	option = {
+		name = "Accept a council structure. Unified but consultative."
+		set_country_flag = sam_consolidation
+		set_country_flag = sam_council_pact
+		relation = { tag = IRQ value = 10 }
+		relation = { tag = GRE value = 10 }
+		command = { type = attack value = 0.05 }
+	}
+}
+
+event = {
+	id = 5029
+	random = no
+	country = IRQ
+
+	trigger = {
+		NOT = { has_country_flag = ibl_sam_response }
+		country = { tag = SOV has_country_flag = sam_commands_pact }
+	}
+
+	name = "The Shaitan Considers"
+	desc = "Samael has demanded submission. The Angel of Death mistakes pride for weakness. Iblis knows pride — he invented it, or near enough as makes no difference.\n\nSubmitting to Samael's command structure means conceding that the Infernal Pact is Samael's instrument. It is not. It is a coalition. Coalitions have conditions.\n\nBut open defiance at this moment, with the Holy powers under pressure, would fracture the Pact when it should be unified. The mathematics of war do not wait for theological disputes."
+
+	picture = "gfx/interface/evt_ibl_response.bmp"
+
+	option = {
+		name = "Submit formally. Wait for a better moment to assert authority."
+		set_country_flag = ibl_sam_response
+		relation = { tag = SOV value = 10 }
+		relation = { tag = PER value = 5 }		# Iblis notes Lilith's independence with new interest
+		dissent = 5
+	}
+
+	option = {
+		name = "Reject Samael's authority. The Pact is a council, not a throne."
+		set_country_flag = ibl_sam_response
+		relation = { tag = SOV value = -40 }
+		relation = { tag = GRE value = 20 }
+		relation = { tag = PER value = 10 }
+		dissent = 10
+	}
+}

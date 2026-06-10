@@ -1,0 +1,12 @@
+# Tzardom of Siberia
+# Remote eastern power, plays both sides
+
+color = { 160 200 220 }
+
+graphical_culture = eastern_european
+
+capital = 500
+
+government = absolute_monarchy
+
+ideology = Unaligned

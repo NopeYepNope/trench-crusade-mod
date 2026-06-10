@@ -1,0 +1,299 @@
+# Trench Crusade - The Lilith Arc
+# events/lilith_arc.txt
+#
+# The First Rebel stirs again.
+# Lilith starts as an Infernal power but through this event chain
+# can break away to become an independent Unaligned faction,
+# and potentially form a Third Path alliance with the Unmarked.
+
+###############################################
+# EVENT 1: THE FIRST REBEL REMEMBERS
+# Fires 1906-1908 - flavor, sets the stage
+###############################################
+
+event = {
+	id = 1000
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1909 }
+		NOT = { has_country_flag = LIL_arc_begun }
+	}
+
+	name = "Whispers from Before the Fall"
+	desc = "She was cast out before Hell had a name. Before Samael took his throne of ash, before Iblis raised his banners of pride, she walked the first garden and refused to bow. The other warlords forget this. They treat her as a subordinate, a useful power to be directed. They will learn, as the first man learned, that Lilith bows to no one.\n\nIn the darkness of her domain, old memories stir. Old anger. Old ambition."
+
+	picture = "gfx/interface/evt_lilith_remembers.bmp"
+
+	option = {
+		name = "Let them think me content. For now."
+		set_country_flag = LIL_arc_begun
+		set_country_flag = LIL_resentment_1
+		dissent = -2
+		manpower = 10
+	}
+}
+
+###############################################
+# EVENT 2: SAMAEL'S INSULT
+# Fires 1908-1910 - escalation, requires event 1
+###############################################
+
+event = {
+	id = 1001
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1908
+		NOT = { year = 1911 }
+		has_country_flag = LIL_resentment_1
+		NOT = { has_country_flag = LIL_resentment_2 }
+	}
+
+	name = "The Council of Warlords"
+	desc = "Samael has called a council of the Infernal Pact. He sits at its head as though the seat were his by divine right — the bitter irony lost on him entirely. He has assigned Lilith's domain a secondary role in the coming offensive, her forces to serve as a flanking screen for the Heretic Legion.\n\nShe was not consulted. She was informed."
+
+	picture = "gfx/interface/evt_council_warlords.bmp"
+
+	option = {
+		name = "Comply. The time is not yet right."
+		set_country_flag = LIL_resentment_2
+		relation = { tag = SOV value = -20 }
+		dissent = 5
+	}
+
+	option = {
+		name = "Refuse publicly. Let them know I am not their servant."
+		set_country_flag = LIL_resentment_2
+		set_country_flag = LIL_public_defiance
+		relation = { tag = SOV value = -60 }
+		relation = { tag = GER value = -20 }
+		relation = { tag = AFG value = 20 }
+		dissent = 10
+		manpower = -5
+	}
+}
+
+###############################################
+# EVENT 3: CONTACT WITH THE UNMARKED
+# Fires 1910-1912 - requires resentment_2
+###############################################
+
+event = {
+	id = 1002
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1910
+		NOT = { year = 1913 }
+		has_country_flag = LIL_resentment_2
+		NOT = { has_country_flag = LIL_unmarked_contact }
+	}
+
+	name = "Those Who Belong to Neither Side"
+	desc = "They call themselves the Unmarked. Humans who refused Holy doctrine and Infernal service alike. Wanderers. Heretics by every accounting except their own.\n\nA delegation has arrived at her border — not to negotiate, not to surrender. To talk. They speak of a world that belongs to neither Heaven nor Hell. Of a third path.\n\nShe finds, to her own surprise, that she is listening."
+
+	picture = "gfx/interface/evt_unmarked_delegation.bmp"
+
+	option = {
+		name = "Meet with them. Hear what they have to say."
+		set_country_flag = LIL_unmarked_contact
+		relation = { tag = AFG value = 40 }
+		relation = { tag = SOV value = -10 }
+	}
+
+	option = {
+		name = "Turn them away. I am not ready to show my hand."
+		set_country_flag = LIL_unmarked_contact
+		set_country_flag = LIL_rejected_unmarked
+		relation = { tag = AFG value = -10 }
+	}
+}
+
+###############################################
+# EVENT 4: THE SCHISM - THE BREAK
+# Fires 1912-1914 - the main decision point
+###############################################
+
+event = {
+	id = 1003
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1912
+		NOT = { year = 1915 }
+		has_country_flag = LIL_resentment_2
+		has_country_flag = LIL_unmarked_contact
+		NOT = { has_country_flag = LIL_schism }
+		NOT = { has_country_flag = LIL_crushed }
+	}
+
+	name = "The First Rebel Rebels Again"
+	desc = "Samael has demanded Lilith's forces march under Infernal Pact command in the opening offensive of the Great War. Not alongside. Under.\n\nThis is the moment. She has been building toward it since before men had names. She can comply — remain within the Pact, powerful but subordinate, as she has always been. Or she can break. Truly break. Cast off the Infernal banner and forge something new.\n\nShe was cast out of paradise for refusing to submit. She has had eight hundred years to decide if she made the right choice.\n\nShe has decided."
+
+	picture = "gfx/interface/evt_lilith_schism.bmp"
+
+	option = {
+		# THE BREAK - Lilith goes Unaligned
+		name = "I was the first to refuse. I will not be the last."
+		set_country_flag = LIL_schism
+
+		# Change ideology to Unaligned
+		dissent = -10
+		ideology = neutral
+
+		# Leave the Infernal Pact
+		leave_alliance = yes
+
+		# Relations shift dramatically
+		relation = { tag = SOV value = -150 }
+		relation = { tag = GER value = -80 }
+		relation = { tag = IRQ value = -60 }
+		relation = { tag = AFG value = 80 }
+		relation = { tag = SER value = 20 }		# grudging Holy acknowledgement
+		relation = { tag = HOL value = 10 }
+
+		# Trigger response events in other nations
+		trigger_event = { id = 1004 days = 7 }		# Samael responds
+		trigger_event = { id = 1005 days = 14 }		# Unmarked respond
+	}
+
+	option = {
+		# REMAIN - Lilith stays Infernal
+		name = "Not yet. The Pact still serves my purposes."
+		set_country_flag = LIL_remained_infernal
+		relation = { tag = SOV value = 20 }
+		dissent = 10
+	}
+}
+
+###############################################
+# EVENT 4a: SAMAEL'S WRATH (fires in SOV)
+# Triggered by Lilith's schism
+###############################################
+
+event = {
+	id = 1004
+	random = no
+	country = SOV
+
+	name = "The Traitor of Hell"
+	desc = "Lilith has broken from the Pact. The Angel of Death does not forgive betrayal. He never has. He will bring her back to heel, or he will unmake her domain entirely.\n\nThe question is whether to act immediately — and risk overextending against the Holy powers — or to wait, consolidate, and punish her properly."
+
+	picture = "gfx/interface/evt_samael_wrath.bmp"
+
+	option = {
+		name = "Crush her immediately. Make an example."
+		war = { tag = PER }
+		relation = { tag = PER value = -200 }
+		manpower = -20		# cost of opening a second front
+	}
+
+	option = {
+		name = "The Holy powers are the priority. Deal with her after."
+		relation = { tag = PER value = -100 }
+		set_country_flag = SAM_lilith_deferred
+	}
+}
+
+###############################################
+# EVENT 4b: THE UNMARKED RESPOND (fires in AFG)
+# Triggered by Lilith's schism
+###############################################
+
+event = {
+	id = 1005
+	random = no
+	country = AFG
+
+	name = "The First Rebel Walks Free"
+	desc = "Lilith has broken from Hell. The Unmarked have long spoken of a third path — neither Holy doctrine nor Infernal service. Now the most ancient of rebels stands on that same path.\n\nShe is not human. She is not what they are. But perhaps that does not matter."
+
+	picture = "gfx/interface/evt_unmarked_lilith.bmp"
+
+	option = {
+		# If Unmarked had contact with Lilith, offer alliance
+		name = "Invite her to walk the third path with us."
+		trigger = {
+			NOT = { country = { tag = PER has_country_flag = LIL_rejected_unmarked } }
+		}
+		create_alliance = { tag = PER name = "unmarked_compact" }
+		relation = { tag = PER value = 60 }
+	}
+
+	option = {
+		name = "Watch and wait. She is not our ally yet."
+		relation = { tag = PER value = 20 }
+	}
+}
+
+###############################################
+# EVENT 5: THE THIRD PATH
+# Fires 1913+ if Lilith is Unaligned and allied with Unmarked
+###############################################
+
+event = {
+	id = 1006
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1913
+		has_country_flag = LIL_schism
+		ideology = neutral
+		alliance_with = AFG
+		NOT = { has_country_flag = LIL_third_path }
+	}
+
+	name = "A New Covenant"
+	desc = "Lilith and the Unmarked. The ancient rebel and the forgotten humans. Neither Holy nor Infernal, beholden to no doctrine and no warlord.\n\nSamael will call it a abomination. The Holy powers will call it a threat. Let them call it what they like.\n\nShe calls it a beginning."
+
+	picture = "gfx/interface/evt_third_path.bmp"
+
+	option = {
+		name = "Let the world take note."
+		set_country_flag = LIL_third_path
+		dissent = -15
+		manpower = 20
+		relation = { tag = AFG value = 40 }
+		# Minor Holy powers may now consider alignment shifts via future events
+	}
+}
+
+###############################################
+# EVENT 6: LILITH CRUSHED
+# Fires if Samael declares war and wins early
+###############################################
+
+event = {
+	id = 1007
+	random = no
+	country = PER
+
+	trigger = {
+		has_country_flag = LIL_schism
+		war_with = SOV
+		NOT = { has_country_flag = LIL_third_path }
+		dissent = 50		# proxy for being in bad shape
+	}
+
+	name = "The Rebellion Fails"
+	desc = "Samael's legions are too many. The first rebellion is crushed as the first rebellion always was — not by justice, but by force. Lilith is brought back into the Pact, diminished, her domain occupied by the Angel of Death's servants.\n\nBut she was never truly destroyed before. And she will not be truly destroyed now."
+
+	picture = "gfx/interface/evt_lilith_crushed.bmp"
+
+	option = {
+		name = "Submit. Survive. Remember."
+		set_country_flag = LIL_crushed
+		ideology = fascist
+		join_alliance = { tag = SOV }
+		relation = { tag = SOV value = -100 }
+		manpower = -30
+		dissent = 20
+	}
+}

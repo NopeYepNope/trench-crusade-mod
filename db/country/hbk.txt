@@ -1,0 +1,12 @@
+# Hebrew Knights
+# Jewish martial order, independent holy power
+
+color = { 60 120 180 }
+
+graphical_culture = middle_eastern
+
+capital = 801
+
+government = theocracy
+
+ideology = Holy

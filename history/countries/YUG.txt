@@ -1,0 +1,32 @@
+# YUG — Country History
+# Dominion of the Marid — dominant naval power
+# 1905 Start
+
+capital = 388
+manpower = 80
+
+# Policy Sliders
+democratic = 2
+political_left = 3
+freedom = 2
+open_society = 2
+interventionism = 7
+professional_army = 8
+defence_lobby = 9
+market_economy = 4
+
+# Technology
+techteam = {
+	land_tech = 2
+	naval_tech = 7
+	air_tech = 2
+	industry_tech = 3
+	infra_tech = 2
+	supernatural_tech = 5
+}
+
+# Dissent
+dissent = 0
+
+# Industrial Capacity
+industrial_capacity = 20

@@ -1,0 +1,130 @@
+# New Antioch — Ministers
+# db/ministers/NAT.txt
+
+minister = {
+	name = "Prince-Regent Godfrey de Bouillon IV"
+	id = { type = 2 id = 10101 }
+	country = NAT
+	ideology = democratic
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1925
+	traits = { national_unity_advisor }
+	# The ruling prince of New Antioch. A steady hand in a crisis,
+	# which is fortunate as New Antioch is in perpetual crisis.
+}
+
+minister = {
+	name = "Archbishop-Diplomat Aimery of Caesarea"
+	id = { type = 2 id = 10102 }
+	country = NAT
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1922
+	traits = { iron_fisted_brute }
+	# His title suggests diplomacy. His methods suggest otherwise.
+	# Remarkably effective at extracting commitments from Holy League partners.
+}
+
+minister = {
+	name = "Grandmaster-Engineer Bertram of the Arsenal"
+	id = { type = 2 id = 10103 }
+	country = NAT
+	ideology = democratic
+	position = armament_minister
+	loyalty = 9
+	start_year = 1900
+	end_year = 1928
+	traits = { administrative_genius }
+	# Has kept New Antioch armed and supplied for thirty years on
+	# a budget that should not be sufficient. No one asks how.
+}
+
+minister = {
+	name = "Prior Inquisitor Clement the Vigilant"
+	id = { type = 2 id = 10104 }
+	country = NAT
+	ideology = democratic
+	position = minister_of_security
+	loyalty = 10
+	start_year = 1900
+	end_year = 1930
+	traits = { secret_police_chief }
+	# Responsible for identifying Infernal infiltration in Antiochene
+	# society. Thorough. Occasionally over-thorough. Never wrong.
+}
+
+minister = {
+	name = "Brother-Spymaster Raoul the Faceless"
+	id = { type = 2 id = 10105 }
+	country = NAT
+	ideology = democratic
+	position = head_of_intelligence
+	loyalty = 9
+	start_year = 1902
+	end_year = 1935
+	traits = { head_of_intelligence }
+	# No one knows what he looks like. This is deliberate.
+	# Runs intelligence networks throughout Infernal-held territory.
+}
+
+minister = {
+	name = "Marshal-Theologian Hugo de Payens III"
+	id = { type = 2 id = 10106 }
+	country = NAT
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 9
+	start_year = 1900
+	end_year = 1920
+	traits = { school_of_defence }
+	# Descended from the founder of the Templars. Believes deeply
+	# in the defensive line. Has made it the foundation of Antiochene
+	# military doctrine.
+}
+
+minister = {
+	name = "General Renaud de Lusignan"
+	id = { type = 2 id = 10107 }
+	country = NAT
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1925
+	traits = { decisive_battle }
+	# The offensive faction's man in the army command.
+	# Perpetually arguing for a push forward. Occasionally right.
+}
+
+minister = {
+	name = "Admiral Bertrand de Ibelin"
+	id = { type = 2 id = 10108 }
+	country = NAT
+	ideology = democratic
+	position = chief_of_navy
+	loyalty = 9
+	start_year = 1900
+	end_year = 1922
+	traits = { old_admiral }
+	# Thirty years keeping the Levantine coast open. Knows every
+	# Marid patrol route in the Eastern Mediterranean by heart.
+}
+
+minister = {
+	name = "Friar-Captain Anselm the Sky-Watcher"
+	id = { type = 2 id = 10109 }
+	country = NAT
+	ideology = democratic
+	position = chief_of_air
+	loyalty = 7
+	start_year = 1907
+	end_year = 1935
+	traits = { air_superiority_doctrine }
+	# Responsible for Antiochene aviation development. A former
+	# Witchburner who transferred to the air arm when it became clear
+	# that Zeppelins were going to need blessing as much as artillery.
+}

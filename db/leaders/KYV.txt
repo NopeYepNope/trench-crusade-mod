@@ -1,0 +1,12 @@
+# KYV — Leaders
+
+leader = {
+	name = "Prince-Commander Bohdan Svyatoslav"
+	id = { type = 1 id = 180000 }
+	country = KYV
+	rank = 4
+	skill = 3
+	traits = { old_guard infantry_leader }
+	start_year = 1900
+	end_year = 1930
+}

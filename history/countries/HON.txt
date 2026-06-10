@@ -1,0 +1,32 @@
+# HON — Country History
+# Eire
+# 1905 Start
+
+capital = 110
+manpower = 50
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 3
+	naval_tech = 2
+	air_tech = 1
+	industry_tech = 2
+	infra_tech = 3
+	supernatural_tech = 2
+}
+
+# Dissent
+dissent = 5
+
+# Industrial Capacity
+industrial_capacity = 12

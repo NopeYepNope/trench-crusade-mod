@@ -1,0 +1,12 @@
+# Papal States
+# Spiritual center of Latin Christendom
+
+color = { 220 220 220 }
+
+graphical_culture = western_european
+
+capital = 118
+
+government = theocracy
+
+ideology = Holy

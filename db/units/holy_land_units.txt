@@ -1,0 +1,367 @@
+# Trench Crusade - Holy Faction Unique Land Units
+# db/units/holy_land_units.txt
+#
+# Units exclusive to Holy factions or specific Holy nations.
+# These are unlocked through faction-specific tech branches
+# or the Divine Mysteries supernatural tree.
+
+# ============================================================
+# PALADIN (NAT only — unlocked by Crusader Order Structure)
+# Elite heavy infantry, very high morale, expensive
+# ============================================================
+
+unit = {
+	name = "Paladin"
+	type = land
+	model = 1
+
+	default_organisation = 45
+	morale = 9.0
+	is_stavka = no
+
+	max_speed = 3
+	terrain_speed = { desert = 0.80 arctic = 0.65 mountain = 0.65 }
+
+	defensiveness = 1.5
+	toughness = 0.7		# blessed armour is genuinely harder to kill
+	softness = 0.40		# heavy infantry
+	suppression = 3
+	air_attack = 0
+
+	# Paladins are especially effective against demonic units
+	hard_attack = 4.0
+	soft_attack = 3.5
+
+	supply_consumption = 0.60
+	fuel_consumption = 0
+
+	build_time = 365		# slow to train — requires extensive spiritual preparation
+	manpower = 500
+	ic_cost = 18
+
+	allowed_brigades = { NAT }
+}
+
+# ============================================================
+# PILGRIM LEVY (NAT + TRP — unlocked by Pilgrim Levy Doctrine)
+# Cheap, very high morale, poor combat effectiveness
+# They die well. That is their function.
+# ============================================================
+
+unit = {
+	name = "Pilgrim Levy"
+	type = land
+	model = 1
+
+	default_organisation = 40
+	morale = 10.0		# will not route — ever
+	is_stavka = no
+
+	max_speed = 3
+	terrain_speed = { desert = 0.90 arctic = 0.75 mountain = 0.80 }
+
+	defensiveness = 1.2
+	toughness = 0.2		# no armour, no training
+	softness = 0.95
+	suppression = 1
+	air_attack = 0
+
+	soft_attack = 1.5	# poor combat power
+
+	supply_consumption = 0.20	# they travel light
+	fuel_consumption = 0
+
+	build_time = 60		# they need no training, only a destination
+	manpower = 1500		# large but expendable
+	ic_cost = 2
+
+	allowed_brigades = { NAT TRP }
+}
+
+# ============================================================
+# FLAGELLANT HOST (TRP only — unlocked by Mass Pilgrimage Doctrine)
+# Extreme morale, suicidal charge capability, no defence
+# ============================================================
+
+unit = {
+	name = "Flagellant Host"
+	type = land
+	model = 1
+
+	default_organisation = 50
+	morale = 10.0
+	is_stavka = no
+
+	max_speed = 4		# they run toward the enemy
+	terrain_speed = { desert = 0.95 arctic = 0.80 mountain = 0.85 }
+
+	defensiveness = 0.3		# they do not defend, they charge
+	toughness = 0.15
+	softness = 0.98
+	suppression = 0
+	air_attack = 0
+
+	# The charge is devastating — briefly
+	soft_attack = 6.0
+	hard_attack = 2.0
+
+	supply_consumption = 0.15
+	fuel_consumption = 0
+
+	build_time = 45
+	manpower = 2000
+	ic_cost = 1
+
+	allowed_brigades = { TRP }
+}
+
+# ============================================================
+# GOLEM INFANTRY (HBK only — unlocked by Golem Crafting tech)
+# Does not attrite. Cannot be corrupted. Expensive.
+# ============================================================
+
+unit = {
+	name = "Golem Infantry"
+	type = land
+	model = 2
+
+	default_organisation = 60
+	morale = 10.0		# golems have no fear
+	is_stavka = no
+
+	max_speed = 2		# clay is heavy
+	terrain_speed = { desert = 0.85 arctic = 0.60 mountain = 0.55 }
+
+	defensiveness = 1.8
+	toughness = 0.9		# extremely hard to destroy
+	softness = 0.0		# this is not a soft target
+	suppression = 2
+	air_attack = 0
+
+	# Very effective against demons — the sacred name burns them
+	hard_attack = 5.0
+	soft_attack = 4.0
+
+	supply_consumption = 0.10	# golems don't eat — requires ritual maintenance
+	fuel_consumption = 0
+
+	build_time = 300
+	manpower = 0		# no manpower — they are constructed, not recruited
+	ic_cost = 25		# expensive in raw materials and scholarly time
+
+	allowed_brigades = { HBK }
+}
+
+# ============================================================
+# GREATER GOLEM — THE EMET (HBK only — apex tech)
+# Single unit equivalent to a small army. Rare. Decisive.
+# ============================================================
+
+unit = {
+	name = "Greater Golem"
+	type = land
+	model = 3
+
+	default_organisation = 80
+	morale = 10.0
+	is_stavka = no
+
+	max_speed = 1		# massive and slow
+	terrain_speed = { desert = 0.75 arctic = 0.50 mountain = 0.40 }
+
+	defensiveness = 3.0
+	toughness = 1.0		# nearly indestructible by conventional means
+	softness = 0.0
+	suppression = 5
+	air_attack = 2
+
+	hard_attack = 12.0
+	soft_attack = 10.0
+
+	supply_consumption = 0.05
+	fuel_consumption = 0
+
+	build_time = 730	# two years of scholarly work minimum
+	manpower = 0
+	ic_cost = 60
+
+	allowed_brigades = { HBK }
+}
+
+# ============================================================
+# DJINN AUXILIARY (IRS only — unlocked by Djinn Auxiliaries tech)
+# Fast, powerful, contractually obligated to fight
+# ============================================================
+
+unit = {
+	name = "Djinn Auxiliary"
+	type = land
+	model = 2
+
+	default_organisation = 40
+	morale = 7.0
+	is_stavka = no
+
+	max_speed = 10		# djinn move at supernatural speed
+	terrain_speed = { desert = 1.2 arctic = 0.80 mountain = 1.0 }
+
+	defensiveness = 0.7
+	toughness = 0.6
+	softness = 0.50
+	suppression = 3
+	air_attack = 1		# djinn can operate in the air somewhat
+
+	hard_attack = 4.0
+	soft_attack = 5.0
+
+	supply_consumption = 0.30	# contract maintenance replaces conventional supply
+	fuel_consumption = 0
+
+	build_time = 180	# contract negotiation takes time
+	manpower = 0		# djinn are not human manpower
+	ic_cost = 15
+
+	allowed_brigades = { IRS }
+}
+
+# ============================================================
+# BLESSED SCOUT COMPANY (Holy Engagement doctrine apex)
+# Elite, fast, can operate deep in corrupted territory
+# ============================================================
+
+unit = {
+	name = "Blessed Scout Company"
+	type = land
+	model = 2
+
+	default_organisation = 35
+	morale = 8.0
+	is_stavka = no
+
+	max_speed = 7
+	terrain_speed = { desert = 1.1 arctic = 0.90 mountain = 0.95 }
+
+	defensiveness = 0.5
+	toughness = 0.3
+	softness = 0.80
+	suppression = 1
+	air_attack = 0
+
+	# Blessed scouts carry personal relics — effective against demons
+	hard_attack = 3.0
+	soft_attack = 2.5
+
+	supply_consumption = 0.25
+	fuel_consumption = 0
+
+	build_time = 120
+	manpower = 250
+	ic_cost = 8
+
+	# Available to all Holy ideology factions with Engagement doctrine
+}
+
+# ============================================================
+# COVENANT HOST (Holy Ritual doctrine apex)
+# Supernatural allies fighting by choice, not binding
+# Cannot be corrupted. Very expensive to maintain.
+# ============================================================
+
+unit = {
+	name = "Covenant Host"
+	type = land
+	model = 3
+
+	default_organisation = 55
+	morale = 10.0
+	is_stavka = no
+
+	max_speed = 4
+	terrain_speed = { desert = 0.95 arctic = 0.85 mountain = 0.90 }
+
+	defensiveness = 1.5
+	toughness = 0.8
+	softness = 0.30
+	suppression = 4
+	air_attack = 2
+
+	hard_attack = 7.0
+	soft_attack = 6.0
+
+	supply_consumption = 0.40	# maintaining the covenant costs ongoing effort
+	fuel_consumption = 0
+
+	build_time = 365
+	manpower = 0
+	ic_cost = 35
+}
+
+# ============================================================
+# EXPLOITATION CAVALRY (Movement doctrine — all factions)
+# Fast exploitation unit for breakthrough follow-up
+# ============================================================
+
+unit = {
+	name = "Exploitation Cavalry"
+	type = land
+	model = 1
+
+	default_organisation = 30
+	morale = 6.5
+	is_stavka = no
+
+	max_speed = 10
+	terrain_speed = { desert = 0.90 arctic = 0.70 mountain = 0.50 }
+
+	defensiveness = 0.4
+	toughness = 0.3
+	softness = 0.85
+	suppression = 2
+	air_attack = 0
+
+	soft_attack = 4.0
+	hard_attack = 1.5
+
+	supply_consumption = 0.50
+	fuel_consumption = 0
+
+	build_time = 120
+	manpower = 500
+	ic_cost = 8
+}
+
+# ============================================================
+# DIVINE WRATH UNIT (Holy apex supernatural tech)
+# Soldiers who briefly channel divine power
+# Devastating, burns out quickly
+# ============================================================
+
+unit = {
+	name = "Divine Wrath Unit"
+	type = land
+	model = 3
+
+	default_organisation = 25		# burns through org fast
+	morale = 10.0
+	is_stavka = no
+
+	max_speed = 5
+	terrain_speed = { desert = 1.0 arctic = 0.90 mountain = 0.90 }
+
+	defensiveness = 0.5
+	toughness = 0.6
+	softness = 0.50
+	suppression = 5
+	air_attack = 3
+
+	# Devastating against demons
+	hard_attack = 15.0
+	soft_attack = 8.0
+
+	supply_consumption = 0.80	# intense spiritual maintenance required
+	fuel_consumption = 0
+
+	build_time = 365
+	manpower = 250
+	ic_cost = 30
+}

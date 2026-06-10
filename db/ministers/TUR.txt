@@ -1,0 +1,125 @@
+# Iron Sultanate — Ministers
+# db/ministers/TUR.txt
+
+minister = {
+	name = "Sultan Mahmud III al-Qasimi"
+	id = { type = 2 id = 40101 }
+	country = TUR
+	ideology = democratic
+	position = head_of_government
+	loyalty = 9
+	start_year = 1900
+	end_year = 1922
+	traits = { man_of_the_people }
+	# The Sultan of the Iron Wall. Rules a coalition of Islamic
+	# peoples who agree on the necessity of fighting Hell and
+	# disagree on everything else. Managing this is his life's work.
+}
+
+minister = {
+	name = "Vizier Ibn Khalid al-Rashidi"
+	id = { type = 2 id = 40102 }
+	country = TUR
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1924
+	traits = { ideological_crusader }
+	# Responsible for Sultanate relations with the Holy League —
+	# particularly navigating the theological objections of the
+	# Papal States and Trench Pilgrims. Patient, precise, effective.
+}
+
+minister = {
+	name = "Director of the House of Wisdom, Scholar Avicenna ibn Rushd"
+	id = { type = 2 id = 40103 }
+	country = TUR
+	ideology = democratic
+	position = armament_minister
+	loyalty = 10
+	start_year = 1900
+	end_year = 1926
+	traits = { administrative_genius }
+	# The House of Wisdom's director doubles as armament minister.
+	# Alchemical production, djinn contract logistics, and conventional
+	# manufacturing all fall under his authority. He considers this
+	# a single unified problem.
+}
+
+minister = {
+	name = "Mudir al-Aman Yusuf al-Hakim"
+	id = { type = 2 id = 40104 }
+	country = TUR
+	ideology = democratic
+	position = minister_of_security
+	loyalty = 9
+	start_year = 1900
+	end_year = 1928
+	traits = { prince_of_terror }
+}
+
+minister = {
+	name = "Master of the Fida'i Nazim al-Ismaili"
+	id = { type = 2 id = 40105 }
+	country = TUR
+	ideology = democratic
+	position = the_cloak_n_dagger_schemer
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { the_cloak_n_dagger_schemer }
+	# The Sultanate's intelligence service draws on the ancient
+	# Assassin tradition. Their information is always accurate.
+	# How they obtain it is not discussed.
+}
+
+minister = {
+	name = "Grand Vizier-Marshal Suleiman al-Qasim"
+	id = { type = 2 id = 40106 }
+	country = TUR
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 9
+	start_year = 1900
+	end_year = 1920
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "General Fatima bint Rashid al-Hawrani"
+	id = { type = 2 id = 40107 }
+	country = TUR
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1928
+	traits = { school_of_maneuver }
+}
+
+minister = {
+	name = "Admiral Hassan ibn Murad"
+	id = { type = 2 id = 40108 }
+	country = TUR
+	ideology = democratic
+	position = chief_of_navy
+	loyalty = 8
+	start_year = 1900
+	end_year = 1924
+	traits = { old_admiral }
+}
+
+minister = {
+	name = "Amir al-Jaww Ibrahim al-Tawil"
+	id = { type = 2 id = 40109 }
+	country = TUR
+	ideology = democratic
+	position = chief_of_air
+	loyalty = 7
+	start_year = 1906
+	end_year = 1932
+	traits = { army_aviation_doctrine }
+	# The Sultanate's air force chief. Pioneered the integration
+	# of djinn-assisted aviation with conventional aircraft.
+}

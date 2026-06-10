@@ -1,0 +1,12 @@
+# NOR — Leaders
+
+leader = {
+	name = "Admiral Erik Stormbane"
+	id = { type = 1 id = 180000 }
+	country = NOR
+	rank = 3
+	skill = 4
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1930
+}

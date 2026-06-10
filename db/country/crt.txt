@@ -1,0 +1,12 @@
+# Court of the Harrowed King
+# Cursed undead kingdom, chose Infernal alignment
+
+color = { 60 40 80 }
+
+graphical_culture = eastern_european
+
+capital = 160
+
+government = absolute_monarchy
+
+ideology = Infernal

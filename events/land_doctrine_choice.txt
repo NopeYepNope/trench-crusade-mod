@@ -1,0 +1,172 @@
+# Trench Crusade - Land Doctrine Choice
+# events/land_doctrine_choice.txt
+#
+# Fires when a nation reaches land_doctrine tier 3 (Artillery).
+# Sets one of five doctrine flags and locks the path.
+# Total Destruction only appears for eligible factions.
+
+event = {
+	id = 4000
+	random = no
+
+	trigger = {
+		technology = { type = land_doctrine value = 3 }
+		NOT = { has_country_flag = land_doctrine_permanence }
+		NOT = { has_country_flag = land_doctrine_movement }
+		NOT = { has_country_flag = land_doctrine_ritual }
+		NOT = { has_country_flag = land_doctrine_engagement }
+		NOT = { has_country_flag = land_doctrine_total_destruction }
+		NOT = { has_country_flag = land_doctrine_chosen }
+	}
+
+	name = "The Shape of the War"
+	desc = "Eight hundred years. Hundreds of generations of soldiers, commanders, priests, and warlords have each asked the same question: how do you fight a war that does not end?\n\nThe answer, it turns out, is not one answer. It is several. Your military establishment has developed its own answer — shaped by your history, your losses, your victories, and the nature of what you face across the wire.\n\nThe time has come to commit. The doctrine you choose will define your armies for the duration of the coming war. Choose with the understanding that this choice cannot be easily unmade."
+
+	picture = "gfx/interface/evt_land_doctrine_choice.bmp"
+
+	# --- PERMANENCE ---
+	option = {
+		name = "Hold the line. Every yard of ground is sacred. We do not yield."
+		set_country_flag = land_doctrine_permanence
+		set_country_flag = land_doctrine_chosen
+		trigger_event = { id = 4001 days = 3 }
+	}
+
+	# --- MOVEMENT ---
+	option = {
+		name = "Advance. Always advance. Stasis is how we lose."
+		set_country_flag = land_doctrine_movement
+		set_country_flag = land_doctrine_chosen
+		trigger_event = { id = 4002 days = 3 }
+	}
+
+	# --- RITUAL ---
+	option = {
+		name = "Our soldiers command. Other things die. We build around what we can bind."
+		set_country_flag = land_doctrine_ritual
+		set_country_flag = land_doctrine_chosen
+		trigger_event = { id = 4003 days = 3 }
+	}
+
+	# --- ENGAGEMENT ---
+	option = {
+		name = "Speed and precision. We fight smarter, not harder."
+		set_country_flag = land_doctrine_engagement
+		set_country_flag = land_doctrine_chosen
+		trigger_event = { id = 4004 days = 3 }
+	}
+
+	# --- TOTAL DESTRUCTION — only appears for eligible factions ---
+	option = {
+		name = "Destroy everything. Keep moving. Leave nothing."
+		trigger = {
+			OR = {
+				tag = PER
+				tag = AFG
+				tag = SOV
+				tag = SAU
+			}
+		}
+		set_country_flag = land_doctrine_total_destruction
+		set_country_flag = land_doctrine_chosen
+		trigger_event = { id = 4005 days = 3 }
+	}
+}
+
+# ============================================================
+# CONFIRMATION EVENTS
+# ============================================================
+
+event = {
+	id = 4001
+	random = no
+	trigger = {
+		has_country_flag = land_doctrine_permanence
+		NOT = { has_country_flag = land_permanence_confirmed }
+	}
+	name = "The Doctrine of Permanence"
+	desc = "Your generals have their orders. The line is sacred. The engineering corps expands. The consecration parties are attached. The mathematics of attrition are studied.\n\nYou will hold. Whatever comes across the wire, you will hold."
+	picture = "gfx/interface/evt_permanence_confirmed.bmp"
+	option = {
+		name = "Hold the line."
+		set_country_flag = land_permanence_confirmed
+		command = { type = defence value = 0.1 }
+		command = { type = morale value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 4002
+	random = no
+	trigger = {
+		has_country_flag = land_doctrine_movement
+		NOT = { has_country_flag = land_movement_confirmed }
+	}
+	name = "The Doctrine of Movement"
+	desc = "Your generals have their orders. The advance begins. Breakthrough units are formed and trained. Ground transformation teams are assembled.\n\nThe line does not hold. The line moves. Forward."
+	picture = "gfx/interface/evt_movement_confirmed.bmp"
+	option = {
+		name = "Forward. Always forward."
+		set_country_flag = land_movement_confirmed
+		command = { type = attack value = 0.1 }
+		command = { type = speed value = 0.05 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 4003
+	random = no
+	trigger = {
+		has_country_flag = land_doctrine_ritual
+		NOT = { has_country_flag = land_ritual_confirmed }
+	}
+	name = "The Doctrine of Ritual"
+	desc = "Your ritualists receive their expanded commissions. The binding academies are established. Supply lines are reorganised to carry binding components alongside ammunition.\n\nYour soldiers will command. Other things will die."
+	picture = "gfx/interface/evt_ritual_confirmed.bmp"
+	option = {
+		name = "Bind them. Send them forward."
+		set_country_flag = land_ritual_confirmed
+		command = { type = land_attrition value = -0.15 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 4004
+	random = no
+	trigger = {
+		has_country_flag = land_doctrine_engagement
+		NOT = { has_country_flag = land_engagement_confirmed }
+	}
+	name = "The Doctrine of Engagement"
+	desc = "Your light infantry commanders receive their expanded mandate. CAS coordination protocols are established. The tempo doctrine takes shape.\n\nYou will not out-mass the enemy. You will out-think them."
+	picture = "gfx/interface/evt_engagement_confirmed.bmp"
+	option = {
+		name = "Speed. Precision. Tempo."
+		set_country_flag = land_engagement_confirmed
+		command = { type = speed value = 0.1 }
+		command = { type = recon value = 0.1 }
+		dissent = -3
+	}
+}
+
+event = {
+	id = 4005
+	random = no
+	trigger = {
+		has_country_flag = land_doctrine_total_destruction
+		NOT = { has_country_flag = land_destruction_confirmed }
+	}
+	name = "The Doctrine of Total Destruction"
+	desc = "There is no confirmation ceremony for this doctrine. No formal declaration. The orders go out and the thing begins.\n\nDestroy everything. Keep moving. Stop for nothing.\n\nWhat comes after is someone else's problem. If there is someone after."
+	picture = "gfx/interface/evt_destruction_confirmed.bmp"
+	option = {
+		name = "Nothing survives the advance."
+		set_country_flag = land_destruction_confirmed
+		command = { type = attack value = 0.15 }
+		command = { type = defence value = -0.15 }
+		dissent = -5
+	}
+}

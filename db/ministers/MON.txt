@@ -1,0 +1,62 @@
+# MON — Ministers
+
+minister = {
+	name = "Khan-Chancellor Batu Orda"
+	id = { type = 2 id = 192001 }
+	country = MON
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { man_of_the_people }
+}
+
+minister = {
+	name = "Khan-Chancellor Batu Orda"
+	id = { type = 2 id = 192002 }
+	country = MON
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Khan-Chancellor Batu Orda"
+	id = { type = 2 id = 192003 }
+	country = MON
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Khan-Chancellor Batu Orda"
+	id = { type = 2 id = 192004 }
+	country = MON
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Khan-Chancellor Batu Orda"
+	id = { type = 2 id = 192005 }
+	country = MON
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle_doctrine }
+}
+

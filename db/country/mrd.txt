@@ -1,0 +1,24 @@
+# Dominion of the Marid
+# Ancient sea-djinn of Islamic theology, masters of the corrupted Mediterranean
+# The premier Infernal naval power - controls the dark waters between Holy nations
+# Their fleet of damned ships and sea-demons blockades Holy trade and movement
+
+color = { 20 60 160 }		# deep corrupted ocean blue
+
+graphical_culture = middle_eastern
+
+# Capital: mapped to a coastal Mediterranean province
+capital = 388
+
+government = absolute_monarchy		# the Marid King rules the deep
+
+ideology = Infernal
+
+# The Marid are ancient beyond Hell itself - sea djinn who CHOSE Infernal alignment
+# They are not demons by nature but by allegiance
+# This makes them natural rivals of Lilith (also a rebel by nature)
+# and potentially interesting event partners if Lilith breaks away
+
+# Unique mechanic: Marid start with a large navy but minimal land forces
+# Their strategy is blockade, raiding, and amphibious landings
+# Holy nations must invest heavily in their own navies or lose the Mediterranean entirely

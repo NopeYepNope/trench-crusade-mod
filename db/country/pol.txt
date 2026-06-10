@@ -1,0 +1,12 @@
+# Polish-Lithuanian Commonwealth
+# Large eastern Holy power
+
+color = { 180 60 60 }
+
+graphical_culture = central_european
+
+capital = 88
+
+government = constitutional_monarchy
+
+ideology = Holy

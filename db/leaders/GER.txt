@@ -1,0 +1,99 @@
+# Heretic Legion — Leaders
+# db/leaders/GER.txt
+#
+# The Heretic Legion's officer corps began as a mirror of the
+# Prussian military tradition — they were, after all, the army
+# of what was once a German state before the Infernal pact was
+# made. Two centuries of Infernal service have changed them.
+# Senior commanders are professionally excellent and spiritually
+# compromised. Junior officers are fanatics, opportunists, or
+# simply people who made one terrible decision and found there
+# was no way back.
+
+leader = {
+	name = "Oberbefehlshaber Lukas Mordstein"
+	id = { type = 1 id = 70001 }
+	country = GER
+	rank = 4
+	skill = 5
+	traits = { old_guard offensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1920
+	# Supreme commander of the Legion's field armies. His military
+	# brilliance is genuine and uncontested. What he has sold for it
+	# is visible in his eyes to anyone who looks closely enough.
+	# Most people do not look closely enough.
+}
+
+leader = {
+	name = "Generaloberst Kaethe von Schwarzmund"
+	id = { type = 1 id = 70002 }
+	country = GER
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine armor_officer }
+	start_year = 1900
+	end_year = 1928
+	# Commander of the Daemon Engine Corps. She designed the
+	# binding protocols that made daemon engines militarily
+	# reliable. 'Reliable' in this context means they kill
+	# the right people most of the time.
+}
+
+leader = {
+	name = "General Wolfram Aschenbrenner"
+	id = { type = 1 id = 70003 }
+	country = GER
+	rank = 3
+	skill = 4
+	traits = { defensive_doctrine artillery_specialist }
+	start_year = 1902
+	end_year = 1930
+	# Commander of Corrupted Artillery. A former Holy officer who
+	# defected twenty years ago for reasons he has never publicly
+	# stated. His knowledge of Antiochene and Prussian defensive
+	# doctrine makes him extremely dangerous.
+}
+
+leader = {
+	name = "Oberst Brennus the Red Brigade"
+	id = { type = 1 id = 70004 }
+	country = GER
+	rank = 2
+	skill = 4
+	traits = { infantry_leader commando }
+	start_year = 1903
+	end_year = 1932
+	# Commander of the Red Brigade — the Legion's Mammon-aligned
+	# elite infantry. He does not have a surname. The Red Brigade
+	# does not use surnames. This is a choice that means something.
+}
+
+leader = {
+	name = "Vizeadmiral Carolin Tiefengrau"
+	id = { type = 1 id = 70005 }
+	country = GER
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1924
+	# Commander of the Legion's Atlantic fleet. Her ships operate
+	# in waters the Marid consider their own. She and Admiral Vane
+	# have never met in battle. Both are cautious about that changing.
+}
+
+leader = {
+	name = "Hauptmann Ezra Hollenbeck, Soul-Warden"
+	id = { type = 1 id = 70006 }
+	country = GER
+	rank = 1
+	skill = 3
+	traits = { guerilla_fighter }
+	start_year = 1907
+	end_year = 1938
+	# A young officer commanding a soul-harvest unit. His job is
+	# to follow the advance and collect what the advance leaves
+	# behind. He is very professional about this. This is somehow
+	# worse than if he weren't.
+}

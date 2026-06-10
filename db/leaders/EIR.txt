@@ -1,0 +1,12 @@
+# EIR — Leaders
+
+leader = {
+	name = "General Caitlin ni Bhriain"
+	id = { type = 1 id = 180000 }
+	country = EIR
+	rank = 3
+	skill = 4
+	traits = { guerilla_fighter infantry_leader }
+	start_year = 1900
+	end_year = 1930
+}

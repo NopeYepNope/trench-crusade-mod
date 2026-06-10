@@ -1,0 +1,12 @@
+# ALB — Leaders
+
+leader = {
+	name = "Lord-Commander Angus MacAlister"
+	id = { type = 1 id = 180000 }
+	country = ALB
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine }
+	start_year = 1900
+	end_year = 1930
+}

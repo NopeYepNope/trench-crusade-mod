@@ -1,0 +1,12 @@
+# Kingdom of Marruecos
+# Northwest African Holy kingdom
+
+color = { 80 140 80 }
+
+graphical_culture = middle_eastern
+
+capital = 461
+
+government = absolute_monarchy
+
+ideology = Holy

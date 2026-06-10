@@ -1,0 +1,353 @@
+# Trench Crusade - Prewar Events Phase 3
+# events/prewar_phase3.txt
+# "The Powder Keg" — 1911-1914
+#
+# The crises have compounded. The alliances are strained.
+# Something will break. The only question is where —
+# and whether it will be a door opening or a world ending.
+
+###############################################
+# EVENT 5040: THE BREACH OF BEERSHEBA
+# Fires 1911 — the first real breakthrough of the scenario
+# A major Infernal push cracks the line near the Levant
+###############################################
+
+event = {
+	id = 5040
+	random = no
+
+	trigger = {
+		year = 1911
+		NOT = { year = 1912 }
+		NOT = { has_global_flag = breach_of_beersheba }
+	}
+
+	name = "The Breach of Beersheba"
+	desc = "Samael's coordinated offensive has achieved what three decades of uncoordinated Infernal pressure could not. A gap in the line south of New Antioch — twenty miles wide, through which Asmodean forces are pouring into the Levant interior.\n\nThis is the crisis. Not a border incident. Not a plague raid. A breach in the line that has held since the First Heresy.\n\nIn Jerusalem, the bells are ringing. In Antioch, the emergency sessions have begun. In the corrupted zones, things are moving that have not moved in a very long time."
+
+	picture = "gfx/interface/evt_breach_beersheba.bmp"
+
+	# Fires simultaneously for all Holy powers
+	option = {
+		name = "The breach must be closed. Everything else is secondary."
+		set_global_flag = breach_of_beersheba
+		trigger_event = { id = 5041 days = 3 }
+		trigger_event = { id = 5042 days = 7 }
+		trigger_event = { id = 5043 days = 14 }
+	}
+}
+
+event = {
+	id = 5041
+	random = no
+	country = SER
+
+	trigger = {
+		has_global_flag = breach_of_beersheba
+		NOT = { has_country_flag = nat_breach_response }
+	}
+
+	name = "The Breach — Antioch Responds"
+	desc = "The Asmodean advance is eleven miles from New Antioch's southern walls. The Hebrew Knights have fallen back to Akko. The Trench Pilgrims are moving forward — not retreating, moving toward the breach — which is either inspiring or catastrophic depending on your assessment of Pilgrim combat discipline.\n\nEvery reserve has been committed. Emergency messages have gone to England, Prussia, and the Holy League. What comes back in the next seventy-two hours will determine whether New Antioch stands."
+
+	picture = "gfx/interface/evt_nat_crisis.bmp"
+
+	option = {
+		name = "Hold the walls. Commit the Paladin reserves."
+		set_country_flag = nat_breach_response
+		set_country_flag = nat_holds
+		command = { type = defence value = 0.15 }
+		manpower = -15
+		dissent = -5
+	}
+
+	option = {
+		name = "Counterattack into the breach. Close it from inside."
+		set_country_flag = nat_breach_response
+		set_country_flag = nat_counterattacks
+		command = { type = attack value = 0.1 }
+		manpower = -20
+		dissent = -8
+	}
+}
+
+event = {
+	id = 5042
+	random = no
+	country = ENG
+
+	trigger = {
+		has_global_flag = breach_of_beersheba
+		NOT = { has_country_flag = eng_breach_response }
+	}
+
+	name = "The Breach — England Must Choose"
+	desc = "The Levant line has broken. New Antioch is under direct assault. England's Expeditionary Forces in the Eastern Mediterranean are the closest substantial Holy military presence.\n\nCommitting them to the Levant closes the breach. It also strips England's own defensive reserves and leaves the Marid blockade question unresolved.\n\nField Marshal Cranworth's assessment: the fall of New Antioch would be the most significant Holy defeat since the First Heresy. Everything else is secondary."
+
+	picture = "gfx/interface/evt_eng_breach.bmp"
+
+	option = {
+		name = "Deploy the Expeditionary Force to the Levant immediately."
+		set_country_flag = eng_breach_response
+		set_country_flag = eng_aids_nat
+		relation = { tag = SER value = 40 }
+		manpower = -20
+		command = { type = attack value = 0.05 }
+	}
+
+	option = {
+		name = "England's first duty is England. Reinforce our own positions."
+		set_country_flag = eng_breach_response
+		set_country_flag = eng_holds_back
+		relation = { tag = SER value = -30 }
+		dissent = 8
+	}
+}
+
+event = {
+	id = 5043
+	random = no
+	country = PRU
+
+	trigger = {
+		has_global_flag = breach_of_beersheba
+		NOT = { has_country_flag = pru_breach_response }
+	}
+
+	name = "The Breach — Prussia Considers"
+	desc = "The Levant breach is Samael's work — coordinated, precise, devastating. Feldmarschall von Steyr has been studying the offensive. His conclusion is that this is not the main attack. This is the distraction.\n\nWhile Holy forces rush to the Levant, the Heretic Legion's Western Front formations are unusually quiet. Too quiet. The Stoßtruppen reconnaissance units report preparation activity behind Legion lines.\n\nThe Levant is burning. Prussia may be next."
+
+	picture = "gfx/interface/evt_pru_breach.bmp"
+
+	option = {
+		name = "Send forces to aid New Antioch. The League must hold together."
+		set_country_flag = pru_breach_response
+		set_country_flag = pru_aids_nat
+		relation = { tag = SER value = 30 }
+		manpower = -15
+		command = { type = defence value = -0.05 }	# weakened home front
+	}
+
+	option = {
+		name = "Hold position. Von Steyr's instinct is right — they want us to move."
+		set_country_flag = pru_breach_response
+		set_country_flag = pru_holds
+		relation = { tag = SER value = -10 }
+		command = { type = defence value = 0.1 }
+		dissent = 5
+	}
+}
+
+###############################################
+# EVENT 5044: THE HERETIC LEGION PUSHES WEST
+# Fires 1912 — von Steyr was right
+###############################################
+
+event = {
+	id = 5044
+	random = no
+	country = GER
+
+	trigger = {
+		year = 1912
+		NOT = { year = 1913 }
+		NOT = { has_country_flag = hrl_western_offensive }
+		has_global_flag = breach_of_beersheba
+	}
+
+	name = "Operation Dämmerung"
+	desc = "The Levant breach drew Holy reserves south. The Western Front is thinner than it has been in twenty years. Oberbefehlshaber Mordstein's orders go out: Operation Dämmerung begins at dawn.\n\nThree Legion corps advancing on a sixty-mile front. Daemon Engine support. Corrupted artillery. The Red Brigade leading the breakthrough assault.\n\nPrussia was right to be suspicious. They did not act on the suspicion in time."
+
+	picture = "gfx/interface/evt_hrl_offensive.bmp"
+
+	option = {
+		name = "Dämmerung begins. Drive them back before they can consolidate."
+		set_country_flag = hrl_western_offensive
+		war_goal = { type = annex tag = PRU }
+		command = { type = attack value = 0.15 }
+		command = { type = soft_attack value = 0.1 }
+		manpower = 25
+		trigger_event = { id = 5045 days = 7 }
+	}
+}
+
+event = {
+	id = 5045
+	random = no
+	country = PRU
+
+	trigger = {
+		NOT = { has_country_flag = pru_dämmerung_response }
+		war_with = GER
+	}
+
+	name = "Dämmerung — The Legion Advances"
+	desc = "The Legion has come across the wire on a sixty-mile front. Daemon Engines are breaching the first trench line. The Corrupted Artillery is desecrating the forward consecrated ground.\n\nFeldmarschall von Steyr's response is immediate: counterattack with Stoßtruppen into the flanks of the advance. Do not retreat. Do not consolidate. Drive into the breakthrough and collapse it from the sides.\n\nThis is either brilliant or suicide. Von Steyr has been saying that about his own plans for forty years."
+
+	picture = "gfx/interface/evt_pru_response.bmp"
+
+	option = {
+		name = "Stoßtruppen into the flanks. Von Steyr's way."
+		set_country_flag = pru_dämmerung_response
+		set_country_flag = pru_stosstruppen_response
+		command = { type = attack value = 0.15 }
+		command = { type = speed value = 0.1 }
+		manpower = -20
+	}
+
+	option = {
+		name = "Tactical withdrawal. Preserve the army. Regroup."
+		set_country_flag = pru_dämmerung_response
+		set_country_flag = pru_withdraws
+		command = { type = defence value = 0.1 }
+		dissent = 10
+	}
+}
+
+###############################################
+# EVENT 5046: THE COUNCIL OF EMERGENCY
+# Fires 1912 — Holy League convenes in full crisis
+###############################################
+
+event = {
+	id = 5046
+	random = no
+	country = PAP
+
+	trigger = {
+		year = 1912
+		NOT = { year = 1913 }
+		NOT = { has_country_flag = emergency_council }
+		has_global_flag = breach_of_beersheba
+		war_with = GER	# only if Legion offensive has happened
+	}
+
+	name = "The Emergency Council of the Holy League"
+	desc = "The Papal States have called an Emergency Council of the Holy League — the first since the Great Reconquest of 1743. Every Holy major power has been summoned.\n\nThe situation: the Levant line is breached and partially restored. The Western Front is under Legion assault. The Mediterranean is blockaded. The Trench Pilgrims' Great March has sanctified significant forward territory but disrupted supply logistics.\n\nThe question before the Council: is this the war? Has the Great Trench War truly begun?\n\nThe answer will determine everything that follows."
+
+	picture = "gfx/interface/evt_emergency_council.bmp"
+
+	option = {
+		name = "Declare formally: the Great Trench War has begun. Full mobilisation."
+		set_country_flag = emergency_council
+		set_global_flag = great_war_declared
+		command = { type = morale value = 0.15 }
+		manpower = 20
+		dissent = -10
+		trigger_event = { id = 5047 days = 7 }
+		trigger_event = { id = 5048 days = 14 }
+	}
+
+	option = {
+		name = "Not yet. This may still be contained. Avoid escalation."
+		set_country_flag = emergency_council
+		set_country_flag = holy_delays_declaration
+		dissent = 10
+		relation = { tag = PRU value = -10 }
+		relation = { tag = SER value = -10 }
+	}
+}
+
+###############################################
+# EVENT 5047: THE INFERNAL PACT RESPONDS
+# Fires after Holy declaration
+###############################################
+
+event = {
+	id = 5047
+	random = no
+	country = SOV
+
+	trigger = {
+		NOT = { has_country_flag = pact_declares }
+		has_global_flag = great_war_declared
+	}
+
+	name = "The Pact Acknowledges the War"
+	desc = "The Holy League has formally declared the Great Trench War. Samael receives this intelligence with something that might be satisfaction. The centuries of preparation. The patient repositioning. The coordinated offensives.\n\nIt has worked. The war has begun in earnest.\n\nHis orders go to every Pact commander: the restraint is over. Full offensive operations. Every front, simultaneously. Give them no time to consolidate. Give them no ground to breathe.\n\nThis is what eight hundred years of patience has been building toward."
+
+	picture = "gfx/interface/evt_pact_declares.bmp"
+
+	option = {
+		name = "All fronts advance. The Great War is ours to win."
+		set_country_flag = pact_declares
+		set_global_flag = great_war_begun
+		command = { type = attack value = 0.2 }
+		command = { type = morale value = 0.2 }
+		manpower = 30
+		dissent = -15
+	}
+}
+
+###############################################
+# EVENT 5048: THE GREAT TRENCH WAR — 1914
+# The opening of the war proper. Fires for all nations.
+###############################################
+
+event = {
+	id = 5048
+	random = no
+
+	trigger = {
+		has_global_flag = great_war_begun
+		NOT = { has_global_flag = war_opening_fired }
+		year = 1913
+	}
+
+	name = "The Great Trench War — The World at War"
+	desc = "It is 1914. The guns have been firing for months but now every front is alive.\n\nFrom the corrupted Mediterranean to the steppe, from the Levant to the Atlantic coast, every line of demarcation between Holy and Infernal has become a battlefield. The diplomats have gone home. The priests are in the trenches. The warlords are advancing.\n\nThis is what eight hundred years of stalemate has been building toward.\n\nThe Great Trench War has begun."
+
+	picture = "gfx/interface/evt_great_war_begins.bmp"
+
+	option = {
+		name = "To arms. For everything that matters."
+		set_global_flag = war_opening_fired
+		# Global bonuses/penalties for all active nations handled via separate AI files
+		dissent = -10
+	}
+}
+
+###############################################
+# EVENT 5049: THE LILITH SCHISM — WAR TRIGGER
+# Links to lilith_arc.txt — the schism happens during the war
+###############################################
+
+event = {
+	id = 5049
+	random = no
+	country = PER
+
+	trigger = {
+		has_global_flag = great_war_begun
+		has_country_flag = LIL_resentment_2
+		NOT = { has_country_flag = LIL_schism }
+		NOT = { has_country_flag = LIL_remained_infernal }
+		year = 1912
+	}
+
+	name = "Now or Never"
+	desc = "The war is open. Samael has demanded Lilith's forces march under Pact command in the coordinated western offensive.\n\nThe demand arrives as an order, not a request. With a deadline, not a discussion. With the implicit threat that refusal will be treated as defection.\n\nShe has been called defector before. She was called it first.\n\nThe Great Trench War has begun. Every side is choosing.\n\nIt is time to choose."
+
+	picture = "gfx/interface/evt_lilith_now.bmp"
+
+	option = {
+		name = "Break. Now. The first rebel rebels again."
+		set_country_flag = LIL_schism
+		ideology = neutral
+		leave_alliance = yes
+		relation = { tag = SOV value = -150 }
+		relation = { tag = GER value = -80 }
+		relation = { tag = AFG value = 80 }
+		relation = { tag = SER value = 20 }
+		trigger_event = { id = 1004 days = 7 }
+		trigger_event = { id = 1005 days = 14 }
+		dissent = -10
+	}
+
+	option = {
+		name = "Not yet. Survive the opening. Choose the moment carefully."
+		set_country_flag = LIL_remained_infernal
+		relation = { tag = SOV value = 20 }
+		dissent = 10
+	}
+}

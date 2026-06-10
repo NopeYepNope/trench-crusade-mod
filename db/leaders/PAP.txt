@@ -1,0 +1,12 @@
+# PAP — Leaders
+
+leader = {
+	name = "Cardinal-Commander Benedetto Corsini"
+	id = { type = 1 id = 180000 }
+	country = PAP
+	rank = 4
+	skill = 3
+	traits = { old_guard defensive_doctrine }
+	start_year = 1900
+	end_year = 1930
+}

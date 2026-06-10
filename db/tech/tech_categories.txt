@@ -1,0 +1,47 @@
+# Trench Crusade - Technology Categories
+# db/tech/tech_categories.txt
+#
+# Six categories: Land, Naval, Air, Industry, Infrastructure, Supernatural
+# Supernatural splits by ideology group via availability triggers
+
+technology_category = {
+	id = land
+	name = "Land Doctrine"
+	desc = "The science and art of ground warfare — infantry tactics, cavalry doctrine, artillery coordination, and trench engineering."
+	picture = "gfx/interface/tech_land.bmp"
+}
+
+technology_category = {
+	id = naval
+	name = "Naval Doctrine"
+	desc = "Command of the seas — warship design, fleet tactics, blockade doctrine, and coastal defence."
+	picture = "gfx/interface/tech_naval.bmp"
+}
+
+technology_category = {
+	id = air
+	name = "Aviation"
+	desc = "The conquest of the skies — from observation balloons to the relic-powered quadplanes of the Great War."
+	picture = "gfx/interface/tech_air.bmp"
+}
+
+technology_category = {
+	id = industry
+	name = "Industry"
+	desc = "The engines of war — factory capacity, resource extraction, logistics, and the dark or holy forces that power them."
+	picture = "gfx/interface/tech_industry.bmp"
+}
+
+technology_category = {
+	id = infrastructure
+	name = "Infrastructure"
+	desc = "Roads, railways, fortifications, and supply lines. The bones of any lasting power."
+	picture = "gfx/interface/tech_infra.bmp"
+}
+
+technology_category = {
+	id = supernatural
+	name = "Supernatural"
+	desc = "The sixth art of war. Holy nations call it faith. Infernal nations call it power. The Unmarked call it survival. All know it is real."
+	picture = "gfx/interface/tech_supernatural.bmp"
+}

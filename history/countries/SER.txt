@@ -1,0 +1,32 @@
+# SER — Country History
+# New Antioch — front line state, high supernatural tech, moderate IC
+# 1905 Start
+
+capital = 799
+manpower = 120
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 4
+	naval_tech = 2
+	air_tech = 1
+	industry_tech = 3
+	infra_tech = 3
+	supernatural_tech = 3
+}
+
+# Dissent
+dissent = 5
+
+# Industrial Capacity
+industrial_capacity = 28

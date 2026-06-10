@@ -1,0 +1,77 @@
+# LIL — Ministers
+# db/ministers/LIL.txt
+
+minister = {
+	name = "Naamah, the First-Born"
+	id = { type = 2 id = 100101 }
+	country = LIL
+	ideology = neutral
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1950
+	traits = { national_unity_advisor }
+	# Governs the Domain in her mother's name.
+}
+
+minister = {
+	name = "Agrat bat Mahlat, the Dancer"
+	id = { type = 2 id = 100102 }
+	country = LIL
+	ideology = neutral
+	position = foreign_minister
+	loyalty = 9
+	start_year = 1900
+	end_year = 1945
+	traits = { ideological_crusader }
+	# Manages Lilith's complex relationships with all three blocs.
+}
+
+minister = {
+	name = "Eisheth Zenunim, the Hollow"
+	id = { type = 2 id = 100103 }
+	country = LIL
+	ideology = neutral
+	position = minister_of_security
+	loyalty = 9
+	start_year = 1900
+	end_year = 1945
+	traits = { secret_police_chief }
+}
+
+minister = {
+	name = "Mahlat, the Night-Runner"
+	id = { type = 2 id = 100104 }
+	country = LIL
+	ideology = neutral
+	position = head_of_intelligence
+	loyalty = 9
+	start_year = 1903
+	end_year = 1945
+	traits = { head_of_intelligence }
+}
+
+minister = {
+	name = "Naamah, the First-Born"
+	id = { type = 2 id = 100105 }
+	country = LIL
+	ideology = neutral
+	position = chief_of_staff
+	loyalty = 10
+	start_year = 1900
+	end_year = 1950
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Agrat bat Mahlat, the Dancer"
+	id = { type = 2 id = 100106 }
+	country = LIL
+	ideology = neutral
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1945
+	traits = { decisive_battle }
+}
+

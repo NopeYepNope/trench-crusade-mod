@@ -1,0 +1,12 @@
+# Dominion of Beelzebub
+# Lord of Flies, plague and decay
+
+color = { 80 120 20 }
+
+graphical_culture = middle_eastern
+
+capital = 795
+
+government = totalitarian_dictatorship
+
+ideology = Infernal

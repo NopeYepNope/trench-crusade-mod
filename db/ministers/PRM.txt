@@ -1,0 +1,62 @@
+# PRM — Ministers
+
+minister = {
+	name = "Voivode Mikhail of Perm"
+	id = { type = 2 id = 195001 }
+	country = PRM
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { national_unity_advisor }
+}
+
+minister = {
+	name = "Voivode Mikhail of Perm"
+	id = { type = 2 id = 195002 }
+	country = PRM
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Voivode Mikhail of Perm"
+	id = { type = 2 id = 195003 }
+	country = PRM
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Voivode Mikhail of Perm"
+	id = { type = 2 id = 195004 }
+	country = PRM
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Voivode Mikhail of Perm"
+	id = { type = 2 id = 195005 }
+	country = PRM
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle }
+}
+

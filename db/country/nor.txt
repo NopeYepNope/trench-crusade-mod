@@ -1,0 +1,12 @@
+# Kingdom of Norway
+# Northern maritime Holy power
+
+color = { 100 140 180 }
+
+graphical_culture = western_european
+
+capital = 66
+
+government = constitutional_monarchy
+
+ideology = Holy

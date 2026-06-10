@@ -1,0 +1,75 @@
+# Trench Crusade — Province ID Verification Worksheet
+# =====================================================
+# How to use:
+# 1. Load DH with any vanilla scenario
+# 2. Open console (usually ~ or F12)
+# 3. Type: showid
+# 4. Hover over each province listed below
+# 5. Note the ID shown in the bottom-right corner
+# 6. Update tc_provinces.txt with the correct IDs
+#
+# Provinces marked [VERIFY] are estimates that need confirming.
+# Provinces marked [CONFIRMED] have been verified against DH files.
+#
+# KEY CAPITALS TO VERIFY FIRST:
+# =====================================================
+
+NATION          | LOCATION           | CURRENT ID | STATUS
+----------------|--------------------|-----------|---------
+ENG             | London             | 61        | [VERIFY]
+PRU             | Berlin             | 64        | [VERIFY]
+NOR             | Oslo               | 66        | [VERIFY]
+ALB             | Edinburgh          | 112       | [VERIFY]
+EIR             | Dublin             | 110       | [VERIFY]
+PAP             | Rome               | 118       | [VERIFY]
+POL             | Warsaw             | 88        | [VERIFY]
+HUN             | Budapest           | 153       | [VERIFY]
+NOV             | Novgorod           | 295       | [VERIFY]
+KYV             | Kyiv               | 284       | [VERIFY]
+PRM             | Perm               | 416       | [VERIFY]
+GLK             | Sarai/Volga        | 465       | [VERIFY]
+SIB             | Tobolsk            | 500       | [VERIFY]
+SCY             | Pontic steppe      | 350       | [VERIFY]
+MOR             | Marrakesh          | 461       | [VERIFY]
+NUM             | Carthage/Tunis     | 460       | [VERIFY]
+MAL             | Timbuktu           | 550       | [VERIFY]
+ABY             | Addis Ababa        | 620       | [VERIFY]
+IRS             | Konya/Anatolia     | 783       | [VERIFY]
+NAT             | Antioch            | 799       | [VERIFY]
+HBK             | Acre               | 801       | [VERIFY]
+TRP             | Levant interior    | 798       | [VERIFY]
+UNM             | Mountain haven     | 200       | [VERIFY]
+HRL             | Hamburg/N.Germany  | 85        | [VERIFY]
+CRT             | Targoviste         | 160       | [VERIFY]
+MAM             | Corrupted Rhineland| 790       | [VERIFY]
+BLZ             | Corrupted Greece   | 795       | [VERIFY]
+ASM             | S.Levant           | 800       | [VERIFY]
+SAM             | Mesopotamia        | 810       | [VERIFY]
+IBL             | Arabia             | 820       | [VERIFY]
+IFR             | Sahara/desert      | 830       | [VERIFY]
+MRD             | Med coast          | 740       | [VERIFY]
+LIL             | Remote desert      | 815       | [VERIFY]
+
+# =====================================================
+# KNOWN RELIABLE DH 1914 PROVINCE IDs (from vanilla):
+# These are confirmed from the DH 1914 scenario files
+# and are very unlikely to be wrong:
+# =====================================================
+# 64  = Berlin area          (GER capital in 1914)
+# 61  = London               (ENG capital)
+# 88  = Warsaw               (RUS/POL province)
+# 118 = Rome                 (ITA capital)
+# 153 = Budapest             (AUH capital)
+# 110 = Dublin area          (IRE)
+# 295 = Novgorod/Petrograd area (RUS north)
+# 284 = Kiev                 (RUS southwest)
+# =====================================================
+# INFERNAL TERRITORY NOTE:
+# Many Infernal province IDs (790-833) are placeholder
+# estimates. In vanilla DH these provinces may be in the
+# Middle East/Levant range. Use showid to find the right
+# provinces and remap as needed.
+# The key is getting the FRONT LINE right — the border
+# between Holy and Infernal territory is the most
+# important boundary in the mod.
+# =====================================================

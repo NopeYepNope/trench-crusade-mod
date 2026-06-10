@@ -1,0 +1,84 @@
+# Hebrew Knights — Leaders
+# db/leaders/HOL.txt
+#
+# A small elite order. Every leader is also a scholar.
+# Senior commanders hold both military rank and rabbinic ordination.
+# Junior officers are trained in Kabbalistic arts alongside
+# conventional warfare. The order produces few leaders but
+# exceptional ones — every commander here has earned their rank
+# in the hardest school imaginable.
+
+leader = {
+	name = "Grand Master Rabbi Yitzchak ben Shimon"
+	id = { type = 1 id = 50001 }
+	country = HOL
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1920
+	# Grand Master of the Hebrew Knights. Seventy years old. Fought
+	# in four major Infernal incursions. Author of the definitive
+	# military treatise on fighting Asmodean forces. His analysis
+	# of demonic tactics has been translated into seven languages
+	# and is studied at the Antiochene War College.
+}
+
+leader = {
+	name = "Knight-General Devorah of the Burning Sword"
+	id = { type = 1 id = 50002 }
+	country = HOL
+	rank = 3
+	skill = 5
+	traits = { offensive_doctrine infantry_leader brilliant_strategist }
+	start_year = 1900
+	end_year = 1935
+	# The finest field commander the order has produced in a century.
+	# She earned her name in the Battle of the Asmodean Gate —
+	# her unit held the breach for six hours with Golem support.
+	# She does not speak much about what she saw in those six hours.
+}
+
+leader = {
+	name = "Knight-Commander Eleazar the Inscriber"
+	id = { type = 1 id = 50003 }
+	country = HOL
+	rank = 2
+	skill = 4
+	traits = { commando guerilla_fighter }
+	start_year = 1902
+	end_year = 1932
+	# The order's foremost Golem field technician. Can inscribe a
+	# combat Golem in under four minutes. In an emergency, under two.
+	# Responsible for the Golem integration doctrine that has since
+	# been studied by the Iron Sultanate.
+}
+
+leader = {
+	name = "Admiral Miriam bat Avraham"
+	id = { type = 1 id = 50004 }
+	country = HOL
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1925
+	# Commander of the order's small coastal fleet. Her ships are
+	# entirely consecrated, from keel to masthead. Marid vessels
+	# will not approach within cannon range. She is studying why.
+}
+
+leader = {
+	name = "Knight-Captain Shmuel bar Levi, the Namer"
+	id = { type = 1 id = 50005 }
+	country = HOL
+	rank = 1
+	skill = 4
+	traits = { commando }
+	start_year = 1908
+	end_year = 1940
+	# A young officer specialising in sacred name operations — the
+	# direct application of divine names against demonic entities.
+	# Regarded as the most promising practitioner of his generation.
+	# Samael has taken a personal interest in his death.
+}

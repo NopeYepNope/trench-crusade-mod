@@ -1,0 +1,10 @@
+thanks DerStudti and Lord Rommerl, for the icons from TRP 1.03 for maps.
+
+airfield.bmp
+antiair.bmp
+coastal_fortification.bmp
+fortification.bmp
+harbour.bmp
+nuke.bmp
+radar.bmp
+rocket.bmp

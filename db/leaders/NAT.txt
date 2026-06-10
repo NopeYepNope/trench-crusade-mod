@@ -1,0 +1,88 @@
+# New Antioch — Leaders
+# db/leaders/NAT.txt
+#
+# The last Crusader state. Eight centuries of continuous war
+# has produced a military tradition unlike any other on earth.
+# Senior commanders are professional soldiers from hereditary
+# military families. Junior officers are often drawn from
+# pilgrim volunteers — passionate, unpredictable, and brave.
+
+leader = {
+	name = "Prince-Marshal Aldric de Montfort"
+	id = { type = 1 id = 10001 }
+	country = NAT
+	rank = 4				# Field Marshal
+	skill = 4
+	traits = { old_guard trickster }
+	start_year = 1900
+	end_year = 1920
+	# Heir to the de Montfort crusading tradition. Commander of all
+	# Antiochene forces since 1898. Brilliant defensive general,
+	# deeply conservative, deeply effective.
+}
+
+leader = {
+	name = "General Renaud de Lusignan"
+	id = { type = 1 id = 10002 }
+	country = NAT
+	rank = 3				# General
+	skill = 4
+	traits = { offensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1925
+	# Commander of the Northern Front. Believes the line can be pushed
+	# forward. Regularly at odds with de Montfort over this.
+}
+
+leader = {
+	name = "General Isabeau de Chastel"
+	id = { type = 1 id = 10003 }
+	country = NAT
+	rank = 3
+	skill = 3
+	traits = { defensive_doctrine }
+	start_year = 1902
+	end_year = 1930
+	# Commander of the Southern Front and the Hebrew Knights liaison.
+	# Respected across faiths for her consistent judgment.
+}
+
+leader = {
+	name = "Colonel Brother Anselm the Witchburner"
+	id = { type = 1 id = 10004 }
+	country = NAT
+	rank = 2				# Colonel
+	skill = 3
+	traits = { commando guerilla_fighter }
+	start_year = 1903
+	end_year = 1928
+	# A Hospitalier officer who specialises in supernatural field
+	# operations. His methods are unorthodox. His results are not.
+}
+
+leader = {
+	name = "Admiral Bertrand de Ibelin"
+	id = { type = 1 id = 10005 }
+	country = NAT
+	rank = 3
+	skill = 3
+	traits = { navy_chief_of_staff sea_wolf }
+	start_year = 1900
+	end_year = 1922
+	# Commander of the Antiochene coastal fleet. Has spent thirty years
+	# keeping Marid raiders out of the Levantine ports.
+}
+
+leader = {
+	name = "Lieutenant-Colonel Miriam of the Sacred Flame"
+	id = { type = 1 id = 10006 }
+	country = NAT
+	rank = 2
+	skill = 3
+	traits = { infantry_leader }
+	start_year = 1906
+	end_year = 1935
+	# A volunteer officer risen through the ranks. Leads the Pilgrim
+	# Levy integration program — getting Trench Pilgrim zealots to
+	# actually follow orders is her particular gift.
+}

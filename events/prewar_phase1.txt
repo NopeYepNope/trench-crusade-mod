@@ -1,0 +1,370 @@
+# Trench Crusade - Prewar Events Phase 1
+# events/prewar_phase1.txt
+# "The Uneasy Peace" — 1905-1907
+#
+# The front has held for decades. Everyone knows it cannot hold forever.
+# The question is not whether the war will come. The question is when,
+# and who will be ready.
+
+###############################################
+# EVENT 5001: THE LONG SILENCE BREAKS
+# Fires 1905 — opening flavor, sets the tone
+# Fires for all major powers
+###############################################
+
+event = {
+	id = 5001
+	random = yes
+	country = SER
+
+	trigger = {
+		year = 1905
+		NOT = { year = 1906 }
+		NOT = { has_country_flag = prewar_begun }
+	}
+
+	name = "Movement in the Dark"
+	desc = "The front has been quiet for eleven months. The intelligence reports that filter back from the corrupted zones speak of unusual activity — not an offensive, not yet, but something is changing in the Infernal disposition. Demon units are repositioning. Samael's death-fields are expanding. The Heretic Legion has been rotating fresh formations to the front line.\n\nEleven months of quiet. Now this.\n\nYour commanders are divided. Some believe it is preparation for a major offensive. Others believe Samael and Iblis are fighting each other again and the repositioning is defensive, not offensive. Both may be right. Neither is reassuring."
+
+	picture = "gfx/interface/evt_prewar_tension.bmp"
+
+	option = {
+		name = "Begin fortification of the forward positions."
+		set_country_flag = prewar_begun
+		set_country_flag = NAT_fortify_response
+		command = { type = defence value = 0.05 }
+		dissent = -2
+	}
+
+	option = {
+		name = "Send scouts into the corrupted zones. We need better intelligence."
+		set_country_flag = prewar_begun
+		set_country_flag = NAT_scout_response
+		command = { type = recon value = 0.05 }
+		dissent = -1
+	}
+}
+
+# Same event fires for PRU
+event = {
+	id = 5002
+	random = yes
+	country = PRU
+
+	trigger = {
+		year = 1905
+		NOT = { year = 1906 }
+		NOT = { has_country_flag = prewar_begun }
+	}
+
+	name = "Movement in the Dark"
+	desc = "Front-line reports from the Western Front. Heretic Legion formations rotating, fresh units moving up, logistics activity behind their lines. Your intelligence officers disagree on interpretation. Your generals do not — they have seen this pattern before.\n\nThe question is not whether to prepare. The question is how aggressively."
+
+	picture = "gfx/interface/evt_prewar_tension.bmp"
+
+	option = {
+		name = "Accelerate Stoßtruppen training. When they move, we move first."
+		set_country_flag = prewar_begun
+		set_country_flag = PRU_offensive_response
+		command = { type = attack value = 0.05 }
+		manpower = -5
+	}
+
+	option = {
+		name = "Strengthen the defensive line. Hold and prepare."
+		set_country_flag = prewar_begun
+		set_country_flag = PRU_defensive_response
+		command = { type = defence value = 0.05 }
+	}
+}
+
+###############################################
+# EVENT 5003: THE WARLORDS QUARREL
+# Fires 1905-1906 — Samael vs Iblis tension
+# Fires for SOV and IRQ, observed by others
+###############################################
+
+event = {
+	id = 5003
+	random = no
+	country = SOV
+
+	trigger = {
+		year = 1905
+		NOT = { year = 1907 }
+		NOT = { has_country_flag = warlord_quarrel_1 }
+	}
+
+	name = "The Old Argument"
+	desc = "Iblis has sent emissaries again. The message is the same as it has always been: the Infernal advance should be directed by Islamic theological authority, not by the Angel of Death who serves no tradition but his own.\n\nSamael has heard this argument before. He heard it when Iblis first raised his banner of pride. He heard it during the siege of Constantinople. He will hear it again.\n\nThe emissaries are returned, unharmed. The message sent back is brief: when Iblis wins a battle that Samael could not have won, his strategic opinions will be considered."
+
+	picture = "gfx/interface/evt_warlord_quarrel.bmp"
+
+	option = {
+		name = "Rebuff Iblis firmly. The Pact operates under our authority."
+		set_country_flag = warlord_quarrel_1
+		relation = { tag = IRQ value = -20 }
+		relation = { tag = GER value = 10 }
+	}
+
+	option = {
+		name = "Offer a minor concession. Unity is more valuable than dominance."
+		set_country_flag = warlord_quarrel_1
+		relation = { tag = IRQ value = 10 }
+		dissent = 5
+	}
+}
+
+event = {
+	id = 5004
+	random = no
+	country = IRQ
+
+	trigger = {
+		year = 1905
+		NOT = { year = 1907 }
+		NOT = { has_country_flag = warlord_quarrel_1 }
+	}
+
+	name = "The Angel Does Not Listen"
+	desc = "Samael's response to your emissaries was predictable. Pride responds to pride. The Angel of Death considers himself beyond counsel.\n\nThis is his weakness. He has always been too certain of his own precedence. The Iron Sultanate has held your advances for centuries not because of Samael's strategy but despite it. A more coordinated Infernal campaign would have broken them in decades.\n\nThe question is whether to push the issue or wait."
+
+	picture = "gfx/interface/evt_warlord_quarrel.bmp"
+
+	option = {
+		name = "Press the issue. Demand joint command of the next offensive."
+		set_country_flag = warlord_quarrel_1
+		relation = { tag = SOV value = -30 }
+		relation = { tag = GER value = -10 }
+	}
+
+	option = {
+		name = "Wait. Build strength. When the moment comes, we will be ready."
+		set_country_flag = warlord_quarrel_1
+		manpower = 10
+	}
+}
+
+###############################################
+# EVENT 5005: THE MARID TIGHTENS THE GRIP
+# Fires 1906 — Marid begins Mediterranean pressure
+###############################################
+
+event = {
+	id = 5005
+	random = no
+	country = YUG
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1907 }
+		NOT = { has_country_flag = marid_blockade_begins }
+	}
+
+	name = "The Tolls of the Inner Sea"
+	desc = "The Mediterranean has always been ours. But Holy shipping has grown bold in recent decades — convoys running without paying the toll, warships sailing through waters they do not own, merchants acting as if the sea between their continents is a public road.\n\nIt is not a public road. It is ours. The time has come to remind them."
+
+	picture = "gfx/interface/evt_marid_blockade.bmp"
+
+	option = {
+		name = "Begin selective interdiction of Holy Mediterranean shipping."
+		set_country_flag = marid_blockade_begins
+		relation = { tag = ENG value = -30 }
+		relation = { tag = SER value = -20 }
+		relation = { tag = PAP value = -20 }
+		relation = { tag = LIB value = -15 }
+		command = { type = naval_attack value = 0.05 }
+	}
+
+	option = {
+		name = "Not yet. Let them grow comfortable. Then we act."
+		set_country_flag = marid_blockade_begins
+		set_country_flag = marid_delayed_blockade
+	}
+}
+
+# England's response to Marid pressure
+event = {
+	id = 5006
+	random = no
+	country = ENG
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1908 }
+		NOT = { has_country_flag = eng_marid_response }
+		country = { tag = YUG has_country_flag = marid_blockade_begins }
+	}
+
+	name = "The Sea Lanes Close"
+	desc = "Three English merchant vessels have been turned back from Mediterranean routes by Marid entities. No shots fired. No damage done. Simply — stopped, inspected, and sent back the way they came with a message that the toll has not been paid.\n\nThe message from the Marid King is delivered through intermediaries: the Mediterranean is not a free sea. It has never been a free sea. England may negotiate terms for passage, or England may find other routes.\n\nAdmiral Vane's assessment: a direct naval confrontation with the Marid in Mediterranean waters would be extremely costly. The assessment does not say impossible."
+
+	picture = "gfx/interface/evt_eng_marid.bmp"
+
+	option = {
+		name = "Negotiate. We need the sea lanes. Pride is expensive."
+		set_country_flag = eng_marid_response
+		set_country_flag = eng_negotiates_marid
+		relation = { tag = YUG value = 20 }
+		dissent = 5
+	}
+
+	option = {
+		name = "Refuse. Reinforce Admiral Vane's Mediterranean Squadron."
+		set_country_flag = eng_marid_response
+		set_country_flag = eng_confronts_marid
+		relation = { tag = YUG value = -30 }
+		command = { type = naval_attack value = 0.05 }
+		manpower = -5
+	}
+}
+
+###############################################
+# EVENT 5007: LILITH'S FIRST MOVEMENT
+# Fires 1906 — early Lilith arc trigger
+# Links to lilith_arc.txt event 1000
+###############################################
+
+event = {
+	id = 5007
+	random = no
+	country = PER
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1907 }
+		NOT = { has_country_flag = LIL_arc_begun }
+	}
+
+	name = "The First Rebel Remembers"
+	desc = "She was cast out before Hell had a name.\n\nSamael's repositioning of forces on the front has, for the first time in decades, included pressure on her borders. Not an attack — a reminder. A demonstration of Pact authority. Her territory was used as a logistics corridor without her consent. Her objections were received with the polite contempt the powerful reserve for the inconvenient.\n\nShe has received polite contempt before. She was the first to receive it.\n\nShe remembers what she did about it last time."
+
+	picture = "gfx/interface/evt_lilith_remembers.bmp"
+
+	option = {
+		name = "Let them think me content. For now."
+		set_country_flag = LIL_arc_begun
+		set_country_flag = LIL_resentment_1
+		dissent = -2
+		manpower = 10
+	}
+}
+
+###############################################
+# EVENT 5008: HOLY LEAGUE TENSIONS
+# Fires 1906-1907 — Holy powers don't agree on strategy
+###############################################
+
+event = {
+	id = 5008
+	random = no
+	country = PAP
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1908 }
+		NOT = { has_country_flag = holy_league_tension_1 }
+	}
+
+	name = "The Question of the Iron Sultanate"
+	desc = "The Council of the Holy League has reached impasse on the question that has divided it for two centuries: is the Iron Sultanate truly of the Holy League, or merely an ally of convenience?\n\nThe theological argument is ancient. The practical argument is more immediate: the Sultanate's djinn contracts are, by any strict doctrinal reading, exactly the kind of supernatural practice the League has condemned in Infernal factions. The Sultanate argues this is a misreading of the contracts. The Trench Pilgrims argue it is not.\n\nThis disagreement has delayed the coordinated spring offensive by three months."
+
+	picture = "gfx/interface/evt_holy_tension.bmp"
+
+	option = {
+		name = "Rule in favour of the Sultanate. Unity requires compromise."
+		set_country_flag = holy_league_tension_1
+		relation = { tag = TUR value = 20 }
+		relation = { tag = SWI value = -15 }
+		dissent = 3
+	}
+
+	option = {
+		name = "Defer the question. The war cannot wait for theology."
+		set_country_flag = holy_league_tension_1
+		dissent = 5
+	}
+
+	option = {
+		name = "Rule against the Sultanate. Doctrinal purity is not negotiable."
+		set_country_flag = holy_league_tension_1
+		relation = { tag = TUR value = -25 }
+		relation = { tag = SWI value = 15 }
+		dissent = 8
+	}
+}
+
+###############################################
+# EVENT 5009: ABYSSINIAN EXPEDITION
+# Fires 1906-1907 — Abyssinia pushes south against SAU
+###############################################
+
+event = {
+	id = 5009
+	random = no
+	country = ETH
+
+	trigger = {
+		year = 1906
+		NOT = { year = 1908 }
+		NOT = { has_country_flag = aby_expedition }
+	}
+
+	name = "The Southern Crusade"
+	desc = "The Ifrit warlords have been raiding Abyssinian border provinces for decades — not an organised offensive but constant pressure, fire-raids that burn villages and drive populations northward. The Emperor has requested Holy League support for a punitive expedition against the Ifrit's desert strongholds.\n\nThe Holy League's response has been sympathetic and vague. Abyssinia is far from the main front. Resources are constrained.\n\nAbyssinia has decided to act anyway."
+
+	picture = "gfx/interface/evt_aby_expedition.bmp"
+
+	option = {
+		name = "Launch the southern expedition. The Emperor's patience is exhausted."
+		set_country_flag = aby_expedition
+		war = { tag = SAU }
+		relation = { tag = SAU value = -100 }
+		relation = { tag = SER value = 10 }
+		manpower = -10
+	}
+
+	option = {
+		name = "Wait for Holy League coordination. Alone we may overextend."
+		set_country_flag = aby_expedition
+		set_country_flag = aby_waits
+		dissent = 5
+		relation = { tag = SER value = 5 }
+	}
+}
+
+###############################################
+# EVENT 5010: PRUSSIAN-POLISH TENSIONS
+# Fires 1907 — Holy powers have their own disputes
+###############################################
+
+event = {
+	id = 5010
+	random = no
+	country = PRU
+
+	trigger = {
+		year = 1907
+		NOT = { year = 1909 }
+		NOT = { has_country_flag = pru_pol_tension }
+	}
+
+	name = "The Eastern Border Question"
+	desc = "The Polish-Lithuanian Commonwealth has again raised the question of Prussian troops operating in the border provinces during last year's Heretic Legion incursion without Commonwealth permission. Prussia considers this a technicality of wartime necessity. The Commonwealth considers it a violation of sovereign territory by an ally who did not ask.\n\nThis is the fourth time this argument has occurred. It will not be the last."
+
+	picture = "gfx/interface/evt_pru_pol.bmp"
+
+	option = {
+		name = "Apologise formally. Alliance cohesion matters more than pride."
+		set_country_flag = pru_pol_tension
+		relation = { tag = POL value = 15 }
+		dissent = 3
+	}
+
+	option = {
+		name = "Refuse to apologise. We were defending Holy territory."
+		set_country_flag = pru_pol_tension
+		relation = { tag = POL value = -20 }
+		dissent = -2
+	}
+}

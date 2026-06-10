@@ -1,0 +1,12 @@
+# Realm of Samael
+# Angel of Death, supreme Infernal power contender
+
+color = { 60 20 60 }
+
+graphical_culture = middle_eastern
+
+capital = 810
+
+government = totalitarian_dictatorship
+
+ideology = Infernal

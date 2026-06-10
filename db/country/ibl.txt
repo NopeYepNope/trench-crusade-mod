@@ -1,0 +1,12 @@
+# Sultanate of Iblis
+# The great Shaitan of Islamic tradition
+
+color = { 100 40 20 }
+
+graphical_culture = middle_eastern
+
+capital = 820
+
+government = totalitarian_dictatorship
+
+ideology = Infernal

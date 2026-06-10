@@ -1,0 +1,62 @@
+# HUN — Ministers
+
+minister = {
+	name = "Prime Minister Jozsef Palatinus"
+	id = { type = 2 id = 185001 }
+	country = HUN
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { man_of_the_people }
+}
+
+minister = {
+	name = "Prime Minister Jozsef Palatinus"
+	id = { type = 2 id = 185002 }
+	country = HUN
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Prime Minister Jozsef Palatinus"
+	id = { type = 2 id = 185003 }
+	country = HUN
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Prime Minister Jozsef Palatinus"
+	id = { type = 2 id = 185004 }
+	country = HUN
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Prime Minister Jozsef Palatinus"
+	id = { type = 2 id = 185005 }
+	country = HUN
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle_doctrine }
+}
+

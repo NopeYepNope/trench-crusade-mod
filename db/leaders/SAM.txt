@@ -1,0 +1,84 @@
+# Realm of Samael — Leaders
+# db/leaders/SAM.txt
+#
+# Samael does not appear on the battlefield.
+# He is the battlefield.
+# His lieutenants are lesser angels of death, named entities
+# drawn from Kabbalistic and Talmudic tradition — beings ancient
+# enough to remember the First Heresy, old enough to have been
+# present at the creation. They command because Samael allows it.
+# They obey because they have no choice.
+
+leader = {
+	name = "Azrael-Lieutenant, the Near Death"
+	id = { type = 1 id = 80001 }
+	country = SAM
+	rank = 4
+	skill = 5
+	traits = { old_guard offensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1940
+	# Not the Angel of Death itself — a fragment, a lieutenant,
+	# a portion of that power delegated to military command.
+	# Has been fighting since before the First Heresy. Has never
+	# lost a battle. Has won several that should have been impossible.
+}
+
+leader = {
+	name = "Dumah, Keeper of the Silent Dead"
+	id = { type = 1 id = 80002 }
+	country = SAM
+	rank = 3
+	skill = 4
+	traits = { defensive_doctrine infantry_leader }
+	start_year = 1900
+	end_year = 1940
+	# The angel of silence and the grave, delegated to command
+	# Samael's undying infantry. His units do not make noise.
+	# Not in advance, not in retreat, not in death. The silence
+	# they bring to the battlefield is absolute and deeply wrong.
+}
+
+leader = {
+	name = "Kafziel, the Swift Death"
+	id = { type = 1 id = 80003 }
+	country = SAM
+	rank = 3
+	skill = 5
+	traits = { offensive_doctrine cavalry_leader }
+	start_year = 1900
+	end_year = 1940
+	# Commander of the Reaper Cavalry. The fastest field commander
+	# in the Infernal Pact. His cavalry moves at speeds that violate
+	# conventional military physics. Opposing commanders have learned
+	# not to trust maps when Kafziel is in theatre.
+}
+
+leader = {
+	name = "Adriel, the Harvester-General"
+	id = { type = 1 id = 80004 }
+	country = SAM
+	rank = 2
+	skill = 4
+	traits = { artillery_specialist }
+	start_year = 1900
+	end_year = 1940
+	# Commands the Death Field Artillery. An entity that finds
+	# genuine aesthetic satisfaction in the range and precision
+	# of his weapons. His battery commanders are terrified of him.
+	# This improves their performance.
+}
+
+leader = {
+	name = "Tzaphkiel, Watcher of the Dead Sea"
+	id = { type = 1 id = 80005 }
+	country = SAM
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1940
+	# Samael's naval commander. His fleet operates in the Dead Sea
+	# and the corrupted Persian Gulf. He has an ancient grudge
+	# against the Marid. The feeling is mutual.
+}

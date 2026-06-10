@@ -1,0 +1,66 @@
+# CRT — Ministers
+# db/ministers/CRT.txt
+
+minister = {
+	name = "The Harrowed King (Voivode Vladislas)"
+	id = { type = 2 id = 110101 }
+	country = CRT
+	ideology = fascist
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1960
+	traits = { national_unity_advisor }
+	# He rules. He has always ruled.
+}
+
+minister = {
+	name = "Chamberlain-Corpse Radovan the Preserved"
+	id = { type = 2 id = 110102 }
+	country = CRT
+	ideology = fascist
+	position = foreign_minister
+	loyalty = 7
+	start_year = 1900
+	end_year = 1940
+	traits = { ideological_crusader }
+	# Manages the Court's uneasy Pact membership.
+}
+
+minister = {
+	name = "Necromancer-Minister Bogdan the Architect"
+	id = { type = 2 id = 110103 }
+	country = CRT
+	ideology = fascist
+	position = armament_minister
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { war_industrialist }
+	# The dead army requires unusual supply chains. He manages them.
+}
+
+minister = {
+	name = "Wight-Marshal Grigori the Returned"
+	id = { type = 2 id = 110104 }
+	country = CRT
+	ideology = fascist
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { decisive_battle }
+}
+
+minister = {
+	name = "Wight-Marshal Grigori the Returned"
+	id = { type = 2 id = 110105 }
+	country = CRT
+	ideology = fascist
+	position = chief_of_staff
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { school_of_defence }
+}
+

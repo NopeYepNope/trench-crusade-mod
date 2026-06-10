@@ -1,0 +1,33 @@
+# The Unmarked — Leaders
+# No ranks. No titles. Names only.
+# Some of these names are real. Some are chosen.
+# They do not distinguish between the two.
+
+leader = {
+	name = "Gideon the Nameless"
+	id = { type = 1 id = 170001 }
+	country = UNM
+	rank = 4
+	skill = 3
+	traits = { guerilla_fighter defensive_doctrine old_guard }
+	start_year = 1900
+	end_year = 1930
+	# The closest thing the Unmarked have to a commander.
+	# He would dispute the title. He has been disputing it for
+	# twenty years while quietly making all the decisions.
+}
+
+leader = {
+	name = "Three-Scar Marta"
+	id = { type = 1 id = 170002 }
+	country = UNM
+	rank = 3
+	skill = 4
+	traits = { guerilla_fighter commando infantry_leader }
+	start_year = 1900
+	end_year = 1935
+	# The Unmarked's best field commander. Has survived things
+	# that should have killed her three times. The scars are proof.
+	# She leads the warbands that operate in the no-man's-land
+	# between Holy and Infernal territory where no one else goes.
+}

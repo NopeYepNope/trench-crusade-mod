@@ -1,0 +1,56 @@
+# Court of the Harrowed King — Leaders
+# The undead commanders of the Harrowed Court.
+# They were generals once. Death improved some of them.
+
+leader = {
+	name = "The Harrowed King (Voivode Vladislas)"
+	id = { type = 1 id = 110001 }
+	country = CRT
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1960
+	# The King does not die. He has not died for three hundred years.
+	# He remembers being a man. He commands from his throne-fortress
+	# and his orders arrive by means that are not discussed.
+}
+
+leader = {
+	name = "Wight-Marshal Grigori the Returned"
+	id = { type = 1 id = 110002 }
+	country = CRT
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine infantry_leader }
+	start_year = 1900
+	end_year = 1940
+	# The field commander of the Harrowed Court's armies. Was a
+	# famous general in life. Death has made him more patient.
+}
+
+leader = {
+	name = "Countess-Colonel Erzsebet the Pale"
+	id = { type = 1 id = 110003 }
+	country = CRT
+	rank = 2
+	skill = 4
+	traits = { cavalry_leader guerilla_fighter }
+	start_year = 1902
+	end_year = 1940
+	# Commands the Wight Knight cavalry. The most feared cavalry
+	# commander on either side of the Balkans front.
+}
+
+leader = {
+	name = "Necromancer-Admiral Dorin of the Drowned Fleet"
+	id = { type = 1 id = 110004 }
+	country = CRT
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1940
+	# Commands the Harrowed Court's river and coastal fleet.
+	# His sailors do not need air. This is an advantage.
+}

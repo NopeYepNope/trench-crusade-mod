@@ -1,0 +1,24 @@
+# New Antioch
+# The last great Crusader state, holding the line against Hell in the Levant
+
+color = { 220 180 60 }		# crusader gold
+
+graphical_culture = western_european
+
+preferred_religion = catholic
+
+# Capital: New Antioch (mapped to vanilla Antioch province)
+capital = 799
+
+# Government type
+government = constitutional_monarchy
+
+# Alignment
+ideology = Holy
+
+# Factions SER can form or lead
+# - Papal States Intervention Force (POR units embedded)
+# - Expeditionary Forces of Abyssinia (ETH units embedded)
+# - Hebrew Knights (HOL as close ally)
+
+# Tags for diplomatic relations set in scenario file

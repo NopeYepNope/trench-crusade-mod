@@ -1,0 +1,29 @@
+# Ifrit Warlords — Leaders
+# Fire thinks. Fire commands. Fire does not negotiate.
+
+leader = {
+	name = "Sakhr al-Nar, the Burning Throne"
+	id = { type = 1 id = 130001 }
+	country = IFR
+	rank = 4
+	skill = 4
+	traits = { old_guard offensive_doctrine }
+	start_year = 1900
+	end_year = 1950
+	# The paramount Ifrit warlord. Commands by presence — his
+	# armies advance because standing still near him is worse.
+}
+
+leader = {
+	name = "Zarqa of the Desert Flame"
+	id = { type = 1 id = 130002 }
+	country = IFR
+	rank = 3
+	skill = 4
+	traits = { guerilla_fighter cavalry_leader offensive_doctrine }
+	start_year = 1900
+	end_year = 1945
+	# The fastest Ifrit commander. Her raids into Abyssinian
+	# and Sultanate territory are legendary for their speed
+	# and the burning they leave behind.
+}

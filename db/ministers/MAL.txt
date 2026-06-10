@@ -1,0 +1,62 @@
+# MAL — Ministers
+
+minister = {
+	name = "Grand Griot Sundiata Keita III"
+	id = { type = 2 id = 191001 }
+	country = MAL
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { national_unity_advisor }
+}
+
+minister = {
+	name = "Grand Griot Sundiata Keita III"
+	id = { type = 2 id = 191002 }
+	country = MAL
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Grand Griot Sundiata Keita III"
+	id = { type = 2 id = 191003 }
+	country = MAL
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Grand Griot Sundiata Keita III"
+	id = { type = 2 id = 191004 }
+	country = MAL
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Grand Griot Sundiata Keita III"
+	id = { type = 2 id = 191005 }
+	country = MAL
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle }
+}
+

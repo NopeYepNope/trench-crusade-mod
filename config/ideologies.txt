@@ -1,0 +1,26 @@
+# Trench Crusade - Ideology Definitions
+# Remapping vanilla DH ideologies to fit the Trench Crusade setting
+
+ideology = {
+	id = 1
+	name = "Holy"				# replaces "democratic"
+	color = { 200 180 100 }		# gold/divine
+}
+
+ideology = {
+	id = 2
+	name = "Infernal"			# replaces "fascist"
+	color = { 180 20 20 }		# deep red
+}
+
+ideology = {
+	id = 3
+	name = "Unaligned"			# replaces "neutral"
+	color = { 120 120 120 }		# grey
+}
+
+ideology = {
+	id = 4
+	name = "Heretic"			# replaces "communist" - for rebel/breakaway factions
+	color = { 80 0 80 }			# dark purple
+}

@@ -1,0 +1,12 @@
+# Kingdom of Asmodeus
+# King of Demons in Jewish tradition
+
+color = { 140 20 80 }
+
+graphical_culture = middle_eastern
+
+capital = 800
+
+government = absolute_monarchy
+
+ideology = Infernal

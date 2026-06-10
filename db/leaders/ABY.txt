@@ -1,0 +1,12 @@
+# ABY — Leaders
+
+leader = {
+	name = "Ras Hailu Tesemma"
+	id = { type = 1 id = 180000 }
+	country = ABY
+	rank = 4
+	skill = 4
+	traits = { old_guard infantry_leader }
+	start_year = 1900
+	end_year = 1930
+}

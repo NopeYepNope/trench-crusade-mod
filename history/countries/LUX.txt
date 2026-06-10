@@ -1,0 +1,32 @@
+# LUX — Country History
+# Kingdom of Marruecos
+# 1905 Start
+
+capital = 461
+manpower = 60
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 3
+	naval_tech = 2
+	air_tech = 0
+	industry_tech = 2
+	infra_tech = 2
+	supernatural_tech = 2
+}
+
+# Dissent
+dissent = 3
+
+# Industrial Capacity
+industrial_capacity = 12

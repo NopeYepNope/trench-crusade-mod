@@ -1,0 +1,12 @@
+# Czardom of Novgorod
+# Orthodox Christian northern power
+
+color = { 160 160 200 }
+
+graphical_culture = eastern_european
+
+capital = 295
+
+government = absolute_monarchy
+
+ideology = Holy

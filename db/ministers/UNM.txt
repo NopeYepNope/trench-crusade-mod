@@ -1,0 +1,41 @@
+# UNM — Ministers
+# db/ministers/UNM.txt
+
+minister = {
+	name = "Gideon the Nameless"
+	id = { type = 2 id = 170101 }
+	country = UNM
+	ideology = neutral
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { national_unity_advisor }
+	# Does not want the title. Exercises it regardless.
+}
+
+minister = {
+	name = "Three-Scar Marta"
+	id = { type = 2 id = 170102 }
+	country = UNM
+	ideology = neutral
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1935
+	traits = { decisive_battle }
+}
+
+minister = {
+	name = "The Broker (name unknown)"
+	id = { type = 2 id = 170103 }
+	country = UNM
+	ideology = neutral
+	position = foreign_minister
+	loyalty = 7
+	start_year = 1900
+	end_year = 1928
+	traits = { ideological_crusader }
+	# The Unmarked have exactly one diplomat. No one knows their real name.
+}
+

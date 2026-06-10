@@ -1,0 +1,32 @@
+# SCY — Country History
+# Scythians — cavalry specialists
+# 1905 Start
+
+capital = 350
+manpower = 80
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 3
+	naval_tech = 0
+	air_tech = 0
+	industry_tech = 1
+	infra_tech = 1
+	supernatural_tech = 2
+}
+
+# Dissent
+dissent = 3
+
+# Industrial Capacity
+industrial_capacity = 6

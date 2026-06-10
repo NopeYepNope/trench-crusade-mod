@@ -1,0 +1,66 @@
+# TRP — Ministers
+# db/ministers/TRP.txt
+
+minister = {
+	name = "High Penitent Adalric the Unbroken"
+	id = { type = 2 id = 60101 }
+	country = TRP
+	ideology = democratic
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1925
+	traits = { national_unity_advisor }
+	# The spiritual and military head of the Pilgrims.
+}
+
+minister = {
+	name = "Emissary-Penitent Scholastica the Marked"
+	id = { type = 2 id = 60102 }
+	country = TRP
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 6
+	start_year = 1900
+	end_year = 1924
+	traits = { ideological_crusader }
+	# Represents the Pilgrims in Holy League councils. Frequently horrifies other delegations.
+}
+
+minister = {
+	name = "Provision-Master Lazarus the Supply"
+	id = { type = 2 id = 60103 }
+	country = TRP
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1928
+	traits = { administrative_genius }
+	# Keeps the Pilgrim host armed and moving. Miracle worker in the logistical sense.
+}
+
+minister = {
+	name = "Inquisitor Torquato the Pure"
+	id = { type = 2 id = 60104 }
+	country = TRP
+	ideology = democratic
+	position = minister_of_security
+	loyalty = 10
+	start_year = 1900
+	end_year = 1930
+	traits = { secret_police_chief }
+}
+
+minister = {
+	name = "War-Saint Hildegund the Flagellant"
+	id = { type = 2 id = 60105 }
+	country = TRP
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1928
+	traits = { decisive_battle }
+}
+

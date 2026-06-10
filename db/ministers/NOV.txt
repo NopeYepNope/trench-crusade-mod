@@ -1,0 +1,62 @@
+# NOV — Ministers
+
+minister = {
+	name = "Chief Counsellor Boris Nevsky"
+	id = { type = 2 id = 186001 }
+	country = NOV
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { national_unity_advisor }
+}
+
+minister = {
+	name = "Chief Counsellor Boris Nevsky"
+	id = { type = 2 id = 186002 }
+	country = NOV
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Chief Counsellor Boris Nevsky"
+	id = { type = 2 id = 186003 }
+	country = NOV
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Chief Counsellor Boris Nevsky"
+	id = { type = 2 id = 186004 }
+	country = NOV
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Chief Counsellor Boris Nevsky"
+	id = { type = 2 id = 186005 }
+	country = NOV
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle }
+}
+

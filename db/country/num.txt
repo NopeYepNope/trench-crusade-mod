@@ -1,0 +1,12 @@
+# Kingdom of Numidia
+# North African Holy kingdom
+
+color = { 200 180 80 }
+
+graphical_culture = middle_eastern
+
+capital = 460
+
+government = absolute_monarchy
+
+ideology = Holy

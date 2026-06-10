@@ -1,0 +1,24 @@
+# Lilith
+# The First Rebel. Cast out before Hell was Hell.
+# Starts as an Infernal-aligned demonic warlord but
+# through events can break away and form an independent faction.
+# The most unpredictable power in the game.
+
+color = { 120 0 160 }		# deep violet - neither Holy gold nor Infernal red
+
+graphical_culture = middle_eastern
+
+# Capital: in the deep desert, mapped to a remote Middle East province
+capital = 812
+
+government = tribal_dictatorship	# placeholder - replaced by unique gov type via event
+
+ideology = Infernal				# starting alignment - can shift to Unaligned via events
+
+# Key event flags:
+# LIL_resentment		- tracks Lilith's growing independence
+# LIL_schism			- triggered when she breaks from Infernal bloc
+# LIL_third_path		- triggered if she allies with Unmarked or Holy powers
+# LIL_crushed			- triggered if Infernal powers suppress her rebellion
+
+# See events/lilith_arc.txt for full event chain

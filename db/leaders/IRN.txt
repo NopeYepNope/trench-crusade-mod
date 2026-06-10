@@ -1,0 +1,32 @@
+# Kingdom of Asmodeus — Leaders
+# The King of Demons commands through wrath and desire.
+# His generals are his most devoted servants —
+# which is not a comfortable position to be in.
+
+leader = {
+	name = "Asmodai the Bound, First General"
+	id = { type = 1 id = 160001 }
+	country = IRN
+	rank = 4
+	skill = 5
+	traits = { old_guard offensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1940
+	# The eldest of Asmodeus's named generals. Ancient, powerful,
+	# and seething with barely-contained rage. His assaults on
+	# Hebrew Knight positions are personal. They know why.
+}
+
+leader = {
+	name = "Lilitu, the Other Night Wind"
+	id = { type = 1 id = 160002 }
+	country = IRN
+	rank = 3
+	skill = 4
+	traits = { guerilla_fighter commando }
+	start_year = 1900
+	end_year = 1940
+	# Not of Lilith's line — a different kind of night entity,
+	# serving Asmodeus. Commands infiltration operations.
+	# The similarity of names causes confusion that she exploits.
+}

@@ -1,0 +1,12 @@
+# Domain of Mammon
+# Demon of greed, industrial Infernal power
+
+color = { 120 100 20 }
+
+graphical_culture = middle_eastern
+
+capital = 790
+
+government = totalitarian_dictatorship
+
+ideology = Infernal

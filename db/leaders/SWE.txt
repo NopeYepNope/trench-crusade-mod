@@ -1,0 +1,72 @@
+# Trench Pilgrims — Leaders
+# db/leaders/SWE.txt
+#
+# The Pilgrims do not have a conventional military hierarchy.
+# They have a spiritual one. Rank is earned by suffering,
+# demonstration of faith, and the approval of those who have
+# suffered more. Senior leaders are ancient, scarred, and
+# terrifying. Junior leaders are passionate volunteers who
+# have given up everything and come to the front to die well.
+# The miracle is how often they don't.
+
+leader = {
+	name = "High Penitent Adalric the Unbroken"
+	id = { type = 1 id = 60001 }
+	country = SWE
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine infantry_leader }
+	start_year = 1900
+	end_year = 1925
+	# Has led the First Pilgrimage for thirty years. His body bears
+	# the marks of forty years of penance and thirty years of war.
+	# He does not eat. He does not sleep more than two hours.
+	# He is always at the front. No one has ever seen him afraid.
+}
+
+leader = {
+	name = "War-Saint Hildegund the Flagellant"
+	id = { type = 1 id = 60002 }
+	country = SWE
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine infantry_leader }
+	start_year = 1900
+	end_year = 1928
+	# Commander of the assault Pilgrim warbands. She believes the
+	# best way to serve God is to push the front forward by any
+	# means necessary. Her methods alarm the Antiochene command.
+	# Her results are undeniable.
+}
+
+leader = {
+	name = "Blessed Vespasian, Carrier of the Holy Wound"
+	id = { type = 1 id = 60003 }
+	country = SWE
+	rank = 2
+	skill = 3
+	traits = { infantry_leader guerilla_fighter }
+	start_year = 1903
+	end_year = 1930
+	# A stigmatic whose wounds do not heal and do not kill him.
+	# He has been in continuous combat for eleven years. The
+	# soldiers he leads fight with extraordinary ferocity — whether
+	# from inspiration or from shame that he is still standing
+	# when they might not be.
+}
+
+leader = {
+	name = "Brother-Captain Anatolius the Twice-Dead"
+	id = { type = 1 id = 60004 }
+	country = SWE
+	rank = 2
+	skill = 3
+	traits = { commando }
+	start_year = 1905
+	end_year = 1935
+	# The Pilgrims do not keep records of what happened to him
+	# twice. He has not explained. He commands the Pilgrim
+	# special operations warbands — deep penetration missions
+	# into corrupted territory that no conventional soldier
+	# would survive and no Pilgrim expects to.
+}

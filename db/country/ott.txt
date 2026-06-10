@@ -1,0 +1,3 @@
+# Ottoman/Asmodeus stub
+color = { 140 20 80 }
+graphical_culture = middle_eastern

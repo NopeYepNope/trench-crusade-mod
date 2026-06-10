@@ -1,0 +1,62 @@
+# MOR — Ministers
+
+minister = {
+	name = "Grand Vizier Abdullah ibn Yusuf"
+	id = { type = 2 id = 189001 }
+	country = MOR
+	ideology = democratic
+	position = head_of_government
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { national_unity_advisor }
+}
+
+minister = {
+	name = "Grand Vizier Abdullah ibn Yusuf"
+	id = { type = 2 id = 189002 }
+	country = MOR
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { ideological_crusader }
+}
+
+minister = {
+	name = "Grand Vizier Abdullah ibn Yusuf"
+	id = { type = 2 id = 189003 }
+	country = MOR
+	ideology = democratic
+	position = armament_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { administrative_genius }
+}
+
+minister = {
+	name = "Grand Vizier Abdullah ibn Yusuf"
+	id = { type = 2 id = 189004 }
+	country = MOR
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Grand Vizier Abdullah ibn Yusuf"
+	id = { type = 2 id = 189005 }
+	country = MOR
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 8
+	start_year = 1900
+	end_year = 1930
+	traits = { decisive_battle }
+}
+

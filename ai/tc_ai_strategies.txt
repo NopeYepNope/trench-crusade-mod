@@ -1,0 +1,468 @@
+# Trench Crusade - AI Strategy Files
+# ai/tc_ai_strategies.txt
+#
+# AI behavior for each major faction.
+# DH AI uses strategy files to set build priorities,
+# diplomatic behavior, and military focus.
+
+# ============================================================
+# NEW ANTIOCH (SER)
+# Defensive, front-line focused, builds Paladins and engineers
+# Prioritises supernatural tech and fortification
+# ============================================================
+
+country_ai = {
+	tag = SER
+
+	# Build priorities
+	unit_build_priority = {
+		infantry = 3
+		engineer = 4		# fortification priority
+		artillery = 3
+		paladin = 5		# highest priority unique unit
+		pilgrim_levy = 2
+	}
+
+	# Tech priorities
+	tech_build_priority = {
+		land_doctrine = 4
+		supernatural = 5	# divine mysteries first
+		industry = 3
+		infra = 4
+		naval = 1
+		air = 2
+	}
+
+	# Doctrine choice — Permanence
+	ai_doctrine_land = permanence
+	ai_doctrine_naval = coastal
+	ai_doctrine_air = intercept
+
+	# Diplomatic behavior
+	diplomatic = {
+		# Always ally with Holy powers
+		ally_with = { HOL SWI PAP ENG }
+		# Maintain peace with TUR despite tension
+		non_aggression = { TUR }
+		# Never ally Infernal
+		never_ally = { GER SOV IRQ ITA GRE BUL IRN SAU YUG }
+	}
+
+	# Military focus
+	military = {
+		focus = defence
+		offensive_trigger = {
+			# Only advance if the front is heavily fortified
+			has_country_flag = NAT_fortify_response
+		}
+	}
+}
+
+# ============================================================
+# FREE STATE OF PRUSSIA (PRU)
+# Aggressive, Stoßtruppen focused, prioritises land tech
+# Will push offensive operations even at cost
+# ============================================================
+
+country_ai = {
+	tag = PRU
+
+	unit_build_priority = {
+		infantry = 4
+		assault_infantry = 5
+		stosstruppen = 5
+		artillery = 4
+		gas_troops = 3
+		engineer = 2
+	}
+
+	tech_build_priority = {
+		land_doctrine = 5
+		industry = 5
+		infra = 4
+		air = 3
+		supernatural = 2
+		naval = 2
+	}
+
+	ai_doctrine_land = movement
+	ai_doctrine_naval = fleet_in_being
+	ai_doctrine_air = cas
+
+	diplomatic = {
+		ally_with = { SER ENG POL }
+		non_aggression = { ALB NOR HON }
+		never_ally = { GER SOV IRQ ITA GRE BUL IRN SAU YUG }
+	}
+
+	military = {
+		focus = offence
+		# PRU always pushes when ready
+		minimum_attack_org = 40
+	}
+}
+
+# ============================================================
+# ENGLAND (ENG)
+# Naval supremacy, global reach, balanced land
+# Will negotiate with Marid before fighting
+# ============================================================
+
+country_ai = {
+	tag = ENG
+
+	unit_build_priority = {
+		infantry = 3
+		light_infantry = 3
+		battleship = 4
+		cruiser = 4
+		destroyer = 5
+		submarine = 2
+	}
+
+	tech_build_priority = {
+		naval = 5
+		industry = 5
+		infra = 4
+		land = 3
+		air = 3
+		supernatural = 2
+	}
+
+	ai_doctrine_land = engagement
+	ai_doctrine_naval = fleet_in_being
+	ai_doctrine_air = intercept
+
+	diplomatic = {
+		ally_with = { SER ALB NOR }
+		# England will try to negotiate with Marid first
+		non_aggression = { YUG }
+		never_ally = { GER SOV IRQ ITA GRE BUL IRN SAU }
+	}
+
+	military = {
+		focus = naval
+		naval_dominance = yes
+	}
+}
+
+# ============================================================
+# IRON SULTANATE (TUR)
+# Defensive wall, alchemical focus, djinn auxiliaries
+# Manages tense Holy League relations carefully
+# ============================================================
+
+country_ai = {
+	tag = TUR
+
+	unit_build_priority = {
+		infantry = 4
+		artillery = 4
+		djinn_auxiliary = 5
+		cavalry = 3
+		engineer = 3
+	}
+
+	tech_build_priority = {
+		supernatural = 5	# esoteric science
+		land = 4
+		infra = 5		# geometric fortification
+		industry = 3
+		naval = 3
+		air = 2
+	}
+
+	ai_doctrine_land = permanence
+	ai_doctrine_naval = mystical
+	ai_doctrine_air = cas
+
+	diplomatic = {
+		ally_with = { SER HOL }
+		non_aggression = { PAP POL }
+		never_ally = { IRQ SAU SOV ITA GRE IRN }
+	}
+
+	military = {
+		focus = defence
+		# Holds the Iron Wall at all costs
+		never_retreat_from_capital = yes
+	}
+}
+
+# ============================================================
+# HEBREW KNIGHTS (HOL)
+# Elite small force, Golem focused, supernatural specialists
+# ============================================================
+
+country_ai = {
+	tag = HOL
+
+	unit_build_priority = {
+		golem_infantry = 5
+		paladin = 4
+		infantry = 2
+		blessed_scout_company = 3
+	}
+
+	tech_build_priority = {
+		supernatural = 5	# kabbalistic arts
+		land = 4
+		infra = 3
+		industry = 2
+		naval = 2
+		air = 1
+	}
+
+	ai_doctrine_land = ritual
+	ai_doctrine_naval = coastal
+	ai_doctrine_air = intercept
+
+	diplomatic = {
+		ally_with = { SER TUR }
+		# Cautious with SWI — theological tensions
+		non_aggression = { SWI ENG PAP }
+		never_ally = { IRN SOV IRQ ITA GRE GER BUL }
+	}
+
+	military = {
+		focus = quality_over_quantity
+		# Never mass-build — always elite
+		max_unit_count = 20
+	}
+}
+
+# ============================================================
+# HERETIC LEGION (GER)
+# Mirror of Prussia — aggressive, industrial, Infernal
+# ============================================================
+
+country_ai = {
+	tag = GER
+
+	unit_build_priority = {
+		infantry = 4
+		daemon_engine = 5
+		artillery = 5
+		assault_infantry = 4
+	}
+
+	tech_build_priority = {
+		land = 5
+		industry = 5
+		supernatural = 4	# profane arts
+		air = 3
+		infra = 3
+		naval = 2
+	}
+
+	ai_doctrine_land = movement
+	ai_doctrine_naval = indirect
+	ai_doctrine_air = devastation
+
+	diplomatic = {
+		ally_with = { SOV ITA BUL }
+		never_ally = { SER PRU ENG TUR HOL SWI }
+		# Monitors Lilith carefully
+		non_aggression = { PER }
+	}
+
+	military = {
+		focus = offence
+		# Will launch coordinated offensives with SOV
+		coordinate_with = { SOV }
+	}
+}
+
+# ============================================================
+# REALM OF SAMAEL (SOV)
+# Supreme Infernal power — demands coordination
+# Aggressive planner, long-term strategy
+# ============================================================
+
+country_ai = {
+	tag = SOV
+
+	unit_build_priority = {
+		undying_infantry = 5
+		reaper_cavalry = 4
+		death_field_battery = 4
+		infantry = 2
+	}
+
+	tech_build_priority = {
+		supernatural = 6	# absolute priority
+		land = 5
+		air = 3
+		industry = 3
+		naval = 2
+		infra = 2
+	}
+
+	ai_doctrine_land = total_destruction
+	ai_doctrine_naval = fleet_in_being
+	ai_doctrine_air = devastation
+
+	diplomatic = {
+		# Tries to lead the Infernal Pact
+		ally_with = { GER IRQ ITA GRE IRN BUL SAU }
+		# Tolerates Lilith until schism
+		non_aggression = { PER }
+		# Attempts to crush Lilith after schism
+		declare_war_trigger = {
+			tag = PER
+			has_country_flag = LIL_schism
+			has_country_flag = SAM_lilith_deferred
+			NOT = { year = 1914 }
+		}
+		never_ally = { SER PRU ENG TUR HOL SWI }
+	}
+
+	military = {
+		focus = offence
+		# Coordinates all Infernal offensives
+		supreme_command = yes
+	}
+}
+
+# ============================================================
+# DOMINION OF THE MARID (YUG)
+# Naval supremacy, blockade focus, avoids land war
+# Will negotiate terms with Holy powers for passage fees
+# ============================================================
+
+country_ai = {
+	tag = YUG
+
+	unit_build_priority = {
+		storm_warship = 5
+		destroyer = 4
+		submarine = 4
+		cruiser = 3
+		wind_rider = 4
+		sea_creature_auxiliary = 5
+		infantry = 1		# minimal land forces
+	}
+
+	tech_build_priority = {
+		naval = 6		# absolute priority
+		supernatural = 5	# sea dominion
+		air = 3
+		industry = 3
+		land = 1		# low priority
+		infra = 2
+	}
+
+	ai_doctrine_land = permanence	# hold islands defensively
+	ai_doctrine_naval = mystical	# sea dominion branch
+	ai_doctrine_air = intercept
+
+	diplomatic = {
+		# Allied with Infernal but not enthusiastically
+		ally_with = { IRQ SOV }
+		# Will negotiate with Holy if they pay
+		non_aggression = { ENG SER NOR }
+		# Particular hatred of HOL blessed navy
+		target = { HOL }
+	}
+
+	military = {
+		focus = naval
+		# Never invades mainland territories
+		no_land_invasion = yes
+		# Maintains blockade of all Holy Mediterranean shipping
+		blockade_target = { ENG SER PAP LIB LUX }
+	}
+}
+
+# ============================================================
+# DOMAIN OF LILITH (PER)
+# Starts Infernal — shifts to Unaligned via events
+# Uses shapeshifter tactics, avoids pitched battles
+# ============================================================
+
+country_ai = {
+	tag = PER
+
+	unit_build_priority = {
+		shapeshifter_scout = 5
+		light_infantry = 4
+		infantry = 2
+		rebel_djinn = 4		# after schism
+	}
+
+	tech_build_priority = {
+		supernatural = 5
+		land = 4
+		infra = 2
+		industry = 2
+		naval = 2
+		air = 2
+	}
+
+	ai_doctrine_land = engagement
+	ai_doctrine_naval = indirect
+	ai_doctrine_air = cas
+
+	diplomatic = {
+		# Starts Infernal — allied with Pact
+		start_allied = { SOV IRQ GER }
+		# Will shift to Unmarked alliance post schism
+		post_schism_ally = { AFG }
+		# Cautious with Holy powers even post schism
+		non_aggression = { SER TUR HOL }
+	}
+
+	military = {
+		focus = guerrilla
+		# Never mass-builds — surgical force
+		prefer_quality = yes
+	}
+}
+
+# ============================================================
+# THE UNMARKED (AFG)
+# Guerrilla only, never fights pitched battles
+# Potential ally of Lilith post-schism
+# ============================================================
+
+country_ai = {
+	tag = AFG
+
+	unit_build_priority = {
+		light_infantry = 5
+		infantry = 3
+		militia = 2
+	}
+
+	tech_build_priority = {
+		land = 3
+		supernatural = 4	# occult lore
+		infra = 2
+		industry = 1
+		naval = 1
+		air = 0
+	}
+
+	ai_doctrine_land = engagement
+	ai_doctrine_naval = indirect
+	ai_doctrine_air = cas
+
+	diplomatic = {
+		# Avoids all alliances initially
+		start_neutral = yes
+		# Will ally Lilith post schism
+		ally_trigger = {
+			tag = PER
+			has_country_flag = LIL_schism
+		}
+		# Never allies major powers on either side
+		never_ally = { SER PRU ENG SOV GER IRQ ITA }
+	}
+
+	military = {
+		focus = survival
+		# Never declare war — only defend or raid
+		no_declare_war = yes
+		raid_targets = { GER SOV GRE }
+	}
+}

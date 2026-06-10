@@ -1,0 +1,757 @@
+# Trench Crusade - Naval and Air Units
+# db/units/naval_air_units.txt
+
+# ============================================================
+# NAVAL UNITS — BASE (all factions)
+# ============================================================
+
+unit = {
+	name = "Destroyer"
+	type = naval
+	model = 0
+
+	default_organisation = 30
+	morale = 6.0
+
+	max_speed = 35
+	visibility = 50
+
+	# Combat
+	naval_attack = 3
+	naval_defense = 2
+	sub_attack = 5
+	sub_defense = 3
+	shore_bombardment = 2
+	convoy_attack = 4
+	convoy_defense = 3
+	sea_transport = 0
+	min_sea_level = 1
+
+	supply_consumption = 0.15
+	fuel_consumption = 0.50
+
+	build_time = 180
+	manpower = 150
+	ic_cost = 12
+}
+
+unit = {
+	name = "Transport"
+	type = naval
+	model = 0
+
+	default_organisation = 15
+	morale = 3.0
+
+	max_speed = 18
+	visibility = 70
+
+	naval_attack = 0
+	naval_defense = 1
+	sub_attack = 0
+	sub_defense = 1
+	shore_bombardment = 0
+	convoy_attack = 0
+	convoy_defense = 0
+	sea_transport = 10
+	min_sea_level = 1
+
+	supply_consumption = 0.10
+	fuel_consumption = 0.30
+
+	build_time = 120
+	manpower = 100
+	ic_cost = 6
+}
+
+unit = {
+	name = "Cruiser"
+	type = naval
+	model = 0
+
+	default_organisation = 35
+	morale = 6.5
+
+	max_speed = 28
+	visibility = 60
+
+	naval_attack = 6
+	naval_defense = 5
+	sub_attack = 3
+	sub_defense = 4
+	shore_bombardment = 5
+	convoy_attack = 6
+	convoy_defense = 5
+	sea_transport = 0
+	min_sea_level = 2
+
+	supply_consumption = 0.25
+	fuel_consumption = 0.80
+
+	build_time = 270
+	manpower = 300
+	ic_cost = 20
+}
+
+unit = {
+	name = "Battleship"
+	type = naval
+	model = 0
+
+	default_organisation = 40
+	morale = 7.0
+
+	max_speed = 20
+	visibility = 80
+
+	naval_attack = 15
+	naval_defense = 12
+	sub_attack = 2
+	sub_defense = 3
+	shore_bombardment = 12
+	convoy_attack = 5
+	convoy_defense = 8
+	sea_transport = 0
+	min_sea_level = 3
+
+	supply_consumption = 0.45
+	fuel_consumption = 1.50
+
+	build_time = 540
+	manpower = 600
+	ic_cost = 40
+}
+
+unit = {
+	name = "Submarine"
+	type = naval
+	model = 0
+
+	default_organisation = 25
+	morale = 7.0
+
+	max_speed = 12
+	visibility = 20		# hard to detect
+
+	naval_attack = 5
+	naval_defense = 2
+	sub_attack = 0
+	sub_defense = 5
+	shore_bombardment = 0
+	convoy_attack = 12
+	convoy_defense = 0
+	sea_transport = 0
+	min_sea_level = 1
+	is_submarine = yes
+
+	supply_consumption = 0.15
+	fuel_consumption = 0.40
+
+	build_time = 240
+	manpower = 100
+	ic_cost = 18
+}
+
+# ============================================================
+# DREADNOUGHT (Fleet in Being doctrine — all factions)
+# ============================================================
+
+unit = {
+	name = "Dreadnought"
+	type = naval
+	model = 1
+
+	default_organisation = 50
+	morale = 8.0
+
+	max_speed = 22
+	visibility = 90
+
+	naval_attack = 25
+	naval_defense = 20
+	sub_attack = 3
+	sub_defense = 5
+	shore_bombardment = 20
+	convoy_attack = 8
+	convoy_defense = 12
+	sea_transport = 0
+	min_sea_level = 3
+
+	supply_consumption = 0.70
+	fuel_consumption = 2.50
+
+	build_time = 730
+	manpower = 1000
+	ic_cost = 65
+}
+
+# ============================================================
+# CORSAIR RAIDER (Indirect Approach doctrine)
+# Fast, predatory, lightly armed
+# ============================================================
+
+unit = {
+	name = "Corsair Raider"
+	type = naval
+	model = 1
+
+	default_organisation = 28
+	morale = 7.5
+
+	max_speed = 40
+	visibility = 35
+
+	naval_attack = 4
+	naval_defense = 2
+	sub_attack = 2
+	sub_defense = 2
+	shore_bombardment = 1
+	convoy_attack = 15
+	convoy_defense = 2
+	sea_transport = 0
+	min_sea_level = 1
+
+	supply_consumption = 0.12
+	fuel_consumption = 0.60
+
+	build_time = 150
+	manpower = 120
+	ic_cost = 10
+}
+
+# ============================================================
+# AMPHIBIOUS ASSAULT CRAFT (Coastal doctrine)
+# ============================================================
+
+unit = {
+	name = "Amphibious Assault Craft"
+	type = naval
+	model = 1
+
+	default_organisation = 20
+	morale = 5.0
+
+	max_speed = 15
+	visibility = 55
+
+	naval_attack = 3
+	naval_defense = 3
+	sub_attack = 0
+	sub_defense = 1
+	shore_bombardment = 6
+	convoy_attack = 0
+	convoy_defense = 2
+	sea_transport = 5
+	min_sea_level = 1
+	amphibious = yes
+
+	supply_consumption = 0.20
+	fuel_consumption = 0.50
+
+	build_time = 200
+	manpower = 200
+	ic_cost = 16
+}
+
+# ============================================================
+# MARID-SPECIFIC NAVAL UNITS
+# ============================================================
+
+unit = {
+	name = "Storm Warship"
+	type = naval
+	model = 2
+
+	default_organisation = 45
+	morale = 9.0
+
+	max_speed = 30
+	visibility = 40		# operates within storm systems — hard to spot
+
+	naval_attack = 18
+	naval_defense = 15
+	sub_attack = 8
+	sub_defense = 10
+	shore_bombardment = 15
+	convoy_attack = 10
+	convoy_defense = 10
+	sea_transport = 0
+	min_sea_level = 2
+
+	supply_consumption = 0.40
+	fuel_consumption = 1.20
+
+	build_time = 400
+	manpower = 400
+	ic_cost = 45
+
+	allowed_brigades = { MRD }
+}
+
+unit = {
+	name = "Sea Creature Auxiliary"
+	type = naval
+	model = 2
+
+	default_organisation = 35
+	morale = 8.0
+
+	max_speed = 25
+	visibility = 15		# hard to detect — it's a sea creature
+
+	naval_attack = 10
+	naval_defense = 8
+	sub_attack = 15		# excellent vs submarines — it lives down there
+	sub_defense = 5
+	shore_bombardment = 5
+	convoy_attack = 20
+	convoy_defense = 0
+	sea_transport = 0
+	min_sea_level = 1
+	is_submarine = yes	# operates below surface
+
+	supply_consumption = 0.20	# contract maintenance
+	fuel_consumption = 0
+
+	build_time = 180
+	manpower = 0
+	ic_cost = 20
+
+	# Available to Mystical doctrine factions
+	allowed_brigades = { MRD IRS HRL SAM UNM LIL IBL IFR }
+}
+
+# ============================================================
+# HOLY/INFERNAL APEX NAVAL UNITS
+# ============================================================
+
+unit = {
+	name = "Grand Armada Flagship"
+	type = naval
+	model = 3
+
+	default_organisation = 65
+	morale = 10.0
+
+	max_speed = 20
+	visibility = 100		# it WANTS to be seen — psychological dominance
+
+	naval_attack = 35
+	naval_defense = 30
+	sub_attack = 5
+	sub_defense = 8
+	shore_bombardment = 28
+	convoy_attack = 10
+	convoy_defense = 15
+	sea_transport = 0
+	min_sea_level = 4
+
+	supply_consumption = 1.00
+	fuel_consumption = 4.00
+
+	build_time = 1095	# three years
+	manpower = 2000
+	ic_cost = 120
+}
+
+# ============================================================
+# AIR UNITS — BASE (all factions)
+# ============================================================
+
+unit = {
+	name = "Observation Balloon"
+	type = air
+	model = 0
+
+	default_organisation = 20
+	morale = 4.0
+
+	max_speed = 1		# tethered
+	range = 0
+
+	air_attack = 0
+	air_defense = 1
+	ground_attack = 0
+	naval_attack = 0
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 3	# excellent observation
+	sub_detection = 0
+	air_detection = 0
+
+	supply_consumption = 0.05
+	fuel_consumption = 0.10
+
+	build_time = 60
+	manpower = 50
+	ic_cost = 3
+}
+
+unit = {
+	name = "Military Zeppelin"
+	type = air
+	model = 0
+
+	default_organisation = 25
+	morale = 5.0
+
+	max_speed = 80
+	range = 2500
+
+	air_attack = 1
+	air_defense = 2
+	ground_attack = 3
+	naval_attack = 2
+	strategic_attack = 4
+	tactical_bombing = 2
+
+	surface_detection = 4
+	sub_detection = 2
+	air_detection = 1
+
+	supply_consumption = 0.15
+	fuel_consumption = 0.40
+
+	build_time = 180
+	manpower = 100
+	ic_cost = 15
+}
+
+unit = {
+	name = "Triplane Fighter"
+	type = air
+	model = 0
+
+	default_organisation = 30
+	morale = 6.5
+
+	max_speed = 160
+	range = 400
+
+	air_attack = 5
+	air_defense = 3
+	ground_attack = 1
+	naval_attack = 0
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 1
+	sub_detection = 0
+	air_detection = 3
+
+	supply_consumption = 0.08
+	fuel_consumption = 0.25
+
+	build_time = 90
+	manpower = 50
+	ic_cost = 8
+}
+
+unit = {
+	name = "Quadplane Fighter"
+	type = air
+	model = 1
+
+	default_organisation = 35
+	morale = 7.0
+
+	max_speed = 200
+	range = 500
+
+	air_attack = 8
+	air_defense = 5
+	ground_attack = 2
+	naval_attack = 0
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 1
+	sub_detection = 0
+	air_detection = 4
+
+	supply_consumption = 0.10
+	fuel_consumption = 0.30
+
+	build_time = 120
+	manpower = 50
+	ic_cost = 12
+}
+
+unit = {
+	name = "Bomber Zeppelin"
+	type = air
+	model = 1
+
+	default_organisation = 25
+	morale = 5.5
+
+	max_speed = 90
+	range = 3000
+
+	air_attack = 1
+	air_defense = 2
+	ground_attack = 5
+	naval_attack = 4
+	strategic_attack = 10
+	tactical_bombing = 5
+
+	surface_detection = 4
+	sub_detection = 2
+	air_detection = 1
+
+	supply_consumption = 0.25
+	fuel_consumption = 0.60
+
+	build_time = 240
+	manpower = 150
+	ic_cost = 25
+}
+
+unit = {
+	name = "Tactical Bomber"
+	type = air
+	model = 1
+
+	default_organisation = 28
+	morale = 6.0
+
+	max_speed = 150
+	range = 600
+
+	air_attack = 2
+	air_defense = 3
+	ground_attack = 8
+	naval_attack = 3
+	strategic_attack = 3
+	tactical_bombing = 8
+
+	surface_detection = 2
+	sub_detection = 1
+	air_detection = 2
+
+	supply_consumption = 0.12
+	fuel_consumption = 0.35
+
+	build_time = 150
+	manpower = 100
+	ic_cost = 18
+}
+
+unit = {
+	name = "Quadplane Bomber"
+	type = air
+	model = 2
+
+	default_organisation = 30
+	morale = 6.5
+
+	max_speed = 170
+	range = 800
+
+	air_attack = 2
+	air_defense = 3
+	ground_attack = 6
+	naval_attack = 5
+	strategic_attack = 12
+	tactical_bombing = 6
+
+	surface_detection = 2
+	sub_detection = 1
+	air_detection = 2
+
+	supply_consumption = 0.15
+	fuel_consumption = 0.45
+
+	build_time = 180
+	manpower = 120
+	ic_cost = 22
+}
+
+unit = {
+	name = "Escort Fighter"
+	type = air
+	model = 2
+
+	default_organisation = 35
+	morale = 7.5
+
+	max_speed = 195
+	range = 700
+
+	air_attack = 7
+	air_defense = 6
+	ground_attack = 2
+	naval_attack = 0
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 1
+	sub_detection = 0
+	air_detection = 4
+
+	supply_consumption = 0.12
+	fuel_consumption = 0.35
+
+	build_time = 150
+	manpower = 50
+	ic_cost = 14
+}
+
+unit = {
+	name = "Quadplane Interceptor"
+	type = air
+	model = 2
+
+	default_organisation = 30
+	morale = 7.5
+
+	max_speed = 220		# fastest conventional aircraft
+	range = 350		# short range — defensive only
+
+	air_attack = 10
+	air_defense = 6
+	ground_attack = 0
+	naval_attack = 0
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 0
+	sub_detection = 0
+	air_detection = 5
+
+	supply_consumption = 0.10
+	fuel_consumption = 0.30
+
+	build_time = 120
+	manpower = 50
+	ic_cost = 13
+}
+
+# ============================================================
+# FACTION-SPECIFIC AIR APEX UNITS
+# ============================================================
+
+unit = {
+	name = "Angelic Air Patrol"
+	type = air
+	model = 3
+
+	default_organisation = 50
+	morale = 10.0
+
+	max_speed = 300
+	range = 1000
+
+	air_attack = 15
+	air_defense = 12
+	ground_attack = 5
+	naval_attack = 3
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 3
+	sub_detection = 0
+	air_detection = 8
+
+	supply_consumption = 0.20
+	fuel_consumption = 0		# divine power, not fuel
+
+	build_time = 365
+	manpower = 0
+	ic_cost = 40
+}
+
+unit = {
+	name = "Bound Demon Air Patrol"
+	type = air
+	model = 3
+
+	default_organisation = 40
+	morale = 10.0
+
+	max_speed = 350
+	range = 800
+
+	air_attack = 18
+	air_defense = 10
+	ground_attack = 3
+	naval_attack = 2
+	strategic_attack = 0
+	tactical_bombing = 0
+
+	surface_detection = 2
+	sub_detection = 0
+	air_detection = 9
+
+	supply_consumption = 0.30
+	fuel_consumption = 0
+
+	build_time = 300
+	manpower = 0
+	ic_cost = 45
+}
+
+unit = {
+	name = "Hellstorm Zeppelin"
+	type = air
+	model = 3
+
+	default_organisation = 20
+	morale = 8.0
+
+	max_speed = 70
+	range = 4000
+
+	air_attack = 0
+	air_defense = 3
+	ground_attack = 8
+	naval_attack = 6
+	strategic_attack = 20	# devastating strategic bombing
+	tactical_bombing = 8
+
+	surface_detection = 3
+	sub_detection = 1
+	air_detection = 0
+
+	supply_consumption = 0.50
+	fuel_consumption = 0.80
+
+	build_time = 365
+	manpower = 200
+	ic_cost = 50
+
+	allowed_brigades = { HRL SAM IBL }
+}
+
+unit = {
+	name = "Wind Rider"
+	type = air
+	model = 3
+
+	default_organisation = 40
+	morale = 9.0
+
+	max_speed = 400		# wind itself
+	range = 2000
+
+	air_attack = 12
+	air_defense = 8
+	ground_attack = 3
+	naval_attack = 15	# excellent vs naval targets
+	strategic_attack = 5
+	tactical_bombing = 3
+
+	surface_detection = 5
+	sub_detection = 5	# can sense through water
+	air_detection = 6
+
+	supply_consumption = 0.15
+	fuel_consumption = 0
+
+	build_time = 240
+	manpower = 0
+	ic_cost = 35
+
+	allowed_brigades = { MRD }
+}

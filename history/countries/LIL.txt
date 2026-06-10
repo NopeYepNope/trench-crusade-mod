@@ -1,0 +1,32 @@
+# LIL — Country History
+# Domain of Lilith — starts Infernal, can change via schism event
+# 1905 Start
+
+capital = 815
+manpower = 100
+
+# Policy Sliders
+democratic = 2
+political_left = 3
+freedom = 2
+open_society = 2
+interventionism = 7
+professional_army = 8
+defence_lobby = 9
+market_economy = 4
+
+# Technology
+techteam = {
+	land_tech = 4
+	naval_tech = 2
+	air_tech = 1
+	industry_tech = 2
+	infra_tech = 2
+	supernatural_tech = 4
+}
+
+# Dissent
+dissent = 3
+
+# Industrial Capacity
+industrial_capacity = 15

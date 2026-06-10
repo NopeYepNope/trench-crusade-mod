@@ -1,0 +1,32 @@
+# HOL — Country History
+# Hebrew Knights — elite but tiny, highest supernatural tech
+# 1905 Start
+
+capital = 801
+manpower = 40
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 4
+	naval_tech = 2
+	air_tech = 1
+	industry_tech = 2
+	infra_tech = 2
+	supernatural_tech = 5
+}
+
+# Dissent
+dissent = 2
+
+# Industrial Capacity
+industrial_capacity = 12

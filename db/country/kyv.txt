@@ -1,0 +1,12 @@
+# Principality of Kyiv
+# Kylivan Rus, Orthodox eastern power
+
+color = { 120 160 60 }
+
+graphical_culture = eastern_european
+
+capital = 284
+
+government = absolute_monarchy
+
+ideology = Holy

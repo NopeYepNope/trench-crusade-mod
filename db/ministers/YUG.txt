@@ -1,0 +1,65 @@
+# YUG — Ministers
+# db/ministers/YUG.txt
+
+minister = {
+	name = "Bahr al-Azim, the Boundless Deep"
+	id = { type = 2 id = 90101 }
+	country = YUG
+	ideology = fascist
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1960
+	traits = { man_of_the_people }
+	# The paramount authority of the Marid dominion.
+}
+
+minister = {
+	name = "Tawfan al-Bahr, the Storm-Caller"
+	id = { type = 2 id = 90102 }
+	country = YUG
+	ideology = fascist
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1955
+	traits = { ideological_crusader }
+	# Negotiates Marid terms with Holy and Infernal powers alike.
+}
+
+minister = {
+	name = "Labwah al-Nil, She of the River's Mouth"
+	id = { type = 2 id = 90103 }
+	country = YUG
+	ideology = fascist
+	position = the_cloak_n_dagger_schemer
+	loyalty = 9
+	start_year = 1900
+	end_year = 1950
+	traits = { the_cloak_n_dagger_schemer }
+}
+
+minister = {
+	name = "Bahr al-Azim, the Boundless Deep"
+	id = { type = 2 id = 90104 }
+	country = YUG
+	ideology = fascist
+	position = chief_of_navy
+	loyalty = 10
+	start_year = 1900
+	end_year = 1960
+	traits = { naval_aviation_doctrine }
+}
+
+minister = {
+	name = "Tawfan al-Bahr, the Storm-Caller"
+	id = { type = 2 id = 90105 }
+	country = YUG
+	ideology = fascist
+	position = chief_of_staff
+	loyalty = 9
+	start_year = 1900
+	end_year = 1955
+	traits = { school_of_defence }
+}
+

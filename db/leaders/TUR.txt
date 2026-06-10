@@ -1,0 +1,96 @@
+# Iron Sultanate — Leaders
+# db/leaders/TUR.txt
+#
+# The Sultanate's military tradition blends Turkic cavalry expertise,
+# Arab infantry doctrine, and the alchemical-mathematical innovations
+# of the House of Wisdom. Senior commanders are drawn from the great
+# military families of the Rum Sultanate tradition. Junior officers
+# increasingly come from the House of Wisdom's officer academies —
+# technically sophisticated, scientifically minded, and deeply devout
+# in their own tradition.
+
+leader = {
+	name = "Grand Vizier-Marshal Suleiman al-Qasim"
+	id = { type = 1 id = 40001 }
+	country = TUR
+	rank = 4
+	skill = 4
+	traits = { old_guard defensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1920
+	# Supreme commander of the Iron Wall's military forces. A product
+	# of sixty years of warfare against the Infernal advance. Has held
+	# the eastern front against Iblis and Ifrit simultaneously. Considers
+	# this a reasonable Tuesday.
+}
+
+leader = {
+	name = "General Fatima bint Rashid al-Hawrani"
+	id = { type = 1 id = 40002 }
+	country = TUR
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine armor_officer }
+	start_year = 1900
+	end_year = 1928
+	# Commander of the mobile cavalry forces. Her djinn-auxiliary
+	# integrated cavalry is unlike anything else in the Holy world.
+	# Advocates aggressive forward operations to disrupt Iblis supply lines.
+}
+
+leader = {
+	name = "General Tariq ibn Yusuf al-Kindi"
+	id = { type = 1 id = 40003 }
+	country = TUR
+	rank = 3
+	skill = 4
+	traits = { defensive_doctrine artillery_specialist }
+	start_year = 1901
+	end_year = 1930
+	# Chief of the Iron Wall's fortification system. A mathematician
+	# by training, general by necessity. His geometric fortifications
+	# are famous across the Holy world.
+}
+
+leader = {
+	name = "Admiral Hassan ibn Murad"
+	id = { type = 1 id = 40004 }
+	country = TUR
+	rank = 3
+	skill = 3
+	traits = { sea_wolf navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1924
+	# Commander of the Sultanate's Black Sea fleet. His primary task
+	# is keeping the Marid out of the Bosphorus. He has been doing
+	# this for twenty-two years. It is going reasonably well.
+}
+
+leader = {
+	name = "Colonel Zaynab al-Zahir, Keeper of Contracts"
+	id = { type = 1 id = 40005 }
+	country = TUR
+	rank = 2
+	skill = 4
+	traits = { commando guerilla_fighter }
+	start_year = 1904
+	end_year = 1935
+	# The Sultanate's foremost djinn contract specialist. Her unit
+	# operates at the intersection of military force and supernatural
+	# law. What she negotiates, the djinn honour. What she promises,
+	# the Sultanate delivers.
+}
+
+leader = {
+	name = "Muqaddam Idris the Alchemist"
+	id = { type = 1 id = 40006 }
+	country = TUR
+	rank = 2
+	skill = 3
+	traits = { artillery_specialist }
+	start_year = 1906
+	end_year = 1938
+	# A House of Wisdom graduate commanding an alchemical artillery
+	# battery. His shells are individually formulated for their targets.
+	# He takes this personally.
+}

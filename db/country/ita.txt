@@ -1,0 +1,3 @@
+# ITA - vanilla stub
+color = { 0 150 70 }
+graphical_culture = western_european

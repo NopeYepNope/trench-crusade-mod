@@ -1,0 +1,88 @@
+# Domain of Lilith — Leaders
+# db/leaders/LIL.txt
+#
+# Lilith does not command armies. She has children.
+# The Lilim are her lieutenants — born of her, shaped by her,
+# sent out by her into a world that does not want them.
+# They are not demons in the Infernal sense. They are not
+# human. They are something older than both categories.
+# They fight for their mother with the ferocity of those
+# who have nothing else and know it.
+
+leader = {
+	name = "Naamah, the First-Born"
+	id = { type = 1 id = 100001 }
+	country = LIL
+	rank = 4
+	skill = 4
+	traits = { old_guard offensive_doctrine guerilla_fighter }
+	start_year = 1900
+	end_year = 1950
+	# The eldest of the Lilim. As old as the exile.
+	# Commands Lilith's forces in her mother's absence.
+	# Pragmatic where Lilith is visionary. Vicious where
+	# Lilith is cold. They are a good team.
+}
+
+leader = {
+	name = "Agrat bat Mahlat, the Dancer"
+	id = { type = 1 id = 100002 }
+	country = LIL
+	rank = 3
+	skill = 5
+	traits = { commando guerilla_fighter brilliant_strategist }
+	start_year = 1900
+	end_year = 1945
+	# The most dangerous of Lilith's field commanders. The Dancer
+	# does not fight the way other commanders fight. She finds
+	# the gap that should not exist and she walks through it,
+	# and by the time you understand what has happened you are
+	# already behind her lines. The Infernal warlords want her dead.
+	# She finds this flattering.
+}
+
+leader = {
+	name = "Eisheth Zenunim, the Hollow"
+	id = { type = 1 id = 100003 }
+	country = LIL
+	rank = 3
+	skill = 3
+	traits = { defensive_doctrine commando }
+	start_year = 1900
+	end_year = 1945
+	# Commands Lilith's defensive operations — the holding of
+	# territory against both Infernal pressure and Holy suspicion.
+	# She is the reason the Domain has borders. She is also the
+	# reason those borders are extremely unpleasant to cross uninvited.
+}
+
+leader = {
+	name = "Mahlat, the Night-Runner"
+	id = { type = 1 id = 100004 }
+	country = LIL
+	rank = 2
+	skill = 4
+	traits = { guerilla_fighter commando infantry_leader }
+	start_year = 1903
+	end_year = 1945
+	# The youngest of the senior Lilim and the most human-seeming.
+	# Commands the shapeshifter scout companies. Her intelligence
+	# reports are detailed, accurate, and contain observations
+	# that imply she was somewhere she should not have been.
+	# She always is.
+}
+
+leader = {
+	name = "Ornias, the Rebel Djinn"
+	id = { type = 1 id = 100005 }
+	country = LIL
+	rank = 2
+	skill = 3
+	traits = { cavalry_leader guerilla_fighter }
+	start_year = 1908
+	end_year = 1940
+	# The first djinn to defect to Lilith's banner after the Schism.
+	# Commands the rebel djinn auxiliaries. His presence is a message
+	# to the Infernal Pact: the djinn are not all yours.
+	# Available only after LIL_schism flag is set.
+}

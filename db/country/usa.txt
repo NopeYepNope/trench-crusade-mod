@@ -1,0 +1,3 @@
+# USA - vanilla stub
+color = { 30 100 180 }
+graphical_culture = western_european

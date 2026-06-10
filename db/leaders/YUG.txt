@@ -1,0 +1,86 @@
+# Dominion of the Marid — Leaders
+# db/leaders/YUG.txt
+#
+# The Marid are the oldest inhabitants of the sea.
+# Their admirals have been sailing since before the First Heresy —
+# some since before humans built ships at all. They command
+# from experience so vast it barely resembles strategy.
+# They do not have ranks in the conventional sense.
+# They have seniority, and the sea's own hierarchy.
+
+leader = {
+	name = "Bahr al-Azim, the Boundless Deep"
+	id = { type = 1 id = 90001 }
+	country = YUG
+	rank = 4
+	skill = 5
+	traits = { old_guard sea_wolf brilliant_strategist navy_chief_of_staff }
+	start_year = 1900
+	end_year = 1960
+	# The oldest Marid in the Mediterranean. Has been here since
+	# before Rome. Remembers the sea before it was corrupted and
+	# holds the corruption as a personal grievance. Commands the
+	# entire Marid fleet from a fortress beneath the sea near Cyprus.
+	# Has never lost a naval engagement. Has never needed to try very hard.
+}
+
+leader = {
+	name = "Tawfan al-Bahr, the Storm-Caller"
+	id = { type = 1 id = 90002 }
+	country = YUG
+	rank = 3
+	skill = 5
+	traits = { sea_wolf blockade_runner }
+	start_year = 1900
+	end_year = 1955
+	# Commands the Storm Fleet. His personal relationship with
+	# Mediterranean weather systems is not metaphorical. The storms
+	# he calls respond to him as a pack responds to its leader.
+	# English Admiral Vane has studied his tactics exhaustively.
+	# She has not found a counter.
+}
+
+leader = {
+	name = "Labwah al-Nil, She of the River's Mouth"
+	id = { type = 1 id = 90003 }
+	country = YUG
+	rank = 3
+	skill = 4
+	traits = { sea_wolf commando }
+	start_year = 1900
+	end_year = 1950
+	# Commands Marid operations in the Eastern Mediterranean —
+	# the contested waters near the Levant coast. Her understanding
+	# of SER and HOL coastal defences is more detailed than their
+	# own intelligence files. She is technically allied with neither.
+}
+
+leader = {
+	name = "Qamus al-Abyad, the White Depth"
+	id = { type = 1 id = 90004 }
+	country = YUG
+	rank = 2
+	skill = 4
+	traits = { sea_wolf guerilla_fighter }
+	start_year = 1900
+	end_year = 1945
+	# Leads the Marid's deep water operations — the things that
+	# happen below where ships sail and above where the truly old
+	# things live. A specialist in disrupting enemy submarine operations
+	# and coastal supply. His methods are not discussed in detail.
+}
+
+leader = {
+	name = "Zahra of the Western Gates"
+	id = { type = 1 id = 90005 }
+	country = YUG
+	rank = 2
+	skill = 3
+	traits = { blockade_runner }
+	start_year = 1902
+	end_year = 1940
+	# Controls the Strait of Gibraltar — the western gate of the
+	# Mediterranean. Nothing passes without her knowledge and,
+	# increasingly, her permission. She is negotiating terms with
+	# the Atlantic powers. The terms are not yet agreed.
+}

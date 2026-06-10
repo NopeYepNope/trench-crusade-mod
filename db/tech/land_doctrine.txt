@@ -1,0 +1,683 @@
+# Trench Crusade - Land Doctrine Tech Tree
+# db/tech/land_doctrine.txt
+#
+# Five doctrines, chosen at tier 3 and locked thereafter.
+# Shared base: Infantry → Cavalry → Artillery → (CHOICE)
+#
+# Doctrine of Permanence  — hold the line, fortify, attrit
+# Doctrine of Movement    — offensive advance, reclaim/corrupt ground
+# Doctrine of Ritual      — cannon fodder, monsters, bound entities
+# Doctrine of Engagement  — light infantry, CAS coordination, tempo
+# Doctrine of Total Destruction — pure offense, no defence, annihilation
+#
+# Apex units split by Holy/Infernal ideology within each doctrine.
+
+# ============================================================
+# TIER 0 — SHARED BASE
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 1 }
+	name = "Infantry Formations"
+	desc = "Organised infantry, basic drill, squad tactics, fire discipline. The foundation of all land warfare. Eight hundred years of fighting Hell has not changed this. It has only made it more desperate."
+	year = 1900
+	cost = 1000
+	category = land
+
+	command = { type = morale value = 0.05 }
+	command = { type = land_attrition value = -0.05 }
+	activate_unit = infantry
+	activate_unit = militia
+}
+
+technology = {
+	id = { type = land_doctrine value = 2 }
+	name = "Cavalry Doctrine"
+	desc = "Mounted reconnaissance, shock charges, dragoon tactics. In corrupted terrain, a blessed warhorse is worth its weight in relics. In Infernal territory, a cursed mount feels no fear — which is either an advantage or a warning, depending on your theology."
+	year = 1902
+	cost = 1200
+	category = land
+	required = { type = land_doctrine value = 1 }
+
+	command = { type = cavalry_attack value = 0.1 }
+	command = { type = cavalry_defence value = 0.05 }
+	activate_unit = cavalry
+}
+
+technology = {
+	id = { type = land_doctrine value = 3 }
+	name = "Artillery Coordination"
+	desc = "Forward observers, fire direction, suppression tactics. The trench line has proven that artillery wins wars. The question every commander now faces is what you do when artillery alone is not enough — when what comes across the wire does not stop for shells."
+	year = 1904
+	cost = 1500
+	category = land
+	required = { type = land_doctrine value = 2 }
+
+	command = { type = artillery_bonus value = 0.1 }
+	command = { type = soft_attack value = 0.05 }
+	activate_unit = artillery
+	activate_unit = horse_artillery
+}
+
+# ============================================================
+# DOCTRINE CHOICE — fires at tier 3
+# See events/land_doctrine_choice.txt
+# ============================================================
+
+# ============================================================
+# DOCTRINE OF PERMANENCE
+# Hold the line. Fortify. Grind.
+# Philosophy: the front is sacred. Every yard held is a yard
+# Hell does not have. Advancement is secondary to the
+# inviolability of the line.
+# Best for: New Antioch, Papal States, England, Novgorod
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 101 }
+	name = "Permanence — The Unbroken Line"
+	desc = "The first principle: the line does not move. Not backward. Every position is to be held to the last man, the last shell, the last prayer. Commanders who retreat without orders face consequences more severe than the enemy they fled.\n\nThis is not stubbornness. This is theology. The ground you hold is consecrated — or corrupted — and giving it up means giving up what was paid to take it."
+	year = 1905
+	cost = 2000
+	category = land
+	required = { type = land_doctrine value = 3 }
+
+	available = { has_country_flag = land_doctrine_permanence }
+
+	command = { type = defence value = 0.15 }
+	command = { type = morale value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 102 }
+	name = "Permanence — Trench Engineering"
+	desc = "The science of the static front taken to its highest expression. Not merely trenches but systems — layered lines, redoubts, sally ports, underground fortresses. A Permanence-doctrine position properly constructed can hold against numbers that should be impossible. It has to. The numbers that come from Hell frequently are."
+	year = 1907
+	cost = 2500
+	category = land
+	required = { type = land_doctrine value = 101 }
+
+	available = { has_country_flag = land_doctrine_permanence }
+
+	command = { type = defence value = 0.15 }
+	command = { type = digging_in_speed value = 0.2 }
+	command = { type = fort_bonus value = 0.15 }
+	activate_unit = engineer
+}
+
+technology = {
+	id = { type = land_doctrine value = 103 }
+	name = "Permanence — Attrition Doctrine"
+	desc = "If the line holds, the enemy must spend themselves against it. Permanence doctrine calculates the mathematics of attrition with cold precision — how many of them die for every one of yours, and whether that ratio is sustainable. Against Hell, it usually is not. The doctrine does not care. It holds anyway."
+	year = 1909
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 102 }
+
+	available = { has_country_flag = land_doctrine_permanence }
+
+	command = { type = defence value = 0.1 }
+	command = { type = land_attrition value = -0.15 }
+	command = { type = soft_attack value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 104 }
+	name = "Permanence — Consecrated Ground"
+	desc = "Beyond engineering and tactics — the spiritual dimension of holding ground. Holy: ground is formally consecrated by embedded clergy, creating zones where Infernal entities are weakened and soldiers fight with supernatural conviction.\n\nInfernal: ground is formally corrupted, spreading slowly outward, turning the territory itself into a weapon that damages Holy forces standing on it."
+	year = 1911
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 103 }
+
+	available = { has_country_flag = land_doctrine_permanence }
+
+	command = { type = defence value = 0.15 }
+	command = { type = fort_bonus value = 0.1 }
+	command = { type = morale value = 0.1 }
+}
+
+# Permanence Apex — Holy
+technology = {
+	id = { type = land_doctrine value = 105 }
+	name = "Permanence — Fortified Bastion"
+	desc = "The apex of Holy Permanence doctrine. A saint — living, reliquary, or genuinely present in ways that defy explanation — anchors a section of the line. Units fighting near the Anchor cannot be broken. They will not rout. They will not corrupt. They hold with a conviction that is no longer merely human, and the ground they stand on pushes back against Hell with the force of eight hundred years of prayers."
+	year = 1913
+	cost = 7000
+	category = land
+	required = { type = land_doctrine value = 104 }
+
+	available = {
+		has_country_flag = land_doctrine_permanence
+		ideology = democratic
+	}
+
+	command = { type = defence value = 0.25 }
+	command = { type = morale value = 0.25 }
+	command = { type = fort_bonus value = 0.2 }
+	activate_unit = saints_anchor_position
+}
+
+# Permanence Apex — Infernal
+technology = {
+	id = { type = land_doctrine value = 106 }
+	name = "Permanence — Fortified Bastion"
+	desc = "The apex of Infernal Permanence doctrine. A position so thoroughly corrupted that it functions as an extension of Hell itself — demons regenerate within it, the wounded are absorbed and returned changed, and the ground around it actively attacks Holy forces attempting to advance. Taking a Corrupted Redoubt is not a military problem. It is an exorcism problem."
+	year = 1913
+	cost = 7000
+	category = land
+	required = { type = land_doctrine value = 104 }
+
+	available = {
+		has_country_flag = land_doctrine_permanence
+		ideology = fascist
+	}
+
+	command = { type = defence value = 0.3 }
+	command = { type = fort_bonus value = 0.25 }
+	command = { type = morale_damage value = 0.2 }
+	activate_unit = corrupted_redoubt
+}
+
+# ============================================================
+# DOCTRINE OF MOVEMENT
+# Advance. Reclaim. Push.
+# Philosophy: stasis is defeat. The only winning move is
+# forward. Hold nothing — take everything.
+# Best for: Trench Pilgrims, Prussia, Heretic Legion, Iblis
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 201 }
+	name = "Movement — The Advancing Front"
+	desc = "The first principle: the line moves forward. Always forward. A position that cannot be used as a jumping-off point for the next advance is a position not worth holding. Movement doctrine commanders think in terms of exploitation, not consolidation."
+	year = 1905
+	cost = 2000
+	category = land
+	required = { type = land_doctrine value = 3 }
+
+	available = { has_country_flag = land_doctrine_movement }
+
+	command = { type = attack value = 0.15 }
+	command = { type = speed value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 202 }
+	name = "Movement — Breakthrough Tactics"
+	desc = "Concentrated force at a single point, punching through the line before the enemy can respond. Everything behind the breakthrough is someone else's problem — the advance units press on. Speed is armour. Momentum is supply."
+	year = 1907
+	cost = 2500
+	category = land
+	required = { type = land_doctrine value = 201 }
+
+	available = { has_country_flag = land_doctrine_movement }
+
+	command = { type = attack value = 0.15 }
+	command = { type = speed value = 0.1 }
+	activate_unit = assault_infantry
+}
+
+technology = {
+	id = { type = land_doctrine value = 203 }
+	name = "Movement — Ground Transformation"
+	desc = "The advancing army does not merely take ground — it changes it. Holy: advancing units carry consecration parties, priests who sanctify captured terrain faster than the enemy can re-corrupt it. Infernal: advancing units carry corruption spreaders, turning newly captured ground hostile to its former owners within hours."
+	year = 1909
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 202 }
+
+	available = { has_country_flag = land_doctrine_movement }
+
+	command = { type = attack value = 0.1 }
+	command = { type = land_attrition value = -0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 204 }
+	name = "Movement — Exploitation Forces"
+	desc = "Dedicated units trained to exploit a breakthrough — cavalry and light infantry moving through the gap before it closes, attacking supply lines, command posts, and artillery positions in the rear. The enemy's front collapses not from the front but from behind."
+	year = 1911
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 203 }
+
+	available = { has_country_flag = land_doctrine_movement }
+
+	command = { type = attack value = 0.1 }
+	command = { type = cavalry_attack value = 0.15 }
+	command = { type = speed value = 0.1 }
+	activate_unit = exploitation_cavalry
+}
+
+# Movement Apex — Holy
+technology = {
+	id = { type = land_doctrine value = 205 }
+	name = "Movement — Grand Offensive"
+	desc = "The apex of Holy Movement doctrine. Not a tactical advance but a theological event — a formal crusade declaration, with all the spiritual weight that entails. Units fighting under Crusade orders receive a morale and combat bonus that scales with proximity to the front. The further into enemy territory, the stronger the conviction. Soldiers who fall advancing under a Crusade declaration are counted among the blessed dead. The ones behind them know this. They advance faster."
+	year = 1913
+	cost = 7000
+	category = land
+	required = { type = land_doctrine value = 204 }
+
+	available = {
+		has_country_flag = land_doctrine_movement
+		ideology = democratic
+	}
+
+	command = { type = attack value = 0.25 }
+	command = { type = morale value = 0.2 }
+	command = { type = speed value = 0.1 }
+	activate_unit = crusade_vanguard
+}
+
+# Movement Apex — Infernal
+technology = {
+	id = { type = land_doctrine value = 206 }
+	name = "Movement — Grand Offensive"
+	desc = "The apex of Infernal Movement doctrine. The advancing army does not merely occupy territory — it devours it. Corruption spreads faster than it can be countered. Holy fortifications crumble as the ground beneath them becomes hostile. Soldiers defending against a Consuming Advance find their positions literally dissolving, their blessed protections failing, their will to resist leeched away by the ground they stand on."
+	year = 1913
+	cost = 7000
+	category = land
+	required = { type = land_doctrine value = 204 }
+
+	available = {
+		has_country_flag = land_doctrine_movement
+		ideology = fascist
+	}
+
+	command = { type = attack value = 0.2 }
+	command = { type = soft_attack value = 0.2 }
+	command = { type = morale_damage value = 0.2 }
+	activate_unit = consuming_advance_unit
+}
+
+# ============================================================
+# DOCTRINE OF RITUAL
+# Don't spend soldiers. Spend material.
+# Philosophy: human lives are precious and finite. Summoned
+# creatures, bound entities, raised dead, and daemon engines
+# are not. Let them hold the line.
+# Best for: Hebrew Knights, Iron Sultanate, Court of Harrowed King,
+#           Heretic Legion, Samael, Beelzebub
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 301 }
+	name = "Ritual — The Expendable Vanguard"
+	desc = "The first principle: humans command, other things fight. The Ritual doctrine begins with the systematic organisation of non-human or non-living combatants as the primary front-line force. Human soldiers are present — but their role is direction, not dying."
+	year = 1905
+	cost = 2500
+	category = land
+	required = { type = land_doctrine value = 3 }
+
+	available = { has_country_flag = land_doctrine_ritual }
+
+	command = { type = land_attrition value = -0.2 }
+	command = { type = morale value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 302 }
+	name = "Ritual — Binding and Summoning"
+	desc = "The formal military science of entity acquisition — summoning, binding contracts, raising, and the logistics of maintaining a non-human force. Holy: blessed creatures, consecrated constructs, willing supernatural allies under formal covenant. Infernal: bound daemons, raised dead, contracted creatures of the deep dark."
+	year = 1907
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 301 }
+
+	available = { has_country_flag = land_doctrine_ritual }
+
+	command = { type = land_attrition value = -0.1 }
+	activate_unit = ritual_vanguard
+}
+
+technology = {
+	id = { type = land_doctrine value = 303 }
+	name = "Ritual — Mass Expenditure"
+	desc = "Sending bound entities in overwhelming numbers against a position — not coordinated tactics but sheer volume. A hundred daemons or constructs dying to take a trench that would have cost fifty soldiers. The mathematics are correct. The theology is complicated."
+	year = 1909
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 302 }
+
+	available = { has_country_flag = land_doctrine_ritual }
+
+	command = { type = soft_attack value = 0.15 }
+	command = { type = attack value = 0.1 }
+	command = { type = land_attrition value = -0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 304 }
+	name = "Ritual — Command Hierarchy"
+	desc = "A Ritual doctrine army requires a completely different command structure — ritualists and binders are as important as generals, supply lines carry binding components as much as ammunition, and the chain of command includes entities that do not technically understand orders. Getting this right is enormously difficult. Getting it wrong is a military catastrophe and a theological emergency simultaneously."
+	year = 1911
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 303 }
+
+	available = { has_country_flag = land_doctrine_ritual }
+
+	command = { type = morale value = 0.15 }
+	command = { type = land_attrition value = -0.1 }
+	command = { type = attack value = 0.1 }
+}
+
+# Ritual Apex — Holy
+technology = {
+	id = { type = land_doctrine value = 305 }
+	name = "Ritual — The Living Covenant"
+	desc = "The apex of Holy Ritual doctrine. Not merely summoned creatures but a formal covenant between the human army and a congregation of willing supernatural allies — angels of lesser order, blessed beasts, sacred constructs that fight from genuine conviction rather than binding. A Covenant force cannot be corrupted. It cannot be turned. It fights with the full weight of divine purpose and costs not a single human life to maintain."
+	year = 1913
+	cost = 8000
+	category = land
+	required = { type = land_doctrine value = 304 }
+
+	available = {
+		has_country_flag = land_doctrine_ritual
+		ideology = democratic
+	}
+
+	command = { type = attack value = 0.2 }
+	command = { type = defence value = 0.15 }
+	command = { type = land_attrition value = -0.25 }
+	command = { type = morale value = 0.2 }
+	activate_unit = covenant_host
+}
+
+# Ritual Apex — Infernal
+technology = {
+	id = { type = land_doctrine value = 306 }
+	name = "Ritual — The Bound Legion"
+	desc = "The apex of Infernal Ritual doctrine. A force composed entirely of bound entities — no human soldiers at all on the front line, only daemons, raised dead, corrupted constructs, and deep creatures operating under binding so comprehensive they cannot disobey. Maintaining the Bound Legion requires constant ritual investment. When it works, it is unstoppable. When the bindings fail — and eventually they always fail — it is a catastrophe for everyone."
+	year = 1913
+	cost = 8000
+	category = land
+	required = { type = land_doctrine value = 304 }
+
+	available = {
+		has_country_flag = land_doctrine_ritual
+		ideology = fascist
+	}
+
+	command = { type = attack value = 0.25 }
+	command = { type = land_attrition value = -0.3 }
+	command = { type = soft_attack value = 0.2 }
+	activate_unit = bound_legion
+}
+
+# ============================================================
+# DOCTRINE OF ENGAGEMENT
+# Light infantry. CAS coordination. Tempo over power.
+# Philosophy: you don't win by being stronger. You win by
+# being faster, smarter, and never where they expect.
+# Best for: Eire, Alba, Lilith, Unmarked, Iron Sultanate scouts
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 401 }
+	name = "Engagement — Small Unit Tactics"
+	desc = "The first principle: the smallest unit that can accomplish the objective is the right unit to use. Engagement doctrine strips away the mass formations that dominate conventional warfare and builds around squads, sections, and companies operating with high autonomy. Every soldier is trained to lead. Every unit can function if its commander falls."
+	year = 1905
+	cost = 2000
+	category = land
+	required = { type = land_doctrine value = 3 }
+
+	available = { has_country_flag = land_doctrine_engagement }
+
+	command = { type = attack value = 0.1 }
+	command = { type = speed value = 0.1 }
+	command = { type = recon value = 0.1 }
+	activate_unit = light_infantry
+}
+
+technology = {
+	id = { type = land_doctrine value = 402 }
+	name = "Engagement — Corrupted Terrain Operations"
+	desc = "Moving through no-man's-land and corrupted territory without the spiritual attrition that destroys conventional units. Engagement doctrine soldiers are trained and equipped for corrupted terrain — carrying personal wards, learning to move through Infernal ground without touching what shouldn't be touched, and what to do when a comrade begins to change."
+	year = 1907
+	cost = 2500
+	category = land
+	required = { type = land_doctrine value = 401 }
+
+	available = { has_country_flag = land_doctrine_engagement }
+
+	command = { type = land_attrition value = -0.2 }
+	command = { type = speed value = 0.1 }
+	command = { type = recon value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 403 }
+	name = "Engagement — Air-Ground Integration"
+	desc = "The defining feature of Engagement doctrine at the operational level — tight coordination between light infantry on the ground and CAS aircraft overhead. Ground units mark targets, request support, and manoeuvre to exploit what the aircraft create. The air and ground become one system, faster and more responsive than any conventional combined arms formation."
+	year = 1909
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 402 }
+
+	available = { has_country_flag = land_doctrine_engagement }
+
+	command = { type = close_air_support value = 0.2 }
+	command = { type = attack value = 0.1 }
+	command = { type = recon value = 0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 404 }
+	name = "Engagement — Tempo Operations"
+	desc = "Acting faster than the enemy can respond — not just moving faster but deciding faster, communicating faster, exploiting faster. Engagement doctrine at its mature form creates an operational tempo that conventional armies cannot match. By the time the enemy understands what is happening, it has already happened."
+	year = 1911
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 403 }
+
+	available = { has_country_flag = land_doctrine_engagement }
+
+	command = { type = attack value = 0.15 }
+	command = { type = speed value = 0.15 }
+	command = { type = recon value = 0.15 }
+}
+
+# Engagement Apex — Holy
+technology = {
+	id = { type = land_doctrine value = 405 }
+	name = "Engagement — Elite Vanguard"
+	desc = "The apex of Holy Engagement doctrine. Light infantry units operating deep in corrupted territory, sustained by personal relics and individual faith rather than supply lines. They do not need consecrated ground — they carry consecration with them. They move through Hell's territory like light through darkness, disrupting, destroying, and withdrawing before the response arrives. They cannot be trapped because they are never where the enemy expects."
+	year = 1913
+	cost = 6000
+	category = land
+	required = { type = land_doctrine value = 404 }
+
+	available = {
+		has_country_flag = land_doctrine_engagement
+		ideology = democratic
+	}
+
+	command = { type = recon value = 0.25 }
+	command = { type = speed value = 0.2 }
+	command = { type = land_attrition value = -0.2 }
+	command = { type = attack value = 0.15 }
+	activate_unit = blessed_scout_company
+}
+
+# Engagement Apex — Infernal
+technology = {
+	id = { type = land_doctrine value = 406 }
+	name = "Engagement — Elite Vanguard"
+	desc = "The apex of Infernal Engagement doctrine. Units that move through corruption as fish through water — not resisting it but moving with it, using it for cover and concealment. The Shadow Vanguard strikes from within the corrupted zones that Holy forces dare not enter, appearing from the dark places between the lines, striking, and vanishing back into the corruption before a response is possible."
+	year = 1913
+	cost = 6000
+	category = land
+	required = { type = land_doctrine value = 404 }
+
+	available = {
+		has_country_flag = land_doctrine_engagement
+		ideology = fascist
+	}
+
+	command = { type = recon value = 0.2 }
+	command = { type = attack value = 0.2 }
+	command = { type = morale_damage value = 0.15 }
+	command = { type = speed value = 0.15 }
+	activate_unit = shadow_vanguard
+}
+
+# ============================================================
+# DOCTRINE OF TOTAL DESTRUCTION
+# No defence. No holding. No mercy.
+# Philosophy: destroy everything. Keep moving. Stop for nothing.
+# Restricted: LIL, UNM, SAM, IFR only
+# ============================================================
+
+technology = {
+	id = { type = land_doctrine value = 501 }
+	name = "Total Destruction — The Unbound Offensive"
+	desc = "The first principle: there is no defence. There is only what has been destroyed and what has not yet been destroyed. Total Destruction doctrine does not build fortifications. It does not consolidate. It does not hold. It advances, unmakes, and advances again.\n\nThis doctrine cannot be combined with defensive postures. Units trained in Total Destruction will not dig in. They will not hold under orders. They advance or they die."
+	year = 1905
+	cost = 3000
+	category = land
+	required = { type = land_doctrine value = 3 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = LIL
+			tag = UNM
+			tag = SAM
+			tag = IFR
+		}
+	}
+
+	command = { type = attack value = 0.2 }
+	command = { type = speed value = 0.15 }
+	command = { type = defence value = -0.2 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 502 }
+	name = "Total Destruction — Overwhelming Force"
+	desc = "Everything concentrated at the point of attack. No reserves, no flanking considerations, no caution. Every available unit hitting the same point at the same time with maximum violence. The position breaks or everyone dies. Usually the position breaks."
+	year = 1907
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 501 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = LIL
+			tag = UNM
+			tag = SAM
+			tag = IFR
+		}
+	}
+
+	command = { type = attack value = 0.2 }
+	command = { type = soft_attack value = 0.15 }
+	command = { type = hard_attack value = 0.15 }
+	command = { type = defence value = -0.15 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 503 }
+	name = "Total Destruction — Scorched Earth"
+	desc = "What cannot be taken is destroyed. What cannot be used is denied. Total Destruction armies leave nothing behind them — no supply depots for an enemy counterattack, no infrastructure for an occupation, no food, no water, no shelter. The territory behind the advance is ash. The enemy cannot follow into it. The army cannot retreat into it either. This is not a bug."
+	year = 1909
+	cost = 3500
+	category = land
+	required = { type = land_doctrine value = 502 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = LIL
+			tag = UNM
+			tag = SAM
+			tag = IFR
+		}
+	}
+
+	command = { type = attack value = 0.1 }
+	command = { type = industry_damage value = 0.2 }
+	command = { type = defence value = -0.1 }
+}
+
+technology = {
+	id = { type = land_doctrine value = 504 }
+	name = "Total Destruction — The Burning Advance"
+	desc = "Units trained specifically to destroy as they advance — not as a side effect of combat but as a primary objective. The Burning Advance does not capture territory. It eliminates territory. What was there ceases to be a factor in the war. Neither side can use it. Neither side can hold it. It simply no longer matters."
+	year = 1911
+	cost = 4000
+	category = land
+	required = { type = land_doctrine value = 503 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = LIL
+			tag = UNM
+			tag = SAM
+			tag = IFR
+		}
+	}
+
+	command = { type = attack value = 0.15 }
+	command = { type = soft_attack value = 0.2 }
+	command = { type = speed value = 0.1 }
+	command = { type = defence value = -0.15 }
+	activate_unit = burning_advance_unit
+}
+
+# Total Destruction Apex — Holy-adjacent (Lilith / Unmarked)
+technology = {
+	id = { type = land_doctrine value = 505 }
+	name = "Total Destruction — The Unmaking"
+	desc = "Lilith was cast out before Hell had a name. The Unmarked were cast out by both sides. Neither has anything left to protect. The Unmaking is the doctrine of those who have decided that if they cannot have a world, no one can.\n\nUnits under the Unmaking do not fight conventionally. They are weapons of erasure — targeting the things that make a war possible on either side. Supply lines. Command structures. The will to continue. They burn it all."
+	year = 1913
+	cost = 9000
+	category = land
+	required = { type = land_doctrine value = 504 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = LIL
+			tag = UNM
+		}
+	}
+
+	command = { type = attack value = 0.3 }
+	command = { type = soft_attack value = 0.25 }
+	command = { type = morale_damage value = 0.3 }
+	command = { type = industry_damage value = 0.2 }
+	command = { type = defence value = -0.3 }
+	activate_unit = unmaking_host
+}
+
+# Total Destruction Apex — Infernal (Samael / Ifrit)
+technology = {
+	id = { type = land_doctrine value = 506 }
+	name = "Total Destruction — Death Absolute"
+	desc = "Samael is the Angel of Death. The Ifrit are fire that thinks. Neither has any interest in occupation, administration, or the long game. Death Absolute is the doctrine of total annihilation — not conquest but erasure. Armies destroyed down to the last soldier. Cities reduced to nothing. The ground salted with death so thoroughly that nothing grows there again.\n\nSamael has been refining this doctrine for eight hundred years. He is very good at it."
+	year = 1913
+	cost = 9000
+	category = land
+	required = { type = land_doctrine value = 504 }
+
+	available = {
+		has_country_flag = land_doctrine_total_destruction
+		OR = {
+			tag = SAM
+			tag = IFR
+		}
+	}
+
+	command = { type = attack value = 0.35 }
+	command = { type = hard_attack value = 0.25 }
+	command = { type = morale_damage value = 0.25 }
+	command = { type = land_attrition value = 0.1 }	# burns through your own units too
+	command = { type = defence value = -0.35 }
+	activate_unit = death_absolute_legion
+}

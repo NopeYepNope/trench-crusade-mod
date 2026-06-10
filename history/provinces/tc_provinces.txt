@@ -1,0 +1,901 @@
+# Trench Crusade - Province Ownership (v2 - generated from DH province data)
+# All IDs verified against Province.csv and province_names.csv
+# Generated automatically from game files
+
+# === ENG ===
+province = { id = 13     owner = ENG  controller = ENG }  # Sunderland
+province = { id = 14     owner = ENG  controller = ENG }  # Carlisle
+province = { id = 15     owner = ENG  controller = ENG }  # Hull
+province = { id = 16     owner = ENG  controller = ENG }  # Lincoln
+province = { id = 17     owner = ENG  controller = ENG }  # Manchester
+province = { id = 18     owner = ENG  controller = ENG }  # Sheffield
+province = { id = 19     owner = ENG  controller = ENG }  # Bristol
+province = { id = 20     owner = ENG  controller = ENG }  # Exeter
+province = { id = 21     owner = ENG  controller = ENG }  # Caernarfon
+province = { id = 22     owner = ENG  controller = ENG }  # Cardiff
+province = { id = 23     owner = ENG  controller = ENG }  # Plymouth
+province = { id = 24     owner = ENG  controller = ENG }  # Birmingham
+province = { id = 25     owner = ENG  controller = ENG }  # Norwich
+province = { id = 26     owner = ENG  controller = ENG }  # Dover
+province = { id = 27     owner = ENG  controller = ENG }  # Portsmouth
+province = { id = 28     owner = ENG  controller = ENG }  # Oxford
+province = { id = 29     owner = ENG  controller = ENG }  # London
+
+# === ALB ===
+province = { id = 4      owner = ALB  controller = ALB }  # Stornoway
+province = { id = 5      owner = ALB  controller = ALB }  # Scapa Flow
+province = { id = 6      owner = ALB  controller = ALB }  # Inverness
+province = { id = 7      owner = ALB  controller = ALB }  # Aberdeen
+province = { id = 8      owner = ALB  controller = ALB }  # Fort William
+province = { id = 9      owner = ALB  controller = ALB }  # Lerwick
+province = { id = 10     owner = ALB  controller = ALB }  # Dumfries
+province = { id = 11     owner = ALB  controller = ALB }  # Glasgow
+province = { id = 12     owner = ALB  controller = ALB }  # Edinburgh
+
+# === EIR ===
+province = { id = 30     owner = EIR  controller = EIR }  # Waterford
+province = { id = 31     owner = EIR  controller = EIR }  # Cork
+province = { id = 32     owner = EIR  controller = EIR }  # Galway
+province = { id = 33     owner = EIR  controller = EIR }  # Letterkenny
+province = { id = 34     owner = EIR  controller = EIR }  # Dublin
+province = { id = 35     owner = EIR  controller = EIR }  # Londonderry
+province = { id = 36     owner = EIR  controller = EIR }  # Belfast
+
+# === NOR ===
+province = { id = 483    owner = NOR  controller = NOR }  # Oslo
+province = { id = 484    owner = NOR  controller = NOR }  # Fredrikstad
+province = { id = 485    owner = NOR  controller = NOR }  # Kristiansand
+province = { id = 486    owner = NOR  controller = NOR }  # Honefoss
+province = { id = 487    owner = NOR  controller = NOR }  # Stavanger
+province = { id = 488    owner = NOR  controller = NOR }  # Bergen
+province = { id = 489    owner = NOR  controller = NOR }  # Hamar
+province = { id = 490    owner = NOR  controller = NOR }  # Andalsnes
+province = { id = 491    owner = NOR  controller = NOR }  # Alesund
+province = { id = 492    owner = NOR  controller = NOR }  # Lillehammer
+province = { id = 493    owner = NOR  controller = NOR }  # Trondheim
+province = { id = 494    owner = NOR  controller = NOR }  # Bodo
+province = { id = 495    owner = NOR  controller = NOR }  # Narvik
+province = { id = 496    owner = NOR  controller = NOR }  # Alta
+province = { id = 497    owner = NOR  controller = NOR }  # Tromso
+
+# === PRU ===
+province = { id = 126    owner = PRU  controller = PRU }  # Aachen
+province = { id = 127    owner = PRU  controller = PRU }  # Saarbrucken
+province = { id = 128    owner = PRU  controller = PRU }  # Trier
+province = { id = 129    owner = PRU  controller = PRU }  # Koblenz
+province = { id = 130    owner = PRU  controller = PRU }  # Mainz
+province = { id = 131    owner = PRU  controller = PRU }  # Cologne
+province = { id = 132    owner = PRU  controller = PRU }  # Freiburg
+province = { id = 133    owner = PRU  controller = PRU }  # Konstanz
+province = { id = 134    owner = PRU  controller = PRU }  # Stuttgart
+province = { id = 135    owner = PRU  controller = PRU }  # Tubingen
+province = { id = 136    owner = PRU  controller = PRU }  # Karlsruhe
+province = { id = 137    owner = PRU  controller = PRU }  # Kassel
+province = { id = 138    owner = PRU  controller = PRU }  # Frankfurt/Main
+province = { id = 139    owner = PRU  controller = PRU }  # Darmstadt
+province = { id = 140    owner = PRU  controller = PRU }  # Fulda
+province = { id = 141    owner = PRU  controller = PRU }  # Muenster
+province = { id = 142    owner = PRU  controller = PRU }  # Duesseldorf
+province = { id = 143    owner = PRU  controller = PRU }  # Neuwied
+province = { id = 144    owner = PRU  controller = PRU }  # Bielefeld
+province = { id = 145    owner = PRU  controller = PRU }  # Essen
+province = { id = 146    owner = PRU  controller = PRU }  # Hannover
+province = { id = 147    owner = PRU  controller = PRU }  # Wilhelmshaven
+province = { id = 148    owner = PRU  controller = PRU }  # Bremen
+province = { id = 149    owner = PRU  controller = PRU }  # Luneburg
+province = { id = 150    owner = PRU  controller = PRU }  # Flensburg
+province = { id = 151    owner = PRU  controller = PRU }  # Lubeck
+province = { id = 152    owner = PRU  controller = PRU }  # Kiel
+province = { id = 153    owner = PRU  controller = PRU }  # Rostock
+province = { id = 154    owner = PRU  controller = PRU }  # Hamburg
+province = { id = 155    owner = PRU  controller = PRU }  # Stolp
+province = { id = 156    owner = PRU  controller = PRU }  # Neuruppin
+province = { id = 157    owner = PRU  controller = PRU }  # Potsdam
+province = { id = 158    owner = PRU  controller = PRU }  # Stettin
+province = { id = 159    owner = PRU  controller = PRU }  # Meseritz
+province = { id = 160    owner = PRU  controller = PRU }  # Frankfurt/Oder
+province = { id = 161    owner = PRU  controller = PRU }  # Deutsch Krone
+province = { id = 162    owner = PRU  controller = PRU }  # Stralsund
+province = { id = 163    owner = PRU  controller = PRU }  # Berlin
+province = { id = 164    owner = PRU  controller = PRU }  # Oppeln
+province = { id = 165    owner = PRU  controller = PRU }  # Liegnitz
+province = { id = 166    owner = PRU  controller = PRU }  # Waldenburg
+province = { id = 167    owner = PRU  controller = PRU }  # Breslau
+province = { id = 168    owner = PRU  controller = PRU }  # Gleiwitz
+province = { id = 169    owner = PRU  controller = PRU }  # Magdeburg
+province = { id = 170    owner = PRU  controller = PRU }  # Leipzig
+province = { id = 171    owner = PRU  controller = PRU }  # Erfurt
+province = { id = 172    owner = PRU  controller = PRU }  # Cottbus
+province = { id = 173    owner = PRU  controller = PRU }  # Dresden
+province = { id = 174    owner = PRU  controller = PRU }  # Bayreuth
+province = { id = 175    owner = PRU  controller = PRU }  # Regensburg
+province = { id = 176    owner = PRU  controller = PRU }  # Landshut
+province = { id = 177    owner = PRU  controller = PRU }  # Nuremberg
+province = { id = 178    owner = PRU  controller = PRU }  # Augsburg
+province = { id = 179    owner = PRU  controller = PRU }  # Munich
+province = { id = 180    owner = PRU  controller = PRU }  # Wurzburg
+province = { id = 181    owner = PRU  controller = PRU }  # Danzig
+province = { id = 182    owner = PRU  controller = PRU }  # Tilsit
+province = { id = 183    owner = PRU  controller = PRU }  # Elbing
+province = { id = 184    owner = PRU  controller = PRU }  # Koenigsberg
+province = { id = 185    owner = PRU  controller = PRU }  # Allenstein
+
+# === PAP ===
+province = { id = 393    owner = PAP  controller = PAP }  # Brescia
+province = { id = 394    owner = PAP  controller = PAP }  # Belluno
+province = { id = 395    owner = PAP  controller = PAP }  # Bergamo
+province = { id = 396    owner = PAP  controller = PAP }  # Genoa
+province = { id = 398    owner = PAP  controller = PAP }  # Turin
+province = { id = 399    owner = PAP  controller = PAP }  # Alessandria
+province = { id = 400    owner = PAP  controller = PAP }  # Venice
+province = { id = 401    owner = PAP  controller = PAP }  # Trento
+province = { id = 402    owner = PAP  controller = PAP }  # Bolzano
+province = { id = 403    owner = PAP  controller = PAP }  # Capodistria
+province = { id = 404    owner = PAP  controller = PAP }  # Trieste
+province = { id = 405    owner = PAP  controller = PAP }  # Udine
+province = { id = 406    owner = PAP  controller = PAP }  # Pola
+province = { id = 407    owner = PAP  controller = PAP }  # Milan
+province = { id = 408    owner = PAP  controller = PAP }  # Parma
+province = { id = 410    owner = PAP  controller = PAP }  # Florence
+province = { id = 411    owner = PAP  controller = PAP }  # Bologna
+province = { id = 412    owner = PAP  controller = PAP }  # Ancona
+province = { id = 413    owner = PAP  controller = PAP }  # Livorno
+province = { id = 414    owner = PAP  controller = PAP }  # Perugia
+province = { id = 415    owner = PAP  controller = PAP }  # Pescara
+province = { id = 416    owner = PAP  controller = PAP }  # Anzio
+province = { id = 417    owner = PAP  controller = PAP }  # Cassino
+province = { id = 418    owner = PAP  controller = PAP }  # Gaeta
+province = { id = 419    owner = PAP  controller = PAP }  # Rome
+province = { id = 420    owner = PAP  controller = PAP }  # Foggia
+province = { id = 421    owner = PAP  controller = PAP }  # Naples
+province = { id = 422    owner = PAP  controller = PAP }  # Taranto
+province = { id = 423    owner = PAP  controller = PAP }  # Campobasso
+province = { id = 424    owner = PAP  controller = PAP }  # Potenza
+province = { id = 425    owner = PAP  controller = PAP }  # Reggio Calabria
+province = { id = 426    owner = PAP  controller = PAP }  # Bari
+province = { id = 427    owner = PAP  controller = PAP }  # Salerno
+province = { id = 428    owner = PAP  controller = PAP }  # Cosenza
+
+# === POL ===
+province = { id = 221    owner = POL  controller = POL }  # Katowice
+province = { id = 222    owner = POL  controller = POL }  # Torun
+province = { id = 223    owner = POL  controller = POL }  # Lodz
+province = { id = 224    owner = POL  controller = POL }  # Poznan
+province = { id = 225    owner = POL  controller = POL }  # Bydgoszcz
+province = { id = 226    owner = POL  controller = POL }  # Gdynia
+province = { id = 227    owner = POL  controller = POL }  # Czestochowa
+province = { id = 228    owner = POL  controller = POL }  # Siedlce
+province = { id = 229    owner = POL  controller = POL }  # Ostroleka
+province = { id = 230    owner = POL  controller = POL }  # Plock
+province = { id = 231    owner = POL  controller = POL }  # Wloclawek
+province = { id = 232    owner = POL  controller = POL }  # Warsaw
+province = { id = 233    owner = POL  controller = POL }  # Sosnowiec
+province = { id = 234    owner = POL  controller = POL }  # Radom
+province = { id = 235    owner = POL  controller = POL }  # Krakow
+province = { id = 236    owner = POL  controller = POL }  # Nowy Sacz
+province = { id = 237    owner = POL  controller = POL }  # Tarnow
+province = { id = 238    owner = POL  controller = POL }  # Stanislawow
+province = { id = 239    owner = POL  controller = POL }  # Przemysl
+province = { id = 240    owner = POL  controller = POL }  # Tarnopol
+province = { id = 241    owner = POL  controller = POL }  # Stryj
+province = { id = 242    owner = POL  controller = POL }  # Lwow
+province = { id = 243    owner = POL  controller = POL }  # Lublin
+province = { id = 244    owner = POL  controller = POL }  # Rowne
+province = { id = 245    owner = POL  controller = POL }  # Lutsk
+province = { id = 246    owner = POL  controller = POL }  # Chelm
+province = { id = 247    owner = POL  controller = POL }  # Brest-Litovsk
+province = { id = 248    owner = POL  controller = POL }  # Pinsk
+province = { id = 249    owner = POL  controller = POL }  # Sarny
+province = { id = 250    owner = POL  controller = POL }  # Lomza
+province = { id = 251    owner = POL  controller = POL }  # Nowogrodek
+province = { id = 252    owner = POL  controller = POL }  # Suwalki
+province = { id = 253    owner = POL  controller = POL }  # Wolkowysk
+province = { id = 254    owner = POL  controller = POL }  # Bialystok
+province = { id = 255    owner = POL  controller = POL }  # Grodno
+province = { id = 256    owner = POL  controller = POL }  # Vilejka
+province = { id = 257    owner = POL  controller = POL }  # Glebokie
+province = { id = 258    owner = POL  controller = POL }  # Wilno
+
+# === HUN ===
+province = { id = 276    owner = HUN  controller = HUN }  # Zalaegerszeg
+province = { id = 277    owner = HUN  controller = HUN }  # Pecs
+province = { id = 278    owner = HUN  controller = HUN }  # Szekesfehervar
+province = { id = 279    owner = HUN  controller = HUN }  # Gyor
+province = { id = 280    owner = HUN  controller = HUN }  # Szeged
+province = { id = 281    owner = HUN  controller = HUN }  # Debrecen
+province = { id = 282    owner = HUN  controller = HUN }  # Miskolc
+province = { id = 283    owner = HUN  controller = HUN }  # Bekescsaba
+province = { id = 284    owner = HUN  controller = HUN }  # Budapest
+
+# === NOV ===
+province = { id = 542    owner = NOV  controller = NOV }  # Arkhangelsk
+province = { id = 543    owner = NOV  controller = NOV }  # Totma
+province = { id = 544    owner = NOV  controller = NOV }  # Kichmensky Gorodok
+province = { id = 545    owner = NOV  controller = NOV }  # Velsk
+province = { id = 546    owner = NOV  controller = NOV }  # Sudostroy
+province = { id = 547    owner = NOV  controller = NOV }  # Kirillov
+province = { id = 548    owner = NOV  controller = NOV }  # Volodga
+province = { id = 549    owner = NOV  controller = NOV }  # Luga
+province = { id = 550    owner = NOV  controller = NOV }  # Kingisepp
+province = { id = 552    owner = NOV  controller = NOV }  # Gdov
+province = { id = 560    owner = NOV  controller = NOV }  # Novgorod
+province = { id = 561    owner = NOV  controller = NOV }  # Staraya Russa
+province = { id = 564    owner = NOV  controller = NOV }  # Opochka
+province = { id = 565    owner = NOV  controller = NOV }  # Dno
+province = { id = 566    owner = NOV  controller = NOV }  # Pskov
+province = { id = 573    owner = NOV  controller = NOV }  # Velikiye Luki
+province = { id = 575    owner = NOV  controller = NOV }  # Safonovo
+province = { id = 586    owner = NOV  controller = NOV }  # Roslavl
+province = { id = 587    owner = NOV  controller = NOV }  # Klintsy
+province = { id = 588    owner = NOV  controller = NOV }  # Bryansk
+province = { id = 589    owner = NOV  controller = NOV }  # Smolensk
+province = { id = 671    owner = NOV  controller = NOV }  # Izhevsk
+province = { id = 672    owner = NOV  controller = NOV }  # Kazan
+province = { id = 673    owner = NOV  controller = NOV }  # Yoshkar-Ola
+province = { id = 676    owner = NOV  controller = NOV }  # Rybinsk
+province = { id = 680    owner = NOV  controller = NOV }  # Gorky
+province = { id = 681    owner = NOV  controller = NOV }  # Kostroma
+province = { id = 684    owner = NOV  controller = NOV }  # Vyatka
+province = { id = 685    owner = NOV  controller = NOV }  # Syktyvkar
+province = { id = 686    owner = NOV  controller = NOV }  # Kudymkar
+province = { id = 688    owner = NOV  controller = NOV }  # Ukhta
+province = { id = 689    owner = NOV  controller = NOV }  # Solikamsk
+
+# === KYV ===
+province = { id = 605    owner = KYV  controller = KYV }  # Konotop
+province = { id = 606    owner = KYV  controller = KYV }  # Sumy
+province = { id = 607    owner = KYV  controller = KYV }  # Chernigov
+province = { id = 608    owner = KYV  controller = KYV }  # Nezhin
+province = { id = 609    owner = KYV  controller = KYV }  # Korosten
+province = { id = 610    owner = KYV  controller = KYV }  # Kremenchug
+province = { id = 611    owner = KYV  controller = KYV }  # Zhitomir
+province = { id = 612    owner = KYV  controller = KYV }  # Vinnitsa
+province = { id = 613    owner = KYV  controller = KYV }  # Cherkasy
+province = { id = 614    owner = KYV  controller = KYV }  # Proskurov
+province = { id = 615    owner = KYV  controller = KYV }  # Uman
+province = { id = 616    owner = KYV  controller = KYV }  # Novograd-Volynsky
+province = { id = 617    owner = KYV  controller = KYV }  # Kiev
+province = { id = 618    owner = KYV  controller = KYV }  # Kamenets-Podolsky
+province = { id = 619    owner = KYV  controller = KYV }  # Mogilev-Podolsky
+province = { id = 620    owner = KYV  controller = KYV }  # Balta
+province = { id = 621    owner = KYV  controller = KYV }  # Tiraspol
+province = { id = 622    owner = KYV  controller = KYV }  # Nikolayev
+province = { id = 623    owner = KYV  controller = KYV }  # Melitopol
+province = { id = 624    owner = KYV  controller = KYV }  # Kherson
+province = { id = 625    owner = KYV  controller = KYV }  # Ochakov
+province = { id = 626    owner = KYV  controller = KYV }  # Odessa
+province = { id = 627    owner = KYV  controller = KYV }  # Krivoy Rog
+province = { id = 628    owner = KYV  controller = KYV }  # Kirovograd
+province = { id = 629    owner = KYV  controller = KYV }  # Poltava
+province = { id = 630    owner = KYV  controller = KYV }  # Zaporozhye
+province = { id = 631    owner = KYV  controller = KYV }  # Mariupol
+province = { id = 632    owner = KYV  controller = KYV }  # Dnepropetrovsk
+province = { id = 633    owner = KYV  controller = KYV }  # Kupyansk
+province = { id = 634    owner = KYV  controller = KYV }  # Voroshilovgrad
+province = { id = 635    owner = KYV  controller = KYV }  # Bakhmut
+province = { id = 636    owner = KYV  controller = KYV }  # Kharkov
+province = { id = 637    owner = KYV  controller = KYV }  # Yevpatoria
+province = { id = 638    owner = KYV  controller = KYV }  # Simferopol
+province = { id = 639    owner = KYV  controller = KYV }  # Dzhankoy
+province = { id = 640    owner = KYV  controller = KYV }  # Kerch
+province = { id = 641    owner = KYV  controller = KYV }  # Sevastopol
+
+# === SCY ===
+province = { id = 580    owner = SCY  controller = SCY }  # Yelets
+province = { id = 581    owner = SCY  controller = SCY }  # Orel
+province = { id = 582    owner = SCY  controller = SCY }  # Livny
+province = { id = 602    owner = SCY  controller = SCY }  # Zheleznogorsk
+province = { id = 603    owner = SCY  controller = SCY }  # Belgorod
+province = { id = 604    owner = SCY  controller = SCY }  # Kursk
+province = { id = 642    owner = SCY  controller = SCY }  # Surovikino
+province = { id = 643    owner = SCY  controller = SCY }  # Morozovsk
+province = { id = 644    owner = SCY  controller = SCY }  # Rostov-on-Don
+province = { id = 645    owner = SCY  controller = SCY }  # Konstantinovsk
+province = { id = 646    owner = SCY  controller = SCY }  # Ostrogozhsk
+province = { id = 647    owner = SCY  controller = SCY }  # Stary Oskol
+province = { id = 648    owner = SCY  controller = SCY }  # Rossosh
+province = { id = 649    owner = SCY  controller = SCY }  # Kamensk-Shakhtinsky
+province = { id = 650    owner = SCY  controller = SCY }  # Tambov
+province = { id = 651    owner = SCY  controller = SCY }  # Borisoglebsk
+province = { id = 652    owner = SCY  controller = SCY }  # Lipetsk
+province = { id = 653    owner = SCY  controller = SCY }  # Pavlovsk
+province = { id = 654    owner = SCY  controller = SCY }  # Voronezh
+province = { id = 655    owner = SCY  controller = SCY }  # Uryupinsk
+province = { id = 657    owner = SCY  controller = SCY }  # Balashov
+province = { id = 658    owner = SCY  controller = SCY }  # Penza
+province = { id = 659    owner = SCY  controller = SCY }  # Kalach-on-Don
+province = { id = 661    owner = SCY  controller = SCY }  # Kamyshin
+province = { id = 662    owner = SCY  controller = SCY }  # Kotelnikovo
+province = { id = 663    owner = SCY  controller = SCY }  # Stalingrad
+province = { id = 665    owner = SCY  controller = SCY }  # Volsk
+province = { id = 669    owner = SCY  controller = SCY }  # Saratov
+
+# === GLK ===
+province = { id = 498    owner = GLK  controller = GLK }  # Pavlodar
+province = { id = 499    owner = GLK  controller = GLK }  # Ekibastuz
+province = { id = 500    owner = GLK  controller = GLK }  # Balkhash
+province = { id = 501    owner = GLK  controller = GLK }  # Kokchetav
+province = { id = 502    owner = GLK  controller = GLK }  # Akmolinsk
+province = { id = 503    owner = GLK  controller = GLK }  # Karaganda
+province = { id = 504    owner = GLK  controller = GLK }  # Alma-Ata
+province = { id = 505    owner = GLK  controller = GLK }  # Sar
+province = { id = 506    owner = GLK  controller = GLK }  # Taldy-Kurgan
+province = { id = 507    owner = GLK  controller = GLK }  # Ust-Kamenogorsk
+province = { id = 1108   owner = GLK  controller = GLK }  # Dzhambul
+province = { id = 1109   owner = GLK  controller = GLK }  # Chimkent
+province = { id = 1110   owner = GLK  controller = GLK }  # Kzyl-Orda
+province = { id = 1111   owner = GLK  controller = GLK }  # Fyodorovka
+province = { id = 1112   owner = GLK  controller = GLK }  # Novokazalinsk
+province = { id = 1113   owner = GLK  controller = GLK }  # Uralsk
+province = { id = 1114   owner = GLK  controller = GLK }  # Aktyubinsk
+province = { id = 1115   owner = GLK  controller = GLK }  # Kustanay
+province = { id = 1116   owner = GLK  controller = GLK }  # Derzhavinsk
+province = { id = 1117   owner = GLK  controller = GLK }  # Chelkar
+province = { id = 1118   owner = GLK  controller = GLK }  # Fort Alexandrovsky
+
+# === PRM ===
+province = { id = 687    owner = PRM  controller = PRM }  # Perm
+province = { id = 1126   owner = PRM  controller = PRM }  # Kungur
+province = { id = 1127   owner = PRM  controller = PRM }  # Pervouralsk
+province = { id = 1128   owner = PRM  controller = PRM }  # Nizhny Tagil
+province = { id = 1129   owner = PRM  controller = PRM }  # Vorkuta
+province = { id = 1130   owner = PRM  controller = PRM }  # Berezniki
+province = { id = 1151   owner = PRM  controller = PRM }  # Sverdlovsk
+province = { id = 1153   owner = PRM  controller = PRM }  # Uray
+
+# === SIB ===
+province = { id = 1069   owner = SIB  controller = SIB }  # Tayshet
+province = { id = 1070   owner = SIB  controller = SIB }  # Kachug
+province = { id = 1119   owner = SIB  controller = SIB }  # Kyzyl
+province = { id = 1135   owner = SIB  controller = SIB }  # Tobolsk
+province = { id = 1136   owner = SIB  controller = SIB }  # Tyumen
+province = { id = 1137   owner = SIB  controller = SIB }  # Kurgan
+province = { id = 1138   owner = SIB  controller = SIB }  # Omsk
+province = { id = 1139   owner = SIB  controller = SIB }  # Tara
+province = { id = 1140   owner = SIB  controller = SIB }  # Barnaul
+province = { id = 1141   owner = SIB  controller = SIB }  # Barabinsk
+province = { id = 1142   owner = SIB  controller = SIB }  # Novosibirsk
+province = { id = 1143   owner = SIB  controller = SIB }  # Biysk
+province = { id = 1144   owner = SIB  controller = SIB }  # Kemerovo
+province = { id = 1145   owner = SIB  controller = SIB }  # Kuznetsk
+province = { id = 1146   owner = SIB  controller = SIB }  # Oyrot-Tura
+province = { id = 1147   owner = SIB  controller = SIB }  # Abakan
+province = { id = 1148   owner = SIB  controller = SIB }  # Tomsk
+province = { id = 1149   owner = SIB  controller = SIB }  # Asino
+province = { id = 1150   owner = SIB  controller = SIB }  # Ostyako-Vogulsk
+province = { id = 1154   owner = SIB  controller = SIB }  # Surgut
+province = { id = 1156   owner = SIB  controller = SIB }  # Krasnoyarsk
+province = { id = 1157   owner = SIB  controller = SIB }  # Kansk
+province = { id = 1158   owner = SIB  controller = SIB }  # Minusinsk
+province = { id = 1161   owner = SIB  controller = SIB }  # Kalakan
+province = { id = 1162   owner = SIB  controller = SIB }  # Irkutsk
+province = { id = 1163   owner = SIB  controller = SIB }  # Bodaybo
+province = { id = 1164   owner = SIB  controller = SIB }  # Ust-Kut
+province = { id = 1165   owner = SIB  controller = SIB }  # Bratsk
+province = { id = 1166   owner = SIB  controller = SIB }  # Cheremkhovo
+province = { id = 1167   owner = SIB  controller = SIB }  # Ulan-Ude
+province = { id = 1168   owner = SIB  controller = SIB }  # Borzya
+province = { id = 1169   owner = SIB  controller = SIB }  # Chita
+
+# === MOR ===
+province = { id = 715    owner = MOR  controller = MOR }  # Tangier
+province = { id = 716    owner = MOR  controller = MOR }  # Nador
+province = { id = 717    owner = MOR  controller = MOR }  # Rabat
+province = { id = 718    owner = MOR  controller = MOR }  # Casablanca
+province = { id = 719    owner = MOR  controller = MOR }  # Tiznit
+province = { id = 720    owner = MOR  controller = MOR }  # Agadir
+province = { id = 721    owner = MOR  controller = MOR }  # Fes
+province = { id = 722    owner = MOR  controller = MOR }  # Marrakech
+province = { id = 723    owner = MOR  controller = MOR }  # Khenifra
+province = { id = 724    owner = MOR  controller = MOR }  # Oujda
+province = { id = 725    owner = MOR  controller = MOR }  # Ouarzazate
+province = { id = 726    owner = MOR  controller = MOR }  # Er Rachidia
+
+# === NUM ===
+province = { id = 727    owner = NUM  controller = NUM }  # Algiers
+province = { id = 728    owner = NUM  controller = NUM }  # Oran
+province = { id = 729    owner = NUM  controller = NUM }  # Tlemcen
+province = { id = 730    owner = NUM  controller = NUM }  # Orleansville
+province = { id = 731    owner = NUM  controller = NUM }  # Batna
+province = { id = 732    owner = NUM  controller = NUM }  # Djelfa
+province = { id = 733    owner = NUM  controller = NUM }  # Geryville
+province = { id = 734    owner = NUM  controller = NUM }  # Constantine
+province = { id = 735    owner = NUM  controller = NUM }  # Bona
+province = { id = 736    owner = NUM  controller = NUM }  # Bougie
+province = { id = 737    owner = NUM  controller = NUM }  # Touggourt
+province = { id = 738    owner = NUM  controller = NUM }  # Tamanrasset
+province = { id = 739    owner = NUM  controller = NUM }  # Colomb Bechar
+province = { id = 740    owner = NUM  controller = NUM }  # Kasserine
+province = { id = 741    owner = NUM  controller = NUM }  # Tataouine
+province = { id = 742    owner = NUM  controller = NUM }  # Medenine
+province = { id = 743    owner = NUM  controller = NUM }  # Tebessa
+province = { id = 744    owner = NUM  controller = NUM }  # Gabes
+province = { id = 745    owner = NUM  controller = NUM }  # Sousse
+province = { id = 746    owner = NUM  controller = NUM }  # El Kef
+province = { id = 747    owner = NUM  controller = NUM }  # Tunis
+province = { id = 748    owner = NUM  controller = NUM }  # Bizerte
+province = { id = 749    owner = NUM  controller = NUM }  # Beja
+
+# === MAL ===
+province = { id = 929    owner = MAL  controller = MAL }  # Lagos
+province = { id = 930    owner = MAL  controller = MAL }  # Port Harcourt
+province = { id = 931    owner = MAL  controller = MAL }  # Katsina-Ala
+province = { id = 932    owner = MAL  controller = MAL }  # Ibadan
+province = { id = 933    owner = MAL  controller = MAL }  # Buea
+province = { id = 934    owner = MAL  controller = MAL }  # Oshogbo
+province = { id = 935    owner = MAL  controller = MAL }  # Benin City
+province = { id = 936    owner = MAL  controller = MAL }  # Yola
+province = { id = 937    owner = MAL  controller = MAL }  # Sokoto
+province = { id = 938    owner = MAL  controller = MAL }  # Maiduguri
+province = { id = 939    owner = MAL  controller = MAL }  # Kaduna
+province = { id = 940    owner = MAL  controller = MAL }  # Kano
+province = { id = 941    owner = MAL  controller = MAL }  # Abuja
+province = { id = 942    owner = MAL  controller = MAL }  # Say
+province = { id = 943    owner = MAL  controller = MAL }  # Zinder
+province = { id = 944    owner = MAL  controller = MAL }  # Niamey
+province = { id = 945    owner = MAL  controller = MAL }  # Tenkodogo
+province = { id = 946    owner = MAL  controller = MAL }  # Agadez
+province = { id = 947    owner = MAL  controller = MAL }  # Tahoua
+province = { id = 948    owner = MAL  controller = MAL }  # Kara
+province = { id = 949    owner = MAL  controller = MAL }  # Natitingou
+province = { id = 950    owner = MAL  controller = MAL }  # Lome
+province = { id = 951    owner = MAL  controller = MAL }  # Cotonou
+province = { id = 952    owner = MAL  controller = MAL }  # Tamale
+province = { id = 953    owner = MAL  controller = MAL }  # Wa
+province = { id = 954    owner = MAL  controller = MAL }  # Kumasi
+province = { id = 955    owner = MAL  controller = MAL }  # Ho
+province = { id = 956    owner = MAL  controller = MAL }  # Accra
+province = { id = 957    owner = MAL  controller = MAL }  # Ouagadougou
+province = { id = 958    owner = MAL  controller = MAL }  # Tougan
+province = { id = 959    owner = MAL  controller = MAL }  # Bobo-Dioulasso
+province = { id = 960    owner = MAL  controller = MAL }  # Yamoussoukro
+province = { id = 961    owner = MAL  controller = MAL }  # Bouake
+province = { id = 962    owner = MAL  controller = MAL }  # Abidjan
+province = { id = 963    owner = MAL  controller = MAL }  # Bissau
+province = { id = 964    owner = MAL  controller = MAL }  # Freetown
+province = { id = 965    owner = MAL  controller = MAL }  # Labe
+province = { id = 966    owner = MAL  controller = MAL }  # Conakry
+province = { id = 967    owner = MAL  controller = MAL }  # Kankan
+province = { id = 968    owner = MAL  controller = MAL }  # Korhogo
+province = { id = 969    owner = MAL  controller = MAL }  # Monrovia
+province = { id = 970    owner = MAL  controller = MAL }  # San Pedro
+province = { id = 971    owner = MAL  controller = MAL }  # Nioro du Sahel
+province = { id = 972    owner = MAL  controller = MAL }  # Segou
+province = { id = 973    owner = MAL  controller = MAL }  # Sikasso
+province = { id = 974    owner = MAL  controller = MAL }  # Mopti
+province = { id = 975    owner = MAL  controller = MAL }  # Kayes
+province = { id = 976    owner = MAL  controller = MAL }  # Bamako
+province = { id = 977    owner = MAL  controller = MAL }  # Tambacounda
+province = { id = 978    owner = MAL  controller = MAL }  # Dakar
+province = { id = 979    owner = MAL  controller = MAL }  # Banjul
+province = { id = 980    owner = MAL  controller = MAL }  # Ziguinchor
+province = { id = 981    owner = MAL  controller = MAL }  # Nouakchott
+province = { id = 982    owner = MAL  controller = MAL }  # Kiffa
+province = { id = 983    owner = MAL  controller = MAL }  # Saint-Louis
+province = { id = 984    owner = MAL  controller = MAL }  # Gao
+province = { id = 985    owner = MAL  controller = MAL }  # Tombouctou
+province = { id = 986    owner = MAL  controller = MAL }  # Atar
+province = { id = 992    owner = MAL  controller = MAL }  # Cape Verde
+province = { id = 993    owner = MAL  controller = MAL }  # Ascension Island
+
+# === ABY ===
+province = { id = 815    owner = ABY  controller = ABY }  # Massawa
+province = { id = 816    owner = ABY  controller = ABY }  # Assab
+province = { id = 817    owner = ABY  controller = ABY }  # Asmara
+province = { id = 818    owner = ABY  controller = ABY }  # Dire Dawa
+province = { id = 819    owner = ABY  controller = ABY }  # Tendaho
+province = { id = 820    owner = ABY  controller = ABY }  # Dessie
+province = { id = 821    owner = ABY  controller = ABY }  # Adigrat
+province = { id = 822    owner = ABY  controller = ABY }  # Debre Marqos
+province = { id = 823    owner = ABY  controller = ABY }  # Gonder
+province = { id = 824    owner = ABY  controller = ABY }  # Asosa
+province = { id = 825    owner = ABY  controller = ABY }  # Addis Adeba
+province = { id = 826    owner = ABY  controller = ABY }  # Goba
+province = { id = 827    owner = ABY  controller = ABY }  # Gode
+province = { id = 828    owner = ABY  controller = ABY }  # Harer
+province = { id = 829    owner = ABY  controller = ABY }  # Jimma
+province = { id = 830    owner = ABY  controller = ABY }  # Arba Minch
+province = { id = 831    owner = ABY  controller = ABY }  # Awasa
+province = { id = 832    owner = ABY  controller = ABY }  # Hargeisa
+province = { id = 833    owner = ABY  controller = ABY }  # Djibouti
+province = { id = 834    owner = ABY  controller = ABY }  # Gardo
+province = { id = 835    owner = ABY  controller = ABY }  # Galkacyo
+province = { id = 836    owner = ABY  controller = ABY }  # Mogadishu
+province = { id = 837    owner = ABY  controller = ABY }  # Baidoa
+province = { id = 838    owner = ABY  controller = ABY }  # Kismayo
+province = { id = 840    owner = ABY  controller = ABY }  # Suqutra
+
+# === IRS ===
+province = { id = 384    owner = IRS  controller = IRS }  # Gallipoli
+province = { id = 385    owner = IRS  controller = IRS }  # Adrianople
+province = { id = 386    owner = IRS  controller = IRS }  # Kars
+province = { id = 409    owner = IRS  controller = IRS }  # Istanbul
+province = { id = 1054   owner = IRS  controller = IRS }  # Antakya
+province = { id = 1055   owner = IRS  controller = IRS }  # Adana
+province = { id = 1056   owner = IRS  controller = IRS }  # Gaziantep
+province = { id = 1057   owner = IRS  controller = IRS }  # Antalya
+province = { id = 1058   owner = IRS  controller = IRS }  # Tarsus
+province = { id = 1059   owner = IRS  controller = IRS }  # Sivas
+province = { id = 1060   owner = IRS  controller = IRS }  # Diyarbakir
+province = { id = 1061   owner = IRS  controller = IRS }  # Malatya
+province = { id = 1062   owner = IRS  controller = IRS }  # Hakkari
+province = { id = 1063   owner = IRS  controller = IRS }  # Erzurum
+province = { id = 1064   owner = IRS  controller = IRS }  # Elazig
+province = { id = 1065   owner = IRS  controller = IRS }  # Karabuk
+province = { id = 1066   owner = IRS  controller = IRS }  # Samsun
+province = { id = 1067   owner = IRS  controller = IRS }  # Trabzon
+province = { id = 1068   owner = IRS  controller = IRS }  # Zonguldak
+province = { id = 1071   owner = IRS  controller = IRS }  # Eskisehir
+province = { id = 1072   owner = IRS  controller = IRS }  # Kirikkale
+province = { id = 1073   owner = IRS  controller = IRS }  # Kayseri
+province = { id = 1074   owner = IRS  controller = IRS }  # Konya
+province = { id = 1075   owner = IRS  controller = IRS }  # Ankara
+province = { id = 1076   owner = IRS  controller = IRS }  # Izmit
+province = { id = 1077   owner = IRS  controller = IRS }  # Smyrna
+province = { id = 1078   owner = IRS  controller = IRS }  # Bursa
+province = { id = 1079   owner = IRS  controller = IRS }  # Denizli
+
+# === NAT ===
+province = { id = 1017   owner = NAT  controller = NAT }  # Homs
+province = { id = 1018   owner = NAT  controller = NAT }  # Trablos
+province = { id = 1019   owner = NAT  controller = NAT }  # Beirut
+province = { id = 1021   owner = NAT  controller = NAT }  # Aleppo
+province = { id = 1054   owner = NAT  controller = NAT }  # Antakya
+province = { id = 1055   owner = NAT  controller = NAT }  # Adana
+province = { id = 1056   owner = NAT  controller = NAT }  # Gaziantep
+province = { id = 1058   owner = NAT  controller = NAT }  # Tarsus
+
+# === HBK ===
+province = { id = 1008   owner = HBK  controller = HBK }  # Tel Aviv
+province = { id = 1011   owner = HBK  controller = HBK }  # Haifa
+province = { id = 1013   owner = HBK  controller = HBK }  # Akko
+province = { id = 1020   owner = HBK  controller = HBK }  # Golan
+province = { id = 1172   owner = HBK  controller = HBK }  # Jerusalem
+
+# === TRP ===
+province = { id = 1009   owner = TRP  controller = TRP }  # Gaza
+province = { id = 1010   owner = TRP  controller = TRP }  # Eilat
+province = { id = 1022   owner = TRP  controller = TRP }  # Amman
+province = { id = 1023   owner = TRP  controller = TRP }  # Irbid
+province = { id = 1024   owner = TRP  controller = TRP }  # As Zarqa
+province = { id = 1025   owner = TRP  controller = TRP }  # Ma'an
+province = { id = 1026   owner = TRP  controller = TRP }  # Al Kerak
+
+# === SAM ===
+province = { id = 1027   owner = SAM  controller = SAM }  # Arbil
+province = { id = 1028   owner = SAM  controller = SAM }  # Al Amarah
+province = { id = 1029   owner = SAM  controller = SAM }  # Mosul
+province = { id = 1030   owner = SAM  controller = SAM }  # Karbala
+province = { id = 1031   owner = SAM  controller = SAM }  # An Najaf
+province = { id = 1032   owner = SAM  controller = SAM }  # Basrah
+province = { id = 1033   owner = SAM  controller = SAM }  # El Hillah
+province = { id = 1034   owner = SAM  controller = SAM }  # Baghdad
+province = { id = 1035   owner = SAM  controller = SAM }  # Kut
+province = { id = 1036   owner = SAM  controller = SAM }  # Kirkuk
+province = { id = 1037   owner = SAM  controller = SAM }  # An Nasiriyyah
+province = { id = 1080   owner = SAM  controller = SAM }  # Sari
+province = { id = 1081   owner = SAM  controller = SAM }  # Rast
+province = { id = 1082   owner = SAM  controller = SAM }  # Rezaiye
+province = { id = 1083   owner = SAM  controller = SAM }  # Tabriz
+province = { id = 1084   owner = SAM  controller = SAM }  # Kermanshah
+province = { id = 1085   owner = SAM  controller = SAM }  # Teheran
+province = { id = 1086   owner = SAM  controller = SAM }  # Esfahan
+province = { id = 1087   owner = SAM  controller = SAM }  # Hamadan
+province = { id = 1088   owner = SAM  controller = SAM }  # Shiraz
+province = { id = 1089   owner = SAM  controller = SAM }  # Ahvaz
+province = { id = 1090   owner = SAM  controller = SAM }  # Busehr
+province = { id = 1091   owner = SAM  controller = SAM }  # Gameroon
+province = { id = 1092   owner = SAM  controller = SAM }  # Mashhad
+province = { id = 1093   owner = SAM  controller = SAM }  # Zahedan
+province = { id = 1094   owner = SAM  controller = SAM }  # Kerman
+province = { id = 1095   owner = SAM  controller = SAM }  # Birjand
+
+# === IBL ===
+province = { id = 1038   owner = IBL  controller = IBL }  # Doha
+province = { id = 1039   owner = IBL  controller = IBL }  # Abu Dhabi
+province = { id = 1040   owner = IBL  controller = IBL }  # Dammam
+province = { id = 1041   owner = IBL  controller = IBL }  # Kuwait
+province = { id = 1043   owner = IBL  controller = IBL }  # Khasab
+province = { id = 1044   owner = IBL  controller = IBL }  # Hayel
+province = { id = 1045   owner = IBL  controller = IBL }  # Riyadh
+province = { id = 1046   owner = IBL  controller = IBL }  # Al-Jawf
+province = { id = 1047   owner = IBL  controller = IBL }  # El Hofuf
+province = { id = 1048   owner = IBL  controller = IBL }  # Medina
+province = { id = 1049   owner = IBL  controller = IBL }  # Mecca
+
+# === IFR ===
+province = { id = 987    owner = IFR  controller = IFR }  # El Aiun
+province = { id = 988    owner = IFR  controller = IFR }  # Villa Cisneros
+province = { id = 989    owner = IFR  controller = IFR }  # Villa Bens
+province = { id = 990    owner = IFR  controller = IFR }  # Las Palmas de Gran Canaria
+province = { id = 991    owner = IFR  controller = IFR }  # Santa Cruz de Tenerife
+province = { id = 1050   owner = IFR  controller = IFR }  # Sanaa
+province = { id = 1051   owner = IFR  controller = IFR }  # El Mukalla
+province = { id = 1052   owner = IFR  controller = IFR }  # Masqat
+province = { id = 1053   owner = IFR  controller = IFR }  # Aden
+
+# === CRT ===
+province = { id = 285    owner = CRT  controller = CRT }  # Timisoara
+province = { id = 286    owner = CRT  controller = CRT }  # Arad
+province = { id = 287    owner = CRT  controller = CRT }  # Turda
+province = { id = 288    owner = CRT  controller = CRT }  # Cluj
+province = { id = 289    owner = CRT  controller = CRT }  # Alba Iulia
+province = { id = 291    owner = CRT  controller = CRT }  # Sibiu
+province = { id = 292    owner = CRT  controller = CRT }  # Bistrita
+province = { id = 293    owner = CRT  controller = CRT }  # Miercurea Ciuc
+province = { id = 295    owner = CRT  controller = CRT }  # Resita
+province = { id = 296    owner = CRT  controller = CRT }  # Oradea
+province = { id = 297    owner = CRT  controller = CRT }  # Iasi
+province = { id = 298    owner = CRT  controller = CRT }  # Galati
+province = { id = 299    owner = CRT  controller = CRT }  # Bacau
+province = { id = 300    owner = CRT  controller = CRT }  # Cernauti
+province = { id = 301    owner = CRT  controller = CRT }  # Suceava
+province = { id = 302    owner = CRT  controller = CRT }  # Hotin
+province = { id = 303    owner = CRT  controller = CRT }  # Balti
+province = { id = 304    owner = CRT  controller = CRT }  # Chisinau
+province = { id = 305    owner = CRT  controller = CRT }  # Cahul
+province = { id = 306    owner = CRT  controller = CRT }  # Ismail
+province = { id = 307    owner = CRT  controller = CRT }  # Dobrich
+province = { id = 308    owner = CRT  controller = CRT }  # Giurgiu
+province = { id = 309    owner = CRT  controller = CRT }  # Braila
+province = { id = 310    owner = CRT  controller = CRT }  # Constantza
+province = { id = 311    owner = CRT  controller = CRT }  # Ploesti
+province = { id = 312    owner = CRT  controller = CRT }  # Turnu Severin
+province = { id = 313    owner = CRT  controller = CRT }  # Sulina
+province = { id = 314    owner = CRT  controller = CRT }  # Calarasi
+province = { id = 315    owner = CRT  controller = CRT }  # Craiova
+province = { id = 316    owner = CRT  controller = CRT }  # Bucharest
+province = { id = 317    owner = CRT  controller = CRT }  # Ruse
+province = { id = 318    owner = CRT  controller = CRT }  # Vidin
+province = { id = 319    owner = CRT  controller = CRT }  # Haskovo
+province = { id = 320    owner = CRT  controller = CRT }  # Gorna Dzhumaya
+province = { id = 321    owner = CRT  controller = CRT }  # Sofia
+province = { id = 322    owner = CRT  controller = CRT }  # Gabrovo
+province = { id = 323    owner = CRT  controller = CRT }  # Pleven
+province = { id = 324    owner = CRT  controller = CRT }  # Plovdiv
+province = { id = 325    owner = CRT  controller = CRT }  # Burgas
+province = { id = 326    owner = CRT  controller = CRT }  # Varna
+province = { id = 327    owner = CRT  controller = CRT }  # Krusevac
+province = { id = 328    owner = CRT  controller = CRT }  # Kumanovo
+province = { id = 329    owner = CRT  controller = CRT }  # Pristina
+province = { id = 330    owner = CRT  controller = CRT }  # Nis
+province = { id = 331    owner = CRT  controller = CRT }  # Pirot
+province = { id = 332    owner = CRT  controller = CRT }  # Cetinje
+province = { id = 333    owner = CRT  controller = CRT }  # Skopje
+province = { id = 334    owner = CRT  controller = CRT }  # Tetovo
+province = { id = 335    owner = CRT  controller = CRT }  # Prijepolje
+province = { id = 336    owner = CRT  controller = CRT }  # Petrovgrad
+province = { id = 337    owner = CRT  controller = CRT }  # Ruma
+province = { id = 338    owner = CRT  controller = CRT }  # Belgrade
+province = { id = 339    owner = CRT  controller = CRT }  # Bor
+province = { id = 340    owner = CRT  controller = CRT }  # Sabac
+province = { id = 341    owner = CRT  controller = CRT }  # Novi Sad
+province = { id = 342    owner = CRT  controller = CRT }  # Uzice
+province = { id = 343    owner = CRT  controller = CRT }  # Dubrovnik
+province = { id = 344    owner = CRT  controller = CRT }  # Osijek
+province = { id = 345    owner = CRT  controller = CRT }  # Bjelovar
+province = { id = 346    owner = CRT  controller = CRT }  # Maribor
+province = { id = 347    owner = CRT  controller = CRT }  # Karlovac
+province = { id = 349    owner = CRT  controller = CRT }  # Ljubljana
+province = { id = 350    owner = CRT  controller = CRT }  # Split
+province = { id = 351    owner = CRT  controller = CRT }  # Knin
+province = { id = 352    owner = CRT  controller = CRT }  # Zagreb
+province = { id = 353    owner = CRT  controller = CRT }  # Banja Luka
+province = { id = 354    owner = CRT  controller = CRT }  # Tuzla
+province = { id = 355    owner = CRT  controller = CRT }  # Sarajevo
+province = { id = 356    owner = CRT  controller = CRT }  # Mostar
+province = { id = 357    owner = CRT  controller = CRT }  # Bihac
+province = { id = 358    owner = CRT  controller = CRT }  # Travnik
+
+# === BLZ ===
+province = { id = 359    owner = BLZ  controller = BLZ }  # Tirana
+province = { id = 360    owner = BLZ  controller = BLZ }  # Korce
+province = { id = 361    owner = BLZ  controller = BLZ }  # Shkoder
+province = { id = 362    owner = BLZ  controller = BLZ }  # Vlore
+province = { id = 363    owner = BLZ  controller = BLZ }  # Xanthi
+province = { id = 364    owner = BLZ  controller = BLZ }  # Kavala
+province = { id = 365    owner = BLZ  controller = BLZ }  # Thessaloniki
+province = { id = 366    owner = BLZ  controller = BLZ }  # Kozani
+province = { id = 367    owner = BLZ  controller = BLZ }  # Ioannina
+province = { id = 368    owner = BLZ  controller = BLZ }  # Larissa
+province = { id = 369    owner = BLZ  controller = BLZ }  # Metsovo
+province = { id = 370    owner = BLZ  controller = BLZ }  # Alexandroupoli
+province = { id = 372    owner = BLZ  controller = BLZ }  # Patra
+province = { id = 373    owner = BLZ  controller = BLZ }  # Corinth
+province = { id = 374    owner = BLZ  controller = BLZ }  # Chalcis
+province = { id = 375    owner = BLZ  controller = BLZ }  # Levadhia
+province = { id = 376    owner = BLZ  controller = BLZ }  # Agrinion
+province = { id = 377    owner = BLZ  controller = BLZ }  # Athens
+
+# === MAM ===
+province = { id = 778    owner = MAM  controller = MAM }  # Bir Fuad
+province = { id = 779    owner = MAM  controller = MAM }  # Siwah
+province = { id = 780    owner = MAM  controller = MAM }  # Sidi Barrani
+province = { id = 781    owner = MAM  controller = MAM }  # As Sollum
+province = { id = 782    owner = MAM  controller = MAM }  # Bir Baylih
+province = { id = 783    owner = MAM  controller = MAM }  # El Alamein
+province = { id = 784    owner = MAM  controller = MAM }  # Fuqa
+province = { id = 785    owner = MAM  controller = MAM }  # Matruh
+province = { id = 786    owner = MAM  controller = MAM }  # Dimyat
+province = { id = 787    owner = MAM  controller = MAM }  # Cairo
+province = { id = 788    owner = MAM  controller = MAM }  # Giza
+province = { id = 789    owner = MAM  controller = MAM }  # Alexandria
+province = { id = 790    owner = MAM  controller = MAM }  # Tanta
+province = { id = 791    owner = MAM  controller = MAM }  # Port Said
+province = { id = 792    owner = MAM  controller = MAM }  # El Faiyum
+province = { id = 793    owner = MAM  controller = MAM }  # Miniah
+province = { id = 794    owner = MAM  controller = MAM }  # Asyut
+province = { id = 795    owner = MAM  controller = MAM }  # Aswan
+province = { id = 796    owner = MAM  controller = MAM }  # El Ghardaqah
+province = { id = 797    owner = MAM  controller = MAM }  # Luxor
+province = { id = 798    owner = MAM  controller = MAM }  # El Kharga
+province = { id = 799    owner = MAM  controller = MAM }  # Moghara
+province = { id = 800    owner = MAM  controller = MAM }  # Bir Nahid
+province = { id = 801    owner = MAM  controller = MAM }  # El Farafra
+province = { id = 802    owner = MAM  controller = MAM }  # El Qasr
+province = { id = 900    owner = MAM  controller = MAM }  # Suez
+
+# === HRL ===
+province = { id = 37     owner = HRL  controller = HRL }  # Brest
+province = { id = 38     owner = HRL  controller = HRL }  # Rennes
+province = { id = 39     owner = HRL  controller = HRL }  # Lorient
+province = { id = 40     owner = HRL  controller = HRL }  # Saint-Nazaire
+province = { id = 41     owner = HRL  controller = HRL }  # Saint-Brieuc
+province = { id = 42     owner = HRL  controller = HRL }  # Avranches
+province = { id = 43     owner = HRL  controller = HRL }  # Cherbourg
+province = { id = 44     owner = HRL  controller = HRL }  # Caen
+province = { id = 45     owner = HRL  controller = HRL }  # Le Havre
+province = { id = 46     owner = HRL  controller = HRL }  # Bayeux
+province = { id = 47     owner = HRL  controller = HRL }  # Falaise
+province = { id = 48     owner = HRL  controller = HRL }  # Evreux
+province = { id = 49     owner = HRL  controller = HRL }  # Calais
+province = { id = 50     owner = HRL  controller = HRL }  # Amiens
+province = { id = 51     owner = HRL  controller = HRL }  # Dunkirk
+province = { id = 52     owner = HRL  controller = HRL }  # Lille
+province = { id = 53     owner = HRL  controller = HRL }  # Dieppe
+province = { id = 54     owner = HRL  controller = HRL }  # Troyes
+province = { id = 55     owner = HRL  controller = HRL }  # Paris
+province = { id = 56     owner = HRL  controller = HRL }  # Chateau Thierry
+province = { id = 57     owner = HRL  controller = HRL }  # Nantes
+province = { id = 58     owner = HRL  controller = HRL }  # Le Mans
+province = { id = 59     owner = HRL  controller = HRL }  # Angers
+province = { id = 60     owner = HRL  controller = HRL }  # Chartres
+province = { id = 61     owner = HRL  controller = HRL }  # Tours
+province = { id = 62     owner = HRL  controller = HRL }  # Poitiers
+province = { id = 63     owner = HRL  controller = HRL }  # Auxerre
+province = { id = 64     owner = HRL  controller = HRL }  # Le Creusot
+province = { id = 65     owner = HRL  controller = HRL }  # Bourges
+province = { id = 66     owner = HRL  controller = HRL }  # Orleans
+province = { id = 67     owner = HRL  controller = HRL }  # Mont-de-Marsan
+province = { id = 68     owner = HRL  controller = HRL }  # Bordeaux
+province = { id = 69     owner = HRL  controller = HRL }  # La Rochelle
+province = { id = 70     owner = HRL  controller = HRL }  # Angouleme
+province = { id = 71     owner = HRL  controller = HRL }  # Clermont-Ferrand
+province = { id = 72     owner = HRL  controller = HRL }  # Chateauroux
+province = { id = 73     owner = HRL  controller = HRL }  # Limoges
+province = { id = 74     owner = HRL  controller = HRL }  # Vichy
+province = { id = 75     owner = HRL  controller = HRL }  # Perigueux
+province = { id = 76     owner = HRL  controller = HRL }  # Tulle
+province = { id = 77     owner = HRL  controller = HRL }  # Toulouse
+province = { id = 78     owner = HRL  controller = HRL }  # Saint-Etienne
+province = { id = 79     owner = HRL  controller = HRL }  # Beziers
+province = { id = 80     owner = HRL  controller = HRL }  # Perpignan
+province = { id = 81     owner = HRL  controller = HRL }  # Rodez
+province = { id = 82     owner = HRL  controller = HRL }  # Montpellier
+province = { id = 83     owner = HRL  controller = HRL }  # Pau
+province = { id = 84     owner = HRL  controller = HRL }  # Agen
+province = { id = 85     owner = HRL  controller = HRL }  # Lyon
+province = { id = 86     owner = HRL  controller = HRL }  # Toulon
+province = { id = 87     owner = HRL  controller = HRL }  # Nice
+province = { id = 88     owner = HRL  controller = HRL }  # Bourg-en-Bresse
+province = { id = 89     owner = HRL  controller = HRL }  # Marseille
+province = { id = 90     owner = HRL  controller = HRL }  # Grenoble
+province = { id = 91     owner = HRL  controller = HRL }  # Chambery
+province = { id = 92     owner = HRL  controller = HRL }  # Valence
+province = { id = 93     owner = HRL  controller = HRL }  # Avignon
+province = { id = 95     owner = HRL  controller = HRL }  # Chaumont
+province = { id = 96     owner = HRL  controller = HRL }  # Longwy
+province = { id = 97     owner = HRL  controller = HRL }  # Belfort
+province = { id = 98     owner = HRL  controller = HRL }  # Pontarlier
+province = { id = 99     owner = HRL  controller = HRL }  # Reims
+province = { id = 100    owner = HRL  controller = HRL }  # Verdun
+province = { id = 101    owner = HRL  controller = HRL }  # Laon
+province = { id = 102    owner = HRL  controller = HRL }  # Sedan
+province = { id = 103    owner = HRL  controller = HRL }  # Hirson
+province = { id = 104    owner = HRL  controller = HRL }  # Metz
+province = { id = 105    owner = HRL  controller = HRL }  # Colmar
+province = { id = 106    owner = HRL  controller = HRL }  # Nancy
+province = { id = 107    owner = HRL  controller = HRL }  # Strasbourg
+
+# === MRD ===
+province = { id = 2175   owner = MRD  controller = MRD }  # Coast of Bengazi
+province = { id = 2176   owner = MRD  controller = MRD }  # Nile Delta
+province = { id = 2177   owner = MRD  controller = MRD }  # Gulf of Sollum
+province = { id = 2178   owner = MRD  controller = MRD }  # Coast of Egypt
+province = { id = 2179   owner = MRD  controller = MRD }  # Tyrrhenian Sea
+province = { id = 2180   owner = MRD  controller = MRD }  # Cape Passero
+province = { id = 2181   owner = MRD  controller = MRD }  # Sea of Sicily
+province = { id = 2182   owner = MRD  controller = MRD }  # Gulf of Gaeta
+province = { id = 2183   owner = MRD  controller = MRD }  # Gulf of Gabes
+province = { id = 2184   owner = MRD  controller = MRD }  # Gulf of Naples
+province = { id = 2185   owner = MRD  controller = MRD }  # Gulf of Sidra
+province = { id = 2186   owner = MRD  controller = MRD }  # Gulf of Taranto
+province = { id = 2187   owner = MRD  controller = MRD }  # Catalan Sea
+province = { id = 2188   owner = MRD  controller = MRD }  # Gulf of Lyon
+province = { id = 2189   owner = MRD  controller = MRD }  # Ligurian Sea
+province = { id = 2190   owner = MRD  controller = MRD }  # Balearic Sea
+province = { id = 2191   owner = MRD  controller = MRD }  # Sea of Sardinia
+province = { id = 2192   owner = MRD  controller = MRD }  # Gulf of Cagliari
+province = { id = 2193   owner = MRD  controller = MRD }  # Gulf of Tunis
+province = { id = 2194   owner = MRD  controller = MRD }  # Coast of Algeria
+province = { id = 2195   owner = MRD  controller = MRD }  # Alboran Sea
+province = { id = 2196   owner = MRD  controller = MRD }  # Cape of Palos
+province = { id = 2430   owner = MRD  controller = MRD }  # Strait of Gibraltar
+province = { id = 2734   owner = MRD  controller = MRD }  # Western Adriatic Sea
+province = { id = 2735   owner = MRD  controller = MRD }  # Gulf of Venice
+province = { id = 2736   owner = MRD  controller = MRD }  # Eastern Adriatic Sea
+province = { id = 2737   owner = MRD  controller = MRD }  # Strait of Otranto
+province = { id = 2738   owner = MRD  controller = MRD }  # Ionian Sea
+province = { id = 2739   owner = MRD  controller = MRD }  # Ionian Islands
+province = { id = 2740   owner = MRD  controller = MRD }  # Eastern Mediterranean Sea
+province = { id = 2741   owner = MRD  controller = MRD }  # Gulf of Antalya
+province = { id = 2742   owner = MRD  controller = MRD }  # Aegean Sea
+province = { id = 2743   owner = MRD  controller = MRD }  # Sea of Crete
+province = { id = 2744   owner = MRD  controller = MRD }  # Coast of Syria
+province = { id = 2745   owner = MRD  controller = MRD }  # Gulf of Haifa
+
+
+# MRD islands — Mediterranean land base
+province = { id = 94     owner = MRD  controller = MRD }  # Corsica
+province = { id = 371    owner = MRD  controller = MRD }  # Kerkyra
+province = { id = 378    owner = MRD  controller = MRD }  # Kalymnos
+province = { id = 379    owner = MRD  controller = MRD }  # Rodos
+province = { id = 380    owner = MRD  controller = MRD }  # Sitia
+province = { id = 381    owner = MRD  controller = MRD }  # Ermoupoli
+province = { id = 382    owner = MRD  controller = MRD }  # Irakleio
+province = { id = 383    owner = MRD  controller = MRD }  # Mytilene
+province = { id = 387    owner = MRD  controller = MRD }  # Famagusta
+province = { id = 388    owner = MRD  controller = MRD }  # Nicosia
+province = { id = 429    owner = MRD  controller = MRD }  # Malta
+province = { id = 430    owner = MRD  controller = MRD }  # Palermo
+province = { id = 431    owner = MRD  controller = MRD }  # Messina
+province = { id = 432    owner = MRD  controller = MRD }  # Catania
+province = { id = 433    owner = MRD  controller = MRD }  # Siracuse
+province = { id = 434    owner = MRD  controller = MRD }  # Cagliari
+province = { id = 435    owner = MRD  controller = MRD }  # Sassari
+
+# === UNM ===
+province = { id = 987    owner = UNM  controller = UNM }  # El Aiun
+province = { id = 988    owner = UNM  controller = UNM }  # Villa Cisneros
+province = { id = 989    owner = UNM  controller = UNM }  # Villa Bens
+
+# === LIL ===
+province = { id = 750    owner = LIL  controller = LIL }  # Tripoli
+province = { id = 751    owner = LIL  controller = LIL }  # Gharyan
+province = { id = 752    owner = LIL  controller = LIL }  # Az Zawiyah
+province = { id = 753    owner = LIL  controller = LIL }  # Ghadamis
+province = { id = 754    owner = LIL  controller = LIL }  # Maradah
+province = { id = 755    owner = LIL  controller = LIL }  # Houn
+province = { id = 756    owner = LIL  controller = LIL }  # Sirt
+province = { id = 757    owner = LIL  controller = LIL }  # Misratah
+province = { id = 758    owner = LIL  controller = LIL }  # Bu Nujaym
+province = { id = 759    owner = LIL  controller = LIL }  # El Agheila
+province = { id = 760    owner = LIL  controller = LIL }  # Msus
+province = { id = 761    owner = LIL  controller = LIL }  # Benghazi
+province = { id = 762    owner = LIL  controller = LIL }  # Agedabia
+province = { id = 763    owner = LIL  controller = LIL }  # Qaminis
+province = { id = 764    owner = LIL  controller = LIL }  # Al Bayda
+province = { id = 765    owner = LIL  controller = LIL }  # Tobruk
+province = { id = 766    owner = LIL  controller = LIL }  # Al Mukhayla
+province = { id = 767    owner = LIL  controller = LIL }  # Gazala
+province = { id = 768    owner = LIL  controller = LIL }  # Darnah
+province = { id = 769    owner = LIL  controller = LIL }  # Bir Hakeim
+province = { id = 770    owner = LIL  controller = LIL }  # Al Jaghbub
+province = { id = 771    owner = LIL  controller = LIL }  # Bardia
+province = { id = 772    owner = LIL  controller = LIL }  # Bir el Gubi
+province = { id = 773    owner = LIL  controller = LIL }  # Jalu
+province = { id = 774    owner = LIL  controller = LIL }  # Al Jawf
+province = { id = 775    owner = LIL  controller = LIL }  # Wadi al Hamim
+province = { id = 776    owner = LIL  controller = LIL }  # Sabha
+province = { id = 777    owner = LIL  controller = LIL }  # Ayn Ath Talab
+

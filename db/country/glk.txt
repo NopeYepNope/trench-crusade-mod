@@ -1,0 +1,12 @@
+# Golden Khanate
+# Mongol-descended steppe power, Holy-aligned
+
+color = { 200 160 40 }
+
+graphical_culture = eastern_european
+
+capital = 465
+
+government = tribal_dictatorship
+
+ideology = Holy

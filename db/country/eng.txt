@@ -1,0 +1,12 @@
+# England
+# Island fortress, major naval Holy power
+
+color = { 20 60 160 }
+
+graphical_culture = western_european
+
+capital = 61
+
+government = constitutional_monarchy
+
+ideology = Holy

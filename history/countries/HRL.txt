@@ -1,0 +1,32 @@
+# HRL — Country History
+# Heretic Legion — Infernal mirror of Prussia, strong all round
+# 1905 Start
+
+capital = 85
+manpower = 250
+
+# Policy Sliders
+democratic = 2
+political_left = 3
+freedom = 2
+open_society = 2
+interventionism = 7
+professional_army = 8
+defence_lobby = 9
+market_economy = 4
+
+# Technology
+techteam = {
+	land_tech = 5
+	naval_tech = 2
+	air_tech = 2
+	industry_tech = 5
+	infra_tech = 4
+	supernatural_tech = 4
+}
+
+# Dissent
+dissent = 0
+
+# Industrial Capacity
+industrial_capacity = 50

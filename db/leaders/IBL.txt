@@ -1,0 +1,44 @@
+# Sultanate of Iblis — Leaders
+# The commanders of the great Shaitan. Pride personified.
+# His lieutenants carry that pride like a weapon.
+
+leader = {
+	name = "Azazel, the Scapegoat-General"
+	id = { type = 1 id = 120001 }
+	country = IBL
+	rank = 4
+	skill = 5
+	traits = { old_guard offensive_doctrine brilliant_strategist }
+	start_year = 1900
+	end_year = 1950
+	# The most senior of Iblis's military commanders. Ancient,
+	# proud, and furious at the Iron Sultanate's continued existence.
+	# His campaigns against IRS have been brilliant and almost enough.
+}
+
+leader = {
+	name = "Harut, the Fallen Teacher"
+	id = { type = 1 id = 120002 }
+	country = IBL
+	rank = 3
+	skill = 4
+	traits = { artillery_specialist defensive_doctrine }
+	start_year = 1900
+	end_year = 1940
+	# One of the fallen angels of Islamic tradition, now in Iblis's
+	# service. Commands siege operations against Holy positions.
+}
+
+leader = {
+	name = "Marut, the Other Fallen"
+	id = { type = 1 id = 120003 }
+	country = IBL
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine cavalry_leader }
+	start_year = 1900
+	end_year = 1940
+	# Harut's twin in tradition. Commands Iblis's mobile forces
+	# in the Arabian theatre. Always operates alongside Harut.
+	# Together they are significantly more dangerous than separately.
+}

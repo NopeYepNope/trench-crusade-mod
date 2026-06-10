@@ -1,0 +1,12 @@
+# Iron Sultanate
+# Islamic Holy power, successor to the Sultanate of Rum
+
+color = { 40 120 80 }
+
+graphical_culture = middle_eastern
+
+capital = 783
+
+government = absolute_monarchy
+
+ideology = Holy

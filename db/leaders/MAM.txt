@@ -1,0 +1,29 @@
+# Domain of Mammon — Leaders
+# Greed commands. Industry obeys. Everything has a price.
+
+leader = {
+	name = "Overseer-General Beleth the Investor"
+	id = { type = 1 id = 140001 }
+	country = MAM
+	rank = 4
+	skill = 4
+	traits = { old_guard brilliant_strategist }
+	start_year = 1900
+	end_year = 1940
+	# Mammon's supreme military commander. Approaches war as
+	# a resource allocation problem. Usually correct.
+}
+
+leader = {
+	name = "Director Marchosias of the Red Brigade"
+	id = { type = 1 id = 140002 }
+	country = MAM
+	rank = 3
+	skill = 4
+	traits = { offensive_doctrine armor_officer infantry_leader }
+	start_year = 1900
+	end_year = 1935
+	# The field commander of Mammon's military forces. Drives
+	# his units like a production quota — never fast enough,
+	# never enough casualties acceptable, always more.
+}

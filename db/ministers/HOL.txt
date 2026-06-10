@@ -1,0 +1,102 @@
+# HOL — Ministers
+# db/ministers/HOL.txt
+
+minister = {
+	name = "Grand Master Rabbi Yitzchak ben Shimon"
+	id = { type = 2 id = 50101 }
+	country = HOL
+	ideology = democratic
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1920
+	traits = { man_of_the_people }
+	# Leads the order in war and faith simultaneously.
+}
+
+minister = {
+	name = "Knight-Diplomat Avigail the Negotiator"
+	id = { type = 2 id = 50102 }
+	country = HOL
+	ideology = democratic
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1926
+	traits = { ideological_crusader }
+	# Manages the order's complex relationships with the Holy League.
+}
+
+minister = {
+	name = "Master of the Arsenal, Brother Ezra"
+	id = { type = 2 id = 50103 }
+	country = HOL
+	ideology = democratic
+	position = armament_minister
+	loyalty = 9
+	start_year = 1900
+	end_year = 1928
+	traits = { administrative_genius }
+	# Keeps the order supplied despite its small resource base.
+}
+
+minister = {
+	name = "Warden of Secrets, Sister Miriam"
+	id = { type = 2 id = 50104 }
+	country = HOL
+	ideology = democratic
+	position = minister_of_security
+	loyalty = 9
+	start_year = 1900
+	end_year = 1930
+	traits = { prince_of_terror }
+}
+
+minister = {
+	name = "Knight-Commander Eleazar the Inscriber"
+	id = { type = 2 id = 50105 }
+	country = HOL
+	ideology = democratic
+	position = the_cloak_n_dagger_schemer
+	loyalty = 8
+	start_year = 1902
+	end_year = 1932
+	traits = { the_cloak_n_dagger_schemer }
+}
+
+minister = {
+	name = "Grand Master Rabbi Yitzchak ben Shimon"
+	id = { type = 2 id = 50106 }
+	country = HOL
+	ideology = democratic
+	position = chief_of_staff
+	loyalty = 10
+	start_year = 1900
+	end_year = 1920
+	traits = { school_of_defence }
+}
+
+minister = {
+	name = "Knight-General Devorah of the Burning Sword"
+	id = { type = 2 id = 50107 }
+	country = HOL
+	ideology = democratic
+	position = chief_of_army
+	loyalty = 10
+	start_year = 1900
+	end_year = 1935
+	traits = { decisive_battle_doctrine }
+}
+
+minister = {
+	name = "Admiral Miriam bat Avraham"
+	id = { type = 2 id = 50108 }
+	country = HOL
+	ideology = democratic
+	position = chief_of_navy
+	loyalty = 8
+	start_year = 1900
+	end_year = 1925
+	traits = { old_admiral }
+}
+

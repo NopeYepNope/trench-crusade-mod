@@ -1,0 +1,12 @@
+# Golden Empire of Mali
+# West African Holy empire
+
+color = { 200 140 20 }
+
+graphical_culture = middle_eastern
+
+capital = 550
+
+government = tribal_dictatorship
+
+ideology = Holy

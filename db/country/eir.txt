@@ -1,0 +1,12 @@
+# Eire
+# Celtic Christian nation, light infantry specialists
+
+color = { 40 120 40 }
+
+graphical_culture = western_european
+
+capital = 110
+
+government = constitutional_monarchy
+
+ideology = Holy

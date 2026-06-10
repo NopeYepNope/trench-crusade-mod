@@ -1,0 +1,65 @@
+# MRD — Ministers
+# db/ministers/MRD.txt
+
+minister = {
+	name = "Bahr al-Azim, the Boundless Deep"
+	id = { type = 2 id = 90101 }
+	country = MRD
+	ideology = fascist
+	position = head_of_government
+	loyalty = 10
+	start_year = 1900
+	end_year = 1960
+	traits = { national_unity_advisor }
+	# The paramount authority of the Marid dominion.
+}
+
+minister = {
+	name = "Tawfan al-Bahr, the Storm-Caller"
+	id = { type = 2 id = 90102 }
+	country = MRD
+	ideology = fascist
+	position = foreign_minister
+	loyalty = 8
+	start_year = 1900
+	end_year = 1955
+	traits = { ideological_crusader }
+	# Negotiates Marid terms with Holy and Infernal powers alike.
+}
+
+minister = {
+	name = "Labwah al-Nil, She of the River's Mouth"
+	id = { type = 2 id = 90103 }
+	country = MRD
+	ideology = fascist
+	position = head_of_intelligence
+	loyalty = 9
+	start_year = 1900
+	end_year = 1950
+	traits = { head_of_intelligence }
+}
+
+minister = {
+	name = "Bahr al-Azim, the Boundless Deep"
+	id = { type = 2 id = 90104 }
+	country = MRD
+	ideology = fascist
+	position = chief_of_navy
+	loyalty = 10
+	start_year = 1900
+	end_year = 1960
+	traits = { naval_aviation_pioneer }
+}
+
+minister = {
+	name = "Tawfan al-Bahr, the Storm-Caller"
+	id = { type = 2 id = 90105 }
+	country = MRD
+	ideology = fascist
+	position = chief_of_staff
+	loyalty = 9
+	start_year = 1900
+	end_year = 1955
+	traits = { school_of_defence }
+}
+

@@ -1,0 +1,12 @@
+# Scythians
+# Ancient steppe warriors, Holy-aligned
+
+color = { 140 100 40 }
+
+graphical_culture = eastern_european
+
+capital = 350
+
+government = tribal_dictatorship
+
+ideology = Holy

@@ -1,0 +1,537 @@
+# Trench Crusade - Naval Doctrine Tech Tree
+# db/tech/naval_doctrine.txt
+#
+# Three doctrines chosen at submarine tier and locked thereafter.
+# Ship tech is SEPARATE — any faction can build any ship.
+# Doctrine affects how ships are used, not what ships exist.
+#
+# Fleet in Being    — shock and awe, blessed/cursed capital ships
+# Indirect Approach — submarines, sabotage, escort attacks
+# Mystical          — sea creatures, coastal support, tidal warfare
+#                     (restricted factions only)
+#
+# Marid get their own path outside the choice system.
+
+# ============================================================
+# TIER 0 — SHARED BASE
+# ============================================================
+
+technology = {
+	id = { type = naval_doctrine value = 1 }
+	name = "Basic Seamanship"
+	desc = "Organised naval forces, basic fleet tactics, ship maintenance. The sea in this world is not merely dangerous — it is contested at every level. The Marid patrol the surface. Things older than the First Heresy patrol the deep. Every sailor knows this. Most sail anyway."
+	year = 1900
+	cost = 800
+	category = naval
+
+	command = { type = naval_morale value = 0.05 }
+	activate_unit = destroyer
+	activate_unit = transport
+}
+
+technology = {
+	id = { type = naval_doctrine value = 2 }
+	name = "Steam Warship"
+	desc = "Coal-fired propulsion replaces sail. Faster, heavier-armed, and less dependent on the winds that the Marid have been known to control. Holy boilers run on blessed coal. Infernal boilers run on something that produces black smoke and a smell that makes sailors pray harder."
+	year = 1902
+	cost = 1500
+	category = naval
+	required = { type = naval_doctrine value = 1 }
+
+	command = { type = naval_speed value = 0.1 }
+	activate_unit = cruiser
+}
+
+technology = {
+	id = { type = naval_doctrine value = 3 }
+	name = "Ironclad Warship"
+	desc = "Steel hulls, heavy guns, the transformation of naval warfare. Holy ironclads are blessed at launch with relics in the keel. Infernal ironclads are forged in daemonfire and their hulls are warm to the touch even in cold water."
+	year = 1904
+	cost = 2000
+	category = naval
+	required = { type = naval_doctrine value = 2 }
+
+	command = { type = naval_attack value = 0.1 }
+	command = { type = naval_defence value = 0.1 }
+	activate_unit = battleship
+}
+
+technology = {
+	id = { type = naval_doctrine value = 4 }
+	name = "Submarine Operations"
+	desc = "The underwater vessel as a weapon of war. Navigating the corrupted depths is profoundly dangerous — what lives down there has no interest in human political arrangements. Submariners are selected for extraordinary faith, extraordinary recklessness, or both."
+	year = 1906
+	cost = 2500
+	category = naval
+	required = { type = naval_doctrine value = 3 }
+
+	activate_unit = submarine
+}
+
+# ============================================================
+# FLEET IN BEING DOCTRINE
+# Shock and awe. Blessed or cursed capital ships so powerful
+# the enemy fleet won't risk engaging them.
+# Philosophy: you win by existing. The enemy stays in port
+# because your fleet on the open water is too terrifying
+# to challenge.
+# Best for: England, Norway, Iron Sultanate, Heretic Legion
+# ============================================================
+
+technology = {
+	id = { type = naval_doctrine value = 101 }
+	name = "Fleet in Being — The Deterrent Fleet"
+	desc = "The first principle: your fleet does not need to fight. It needs to exist, visibly, powerfully, in a position where the enemy cannot ignore it. The deterrent fleet ties down enemy resources and constrains enemy movement without firing a shot. When it does fire, the effect is overwhelming."
+	year = 1907
+	cost = 2500
+	category = naval
+	required = { type = naval_doctrine value = 4 }
+
+	available = { has_country_flag = naval_doctrine_fleet_in_being }
+
+	command = { type = naval_attack value = 0.15 }
+	command = { type = naval_morale value = 0.15 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 102 }
+	name = "Fleet in Being — Dreadnought Program"
+	desc = "The great capital ship — larger, faster, more heavily armed than anything before it. A single Dreadnought changes the balance of an entire theatre. Holy Dreadnoughts carry chapels in the hull and reliquary figureheads that glow at sea. Infernal Dreadnoughts are crewed by things that do not need air and armed with weapons that should not exist."
+	year = 1908
+	cost = 4000
+	category = naval
+	required = { type = naval_doctrine value = 101 }
+
+	available = { has_country_flag = naval_doctrine_fleet_in_being }
+
+	command = { type = naval_attack value = 0.2 }
+	command = { type = naval_defence value = 0.15 }
+	activate_unit = dreadnought
+}
+
+technology = {
+	id = { type = naval_doctrine value = 103 }
+	name = "Fleet in Being — Psychological Supremacy"
+	desc = "The deliberate cultivation of the fleet's reputation as something the enemy cannot afford to engage. Selective engagements, visible demonstrations of power, strategic positioning. The enemy admiral who has heard what happens to ships that engage a Fleet in Being force thinks very carefully before leaving port."
+	year = 1910
+	cost = 3000
+	category = naval
+	required = { type = naval_doctrine value = 102 }
+
+	available = { has_country_flag = naval_doctrine_fleet_in_being }
+
+	command = { type = naval_morale value = 0.2 }
+	command = { type = naval_attack value = 0.1 }
+	command = { type = morale_damage value = 0.15 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 104 }
+	name = "Fleet in Being — Consecrated Hull"
+	desc = "Capital ships blessed or cursed at the deepest structural level. Holy: relic-iron in every plate, blessed water in the boilers, chaplains as damage control officers. A blessed capital ship is extraordinary resistant to Infernal weapons and sea-creature attack.\n\nInfernal: soul-coal in the furnaces, daemon-bound crew that does not tire, hull that harms Holy sailors who come too close."
+	year = 1911
+	cost = 3500
+	category = naval
+	required = { type = naval_doctrine value = 103 }
+
+	available = { has_country_flag = naval_doctrine_fleet_in_being }
+
+	command = { type = naval_defence value = 0.25 }
+	command = { type = naval_morale value = 0.1 }
+}
+
+# Fleet in Being Apex — Holy
+technology = {
+	id = { type = naval_doctrine value = 105 }
+	name = "Fleet in Being — Grand Armada"
+	desc = "A fleet so comprehensively blessed it becomes an extension of divine will on water. Ships that survive what should sink them. Sailors who fight past mortal wounds. A flagship whose reliquary burns visible gold in the night and whose passing calms storm waters.\n\nThe Marid will not engage a Holy Armada in open water. Even they know better."
+	year = 1913
+	cost = 8000
+	category = naval
+	required = { type = naval_doctrine value = 104 }
+
+	available = {
+		has_country_flag = naval_doctrine_fleet_in_being
+		ideology = democratic
+	}
+
+	command = { type = naval_attack value = 0.25 }
+	command = { type = naval_defence value = 0.3 }
+	command = { type = naval_morale value = 0.2 }
+	activate_unit = holy_armada_flagship
+}
+
+# Fleet in Being Apex — Infernal
+technology = {
+	id = { type = naval_doctrine value = 106 }
+	name = "Fleet in Being — Grand Armada"
+	desc = "Ships crewed by the damned, armed with weapons that fire through solid hull, flagged in black fire. The Dread Armada does not merely fight — it haunts. Enemy sailors who sight it and survive report it does not entirely exist in normal space. It is partly here and partly somewhere else, and the part that is somewhere else is pulling.\n\nNaval engagements against a Dread Armada have a way of producing survivors who cannot stop screaming."
+	year = 1913
+	cost = 8000
+	category = naval
+	required = { type = naval_doctrine value = 104 }
+
+	available = {
+		has_country_flag = naval_doctrine_fleet_in_being
+		ideology = fascist
+	}
+
+	command = { type = naval_attack value = 0.35 }
+	command = { type = naval_morale value = 0.2 }
+	command = { type = morale_damage value = 0.25 }
+	activate_unit = dread_armada_flagship
+}
+
+# ============================================================
+# INDIRECT APPROACH DOCTRINE
+# Submarines, sabotage, escort attacks, commerce raiding.
+# Philosophy: you win by never being where they can hit you.
+# Best for: Heretic Legion, Unmarked, smaller naval powers,
+#           any faction that cannot match enemy surface fleets
+# ============================================================
+
+technology = {
+	id = { type = naval_doctrine value = 201 }
+	name = "Indirect Approach — The Invisible War"
+	desc = "The first principle: you do not need to defeat the enemy fleet. You need to make the sea unusable for them. Submarines, fast raiders, escort attacks, and commerce disruption. The enemy cannot fight what they cannot find. Their armies starve before their fleets engage."
+	year = 1907
+	cost = 2000
+	category = naval
+	required = { type = naval_doctrine value = 4 }
+
+	available = { has_country_flag = naval_doctrine_indirect }
+
+	command = { type = convoy_attack value = 0.2 }
+	command = { type = submarine_bonus value = 0.1 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 202 }
+	name = "Indirect Approach — Submarine Pack Tactics"
+	desc = "Multiple submarines coordinating against enemy convoys — one to locate, others to strike simultaneously. Devastating against unescorted supply lines. The communication systems required to coordinate through corrupted depths are a significant engineering challenge. Holy submarines use prayer-wire. Infernal submarines use bound messengers that the crew try not to think about too hard."
+	year = 1908
+	cost = 3000
+	category = naval
+	required = { type = naval_doctrine value = 201 }
+
+	available = { has_country_flag = naval_doctrine_indirect }
+
+	command = { type = convoy_attack value = 0.2 }
+	command = { type = submarine_bonus value = 0.2 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 203 }
+	name = "Indirect Approach — Corsair Operations"
+	desc = "Privateers operating under official sanction — fast independent captains given legal cover to raid enemy shipping in exchange for a portion of the prize. The Unmarked excel at this arrangement. So do certain Holy minor powers who prefer not to ask too many questions about their sailors' backgrounds or what they do in port."
+	year = 1908
+	cost = 2500
+	category = naval
+	required = { type = naval_doctrine value = 201 }
+
+	available = { has_country_flag = naval_doctrine_indirect }
+
+	command = { type = convoy_attack value = 0.15 }
+	command = { type = naval_speed value = 0.15 }
+	activate_unit = corsair_raider
+}
+
+technology = {
+	id = { type = naval_doctrine value = 204 }
+	name = "Indirect Approach — Escort Interdiction"
+	desc = "Not just attacking convoys but systematically targeting the escort vessels that protect them. Destroy the escorts, the convoys are helpless. A doctrine requiring patience and precision — engaging warships with submarines is dangerous — but the strategic payoff is enormous."
+	year = 1910
+	cost = 3000
+	category = naval
+	required = { type = naval_doctrine value = 203 }
+
+	available = { has_country_flag = naval_doctrine_indirect }
+
+	command = { type = convoy_attack value = 0.15 }
+	command = { type = naval_attack value = 0.1 }
+	command = { type = submarine_bonus value = 0.1 }
+}
+
+# Indirect Apex — Holy
+technology = {
+	id = { type = naval_doctrine value = 205 }
+	name = "Indirect Approach — The Blessed Deep"
+	desc = "Holy submarines consecrated to navigate the corrupted depths that no unconsecrated vessel can survive. They strike Infernal supply lines through sea-routes the enemy believes safe because nothing natural can reach them. The crew pray constantly. Their faith is their hull. Several have reported contact with things in the deep that are not hostile — that move alongside them, curious.\n\nThe theological implications are unresolved. The submarines keep sailing."
+	year = 1913
+	cost = 7000
+	category = naval
+	required = { type = naval_doctrine value = 204 }
+
+	available = {
+		has_country_flag = naval_doctrine_indirect
+		ideology = democratic
+	}
+
+	command = { type = convoy_attack value = 0.3 }
+	command = { type = submarine_bonus value = 0.3 }
+	command = { type = naval_defence value = 0.1 }
+	activate_unit = blessed_deep_submarine
+}
+
+# Indirect Apex — Infernal
+technology = {
+	id = { type = naval_doctrine value = 206 }
+	name = "Indirect Approach — Bound Sea Hunters"
+	desc = "Minor sea creatures, bound by Infernal contract, operating as autonomous naval assets. They require no crew, no supply, no communication. They are given a target profile — ships flying Holy colours, convoys in certain sea lanes — and released. They hunt until they are destroyed or the contract expires.\n\nThey are not reliable. They are not precise. They do not distinguish between ships as well as a submarine crew would. This is considered an acceptable margin of error."
+	year = 1913
+	cost = 7000
+	category = naval
+	required = { type = naval_doctrine value = 204 }
+
+	available = {
+		has_country_flag = naval_doctrine_indirect
+		ideology = fascist
+	}
+
+	command = { type = convoy_attack value = 0.35 }
+	command = { type = naval_morale_damage value = 0.2 }
+	activate_unit = bound_sea_hunter
+}
+
+# ============================================================
+# MYSTICAL DOCTRINE
+# Sea creatures, coastal rituals, tidal warfare.
+# Philosophy: the sea is not a battlefield. It is an entity.
+# Work with it, and it works for you.
+# RESTRICTED: MRD, IRS, HRL, SAM, UNM, LIL, IBL, IFR
+# ============================================================
+
+technology = {
+	id = { type = naval_doctrine value = 301 }
+	name = "Mystical — The Sea as Ally"
+	desc = "The first principle: the sea is not an obstacle or a highway. It is a living entity with ancient relationships, grievances, and preferences. Mystical doctrine builds military power around working with the sea's nature rather than imposing human will upon it.\n\nThis requires understanding that exceeds conventional naval science. Your commanders are not admirals. They are negotiators."
+	year = 1907
+	cost = 3000
+	category = naval
+	required = { type = naval_doctrine value = 4 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = MRD
+			tag = IRS
+			tag = HRL
+			tag = SAM
+			tag = UNM
+			tag = LIL
+			tag = IBL
+			tag = IFR
+		}
+	}
+
+	command = { type = naval_morale value = 0.15 }
+	command = { type = naval_defence value = 0.1 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 302 }
+	name = "Mystical — Sea Creature Contracts"
+	desc = "Formal agreements with sea creatures — not coercion but contract, with terms both parties understand. The creatures provide naval capability. You provide what they require in exchange. What sea creatures require varies by creature and is not always comfortable to provide.\n\nSmaller creatures serve as scouts, messengers, and saboteurs. Larger ones are assets that would alarm conventional admirals. The largest ones are discussed only at the highest command levels."
+	year = 1909
+	cost = 3500
+	category = naval
+	required = { type = naval_doctrine value = 301 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = MRD
+			tag = IRS
+			tag = HRL
+			tag = SAM
+			tag = UNM
+			tag = LIL
+			tag = IBL
+			tag = IFR
+		}
+	}
+
+	command = { type = naval_attack value = 0.15 }
+	command = { type = convoy_attack value = 0.1 }
+	activate_unit = sea_creature_auxiliary
+}
+
+technology = {
+	id = { type = naval_doctrine value = 303 }
+	name = "Mystical — Tidal Warfare"
+	desc = "The deliberate manipulation of tidal patterns as a military tool — directing tides to strand enemy vessels, creating hazardous shallows, flooding coastal fortifications. Requires deep relationship with sea entities willing to direct such forces. The Marid do this naturally. For others, it requires extensive ritual investment and significant ongoing payment."
+	year = 1910
+	cost = 3500
+	category = naval
+	required = { type = naval_doctrine value = 302 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = MRD
+			tag = IRS
+			tag = HRL
+			tag = SAM
+			tag = UNM
+			tag = LIL
+			tag = IBL
+			tag = IFR
+		}
+	}
+
+	command = { type = shore_bombardment value = 0.2 }
+	command = { type = naval_defence value = 0.15 }
+	command = { type = amphibious_attack value = 0.15 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 304 }
+	name = "Mystical — Coastal Land Support"
+	desc = "Sea creature auxiliaries and weather manipulation directed specifically to support land operations along the coast — clearing beaches for amphibious landings, disrupting enemy coastal supply, providing fire support that conventional naval guns cannot match because it comes from below rather than alongside."
+	year = 1911
+	cost = 4000
+	category = naval
+	required = { type = naval_doctrine value = 303 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = MRD
+			tag = IRS
+			tag = HRL
+			tag = SAM
+			tag = UNM
+			tag = LIL
+			tag = IBL
+			tag = IFR
+		}
+	}
+
+	command = { type = amphibious_attack value = 0.2 }
+	command = { type = shore_bombardment value = 0.15 }
+	command = { type = naval_morale value = 0.1 }
+}
+
+# Mystical Apex — Holy-adjacent (IRS, UNM, LIL)
+technology = {
+	id = { type = naval_doctrine value = 305 }
+	name = "Mystical — Deep Covenant"
+	desc = "A formal covenant between your naval forces and the sea itself — not individual creature contracts but a relationship with the ocean as an entity. The sea does not serve. It cooperates. The distinction matters to it.\n\nUnder the Living Covenant, weather patterns assist your navigation and hinder your enemies. Sea creatures warn of approaching threats. The deep things that no contract can compel simply... do not attack your ships. A mystery that your theologians and ritualists are still working to explain."
+	year = 1913
+	cost = 8000
+	category = naval
+	required = { type = naval_doctrine value = 304 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = IRS
+			tag = UNM
+			tag = LIL
+		}
+	}
+
+	command = { type = naval_attack value = 0.2 }
+	command = { type = naval_defence value = 0.25 }
+	command = { type = naval_morale value = 0.2 }
+	command = { type = amphibious_attack value = 0.15 }
+	activate_unit = covenant_sea_warden
+}
+
+# Mystical Apex — Infernal (MRD, HRL, SAM, IBL, IFR)
+technology = {
+	id = { type = naval_doctrine value = 306 }
+	name = "Mystical — Tidal Supremacy"
+	desc = "The apex of Infernal Mystical doctrine. Not creature contracts but direct command — the sea as a weapon rather than an ally. Controlled flooding. Directed tsunamis. Walls of water answering Infernal will.\n\nCoastal cities become vulnerable to attack that no fortification fully addresses. Naval bases can be simply drowned. Enemy fleets caught near shore when the sea rises do not return.\n\nThe Marid have done this before. The scars are still visible on certain coastlines if you know where to look."
+	year = 1913
+	cost = 8000
+	category = naval
+	required = { type = naval_doctrine value = 304 }
+
+	available = {
+		has_country_flag = naval_doctrine_mystical
+		OR = {
+			tag = MRD
+			tag = HRL
+			tag = SAM
+			tag = IBL
+			tag = IFR
+		}
+	}
+
+	command = { type = naval_attack value = 0.15 }
+	command = { type = shore_bombardment value = 0.35 }
+	command = { type = amphibious_attack value = 0.2 }
+	command = { type = morale_damage value = 0.2 }
+	activate_unit = sea_wrath_caller
+}
+
+# ============================================================
+# MARID: SEA DOMINION — outside choice system entirely
+# ============================================================
+
+technology = {
+	id = { type = naval_doctrine value = 401 }
+	name = "Sea Dominion — Deep Command"
+	desc = "The Marid do not need doctrine. They are the sea. Their naval power begins with the deep — creatures, currents, and things without names. No other navy operates below the surface in Marid waters. The deep is theirs."
+	year = 1905
+	cost = 3000
+	category = naval
+	required = { type = naval_doctrine value = 3 }
+
+	available = { tag = MRD }
+
+	command = { type = submarine_bonus value = 0.25 }
+	command = { type = convoy_attack value = 0.2 }
+	command = { type = naval_defence value = 0.1 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 402 }
+	name = "Sea Dominion — Storm Fleet"
+	desc = "Marid warships operating within conjured storms — sailing in weather that destroys conventional vessels, guided by djinn navigators, armed with lightning-charged weapons. The Storm Fleet fights in conditions where fair does not exist and advantage belongs to whoever made the storm."
+	year = 1908
+	cost = 3500
+	category = naval
+	required = { type = naval_doctrine value = 401 }
+
+	available = { tag = MRD }
+
+	command = { type = naval_attack value = 0.2 }
+	command = { type = naval_morale value = 0.2 }
+	activate_unit = storm_warship
+}
+
+technology = {
+	id = { type = naval_doctrine value = 403 }
+	name = "Sea Dominion — Mediterranean Command"
+	desc = "Total control of the corrupted Mediterranean. No Holy shipping moves without Marid permission. No Infernal fleet challenges them in open water. The sea between the continents becomes a Marid toll road and every power that depends on it must negotiate terms."
+	year = 1911
+	cost = 5000
+	category = naval
+	required = { type = naval_doctrine value = 402 }
+
+	available = { tag = MRD }
+
+	command = { type = naval_attack value = 0.15 }
+	command = { type = convoy_attack value = 0.25 }
+	command = { type = naval_defence value = 0.2 }
+}
+
+technology = {
+	id = { type = naval_doctrine value = 404 }
+	name = "Sea Dominion — Tidal Supremacy"
+	desc = "The Marid's ultimate expression. The sea itself weaponised — controlled flooding, directed tsunamis, walls of water answering Marid command. England built its power on the sea. The Marid remind them that the sea was never theirs.\n\nThis has happened before. The coastlines remember."
+	year = 1913
+	cost = 8000
+	category = naval
+	required = { type = naval_doctrine value = 403 }
+
+	available = { tag = MRD }
+
+	command = { type = naval_attack value = 0.25 }
+	command = { type = shore_bombardment value = 0.35 }
+	command = { type = amphibious_attack value = 0.2 }
+	command = { type = morale_damage value = 0.25 }
+	activate_unit = marid_sea_warden
+}

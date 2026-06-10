@@ -1,0 +1,84 @@
+# Trench Crusade - 1905 Scenario
+
+name   = "Trench Crusade (1905)"
+panel  = "scenarios/1905_gathering_dark/scenario_1905.bmp"
+
+header =
+{ name      = "1905 - The Gathering Dark"
+  startdate = { year = 1905 }
+  selectable = { ENG PRU NOR ALB POL HUN POR SER TUR HOL SWE HON RUS UKR NEP MON TIB ROM ETH LIB NZL LUX GER BUL ITA GRE OTT SOV IRQ YUG SAU PER AFG }
+  ENG        = { }
+  PRU        = { }
+  NOR        = { }
+  ALB        = { }
+  POL        = { }
+  HUN        = { }
+  POR        = { }
+  SER        = { }
+  TUR        = { }
+  HOL        = { }
+  SWE        = { }
+  HON        = { }
+  RUS        = { }
+  UKR        = { }
+  NEP        = { }
+  MON        = { }
+  TIB        = { }
+  ROM        = { }
+  ETH        = { }
+  LIB        = { }
+  NZL        = { }
+  LUX        = { }
+  GER        = { }
+  BUL        = { }
+  ITA        = { }
+  GRE        = { }
+  OTT        = { }
+  SOV        = { }
+  IRQ        = { }
+  YUG        = { }
+  SAU        = { }
+  PER        = { }
+  AFG        = { }
+}
+
+startdate = { year = 1905 month = january day = 1 }
+enddate   = { year = 1955 month = january day = 1 }
+
+include = "scenarios/1905_gathering_dark/ENG.inc"
+include = "scenarios/1905_gathering_dark/PRU.inc"
+include = "scenarios/1905_gathering_dark/NOR.inc"
+include = "scenarios/1905_gathering_dark/ALB.inc"
+include = "scenarios/1905_gathering_dark/POL.inc"
+include = "scenarios/1905_gathering_dark/HUN.inc"
+include = "scenarios/1905_gathering_dark/POR.inc"
+include = "scenarios/1905_gathering_dark/SER.inc"
+include = "scenarios/1905_gathering_dark/TUR.inc"
+include = "scenarios/1905_gathering_dark/HOL.inc"
+include = "scenarios/1905_gathering_dark/SWE.inc"
+include = "scenarios/1905_gathering_dark/HON.inc"
+include = "scenarios/1905_gathering_dark/RUS.inc"
+include = "scenarios/1905_gathering_dark/UKR.inc"
+include = "scenarios/1905_gathering_dark/NEP.inc"
+include = "scenarios/1905_gathering_dark/MON.inc"
+include = "scenarios/1905_gathering_dark/TIB.inc"
+include = "scenarios/1905_gathering_dark/ROM.inc"
+include = "scenarios/1905_gathering_dark/ETH.inc"
+include = "scenarios/1905_gathering_dark/LIB.inc"
+include = "scenarios/1905_gathering_dark/NZL.inc"
+include = "scenarios/1905_gathering_dark/LUX.inc"
+include = "scenarios/1905_gathering_dark/GER.inc"
+include = "scenarios/1905_gathering_dark/BUL.inc"
+include = "scenarios/1905_gathering_dark/ITA.inc"
+include = "scenarios/1905_gathering_dark/GRE.inc"
+include = "scenarios/1905_gathering_dark/OTT.inc"
+include = "scenarios/1905_gathering_dark/SOV.inc"
+include = "scenarios/1905_gathering_dark/IRQ.inc"
+include = "scenarios/1905_gathering_dark/YUG.inc"
+include = "scenarios/1905_gathering_dark/SAU.inc"
+include = "scenarios/1905_gathering_dark/PER.inc"
+include = "scenarios/1905_gathering_dark/AFG.inc"
+include = "scenarios/1905_gathering_dark/rebels.inc"
+include = "scenarios/1905_gathering_dark/vp.inc"
+include = "scenarios/1905_gathering_dark/bases.inc"
+include = "scenarios/1905_gathering_dark/depots.inc"

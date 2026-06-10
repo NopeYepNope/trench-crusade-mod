@@ -1,0 +1,504 @@
+# Trench Crusade - Aviation Tech Tree
+# db/tech/air_doctrine.txt
+#
+# Structure:
+#   Tier 0  — Shared basics (all factions)
+#   DOCTRINE CHOICE — locks one of three paths via event flag
+#   Intercept Tree  — air deterrence, AA, angelic/demonic air superiority
+#   CAS Tree        — ground support, tactical bombers, holy/hell bombs
+#   Devastation Tree — strategic bombing, hell portals, daylight raids
+#
+# Supernatural apex units split further by Holy/Infernal ideology.
+
+# ============================================================
+# TIER 0 — SHARED BASICS
+# ============================================================
+
+technology = {
+	id = { type = air_doctrine value = 1 }
+	name = "Observation Balloons"
+	desc = "Tethered gas balloons carrying observers above the battlefield. Simple, vulnerable, and invaluable for artillery spotting. Both sides use them. Both sides shoot them down."
+	year = 1900
+	cost = 500
+	category = air
+
+	command = { type = recon value = 0.1 }
+	activate_unit = observation_balloon
+}
+
+technology = {
+	id = { type = air_doctrine value = 2 }
+	name = "Military Zeppelin"
+	desc = "The great airship as a weapon of war. Holy Zeppelins carry reliquary gondolas and are blessed against aerial attack. Infernal Zeppelins are grown from damned leather and bone-gas. Both burn magnificently when shot down."
+	year = 1903
+	cost = 1500
+	category = air
+	required = { type = air_doctrine value = 1 }
+
+	command = { type = strategic_bombing value = 0.05 }
+	command = { type = recon value = 0.05 }
+	activate_unit = military_zeppelin
+}
+
+technology = {
+	id = { type = air_doctrine value = 3 }
+	name = "Basic Anti-Aircraft Gunnery"
+	desc = "Guns elevated to engage aerial targets — simple in concept, difficult in practice. The first generation of AA crews aim mostly by prayer. This is not entirely metaphorical."
+	year = 1905
+	cost = 1000
+	category = air
+	required = { type = air_doctrine value = 2 }
+
+	command = { type = air_defence value = 0.1 }
+	activate_unit = aa_battery
+}
+
+technology = {
+	id = { type = air_doctrine value = 4 }
+	name = "Triplane Fighter"
+	desc = "Three wings. Fast, agile, terrifying in a dogfight. Holy cockpits carry icons of saints. Infernal nose cones are carved with daemon-faces. The pilots on both sides are, without exception, slightly mad."
+	year = 1907
+	cost = 2000
+	category = air
+	required = { type = air_doctrine value = 3 }
+
+	command = { type = air_superiority value = 0.1 }
+	activate_unit = triplane_fighter
+}
+
+# ============================================================
+# DOCTRINE CHOICE — handled via event (see events/air_doctrine_choice.txt)
+# Sets one of: flag = air_doctrine_intercept
+#              flag = air_doctrine_cas
+#              flag = air_doctrine_devastation
+# ============================================================
+
+# ============================================================
+# INTERCEPT DOCTRINE
+# Focus: air deterrence, AA supremacy, angelic/demonic patrol
+# Best for: defensive nations, heartland protection, Holy major powers
+# ============================================================
+
+technology = {
+	id = { type = air_doctrine value = 101 }
+	name = "Intercept — First Principles"
+	desc = "The sky is a defensive perimeter. Every enemy aircraft that crosses it is a failure of doctrine. Intercept theory holds that air power is most efficiently used denying the enemy the sky entirely — through standing patrols, rapid-response interceptors, and layered AA coverage."
+	year = 1907
+	cost = 2000
+	category = air
+	required = { type = air_doctrine value = 4 }
+
+	available = { has_country_flag = air_doctrine_intercept }
+
+	command = { type = air_superiority value = 0.15 }
+	command = { type = air_defence value = 0.1 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 102 }
+	name = "Advanced AA Networks"
+	desc = "Anti-aircraft batteries connected by prayer-wire — a network of consecrated signal lines allowing AA crews across a wide area to coordinate fire. A Holy innovation. The guns are blessed. The shells are inscribed. What they shoot down does not always stay down, but it stays down longer."
+	year = 1908
+	cost = 2500
+	category = air
+	required = { type = air_doctrine value = 101 }
+
+	available = { has_country_flag = air_doctrine_intercept }
+
+	command = { type = air_defence value = 0.2 }
+	command = { type = aa_bonus value = 0.15 }
+	activate_unit = blessed_aa_battery
+}
+
+technology = {
+	id = { type = air_doctrine value = 103 }
+	name = "Standing Intercept Patrols"
+	desc = "Permanent aerial patrol routes over key terrain and cities, maintained by rotating fighter squadrons. Exhausting for pilots. Devastating for enemy bombers. The sky above Holy heartlands becomes genuinely dangerous for anything Infernal-touched."
+	year = 1909
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 102 }
+
+	available = { has_country_flag = air_doctrine_intercept }
+
+	command = { type = air_superiority value = 0.2 }
+	command = { type = air_defence value = 0.1 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 104 }
+	name = "Quadplane Interceptor"
+	desc = "Four wings optimised entirely for speed and climb rate — reaching altitude fast enough to intercept enemy aircraft before they reach their targets. The quadplane interceptor sacrifices bomb load and range for pure performance. It is very good at its one job."
+	year = 1911
+	cost = 3500
+	category = air
+	required = { type = air_doctrine value = 103 }
+
+	available = { has_country_flag = air_doctrine_intercept }
+
+	command = { type = air_superiority value = 0.2 }
+	command = { type = air_defence value = 0.15 }
+	activate_unit = quadplane_interceptor
+}
+
+technology = {
+	id = { type = air_doctrine value = 105 }
+	name = "Layered Air Defence"
+	desc = "AA at low altitude, interceptors at mid altitude, and something else entirely at high altitude. The full Intercept doctrine realised — a killing field from ground level to the ceiling of flight."
+	year = 1912
+	cost = 4000
+	category = air
+	required = { type = air_doctrine value = 104 }
+
+	available = { has_country_flag = air_doctrine_intercept }
+
+	command = { type = air_defence value = 0.25 }
+	command = { type = aa_bonus value = 0.15 }
+	command = { type = air_superiority value = 0.1 }
+}
+
+# --- INTERCEPT APEX: HOLY ---
+technology = {
+	id = { type = air_doctrine value = 106 }
+	name = "Angelic Air Patrol"
+	desc = "Whether they are truly angels, or holy men elevated by faith to something angelic, or the concentrated prayers of ten thousand believers given temporary form — the result is the same. They patrol the upper air above Holy territory. Nothing Infernal crosses them without consequence. Pilots on both sides report seeing lights at altitude that correspond to no known aircraft."
+	year = 1913
+	cost = 7000
+	category = air
+	required = { type = air_doctrine value = 105 }
+
+	available = {
+		has_country_flag = air_doctrine_intercept
+		ideology = democratic
+	}
+
+	command = { type = air_superiority value = 0.3 }
+	command = { type = air_defence value = 0.3 }
+	command = { type = morale value = 0.1 }
+	activate_unit = angelic_patrol
+}
+
+# --- INTERCEPT APEX: INFERNAL ---
+technology = {
+	id = { type = air_doctrine value = 107 }
+	name = "Bound Demon Air Patrol"
+	desc = "Greater demons, bound not into machines but into their own bodies and set to patrol the sky. They do not fly. They exist at altitude, hungry and constrained, tearing apart anything that enters their assigned territory. Enemy pilots who survive encounters describe things that should not be possible at ten thousand feet."
+	year = 1913
+	cost = 7000
+	category = air
+	required = { type = air_doctrine value = 105 }
+
+	available = {
+		has_country_flag = air_doctrine_intercept
+		ideology = fascist
+	}
+
+	command = { type = air_superiority value = 0.35 }
+	command = { type = air_defence value = 0.25 }
+	command = { type = morale_damage value = 0.15 }
+	activate_unit = bound_demon_patrol
+}
+
+# ============================================================
+# CAS DOCTRINE
+# Focus: ground support, tactical bombers, holy/hell bombs
+# Best for: front-line nations, offensive ground campaigns, Prussia, Iron Sultanate
+# ============================================================
+
+technology = {
+	id = { type = air_doctrine value = 201 }
+	name = "Close Air Support — First Principles"
+	desc = "The sky belongs to the infantry. Every aircraft is a flying artillery piece, a reconnaissance platform, a supply of morale for the men in the trenches below. CAS doctrine holds that air power's highest purpose is the direct support of ground forces."
+	year = 1907
+	cost = 2000
+	category = air
+	required = { type = air_doctrine value = 4 }
+
+	available = { has_country_flag = air_doctrine_cas }
+
+	command = { type = close_air_support value = 0.15 }
+	command = { type = ground_attack value = 0.1 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 202 }
+	name = "Pre-Mission Preparation"
+	desc = "Priests embedded in aviation units conduct blessing rites over aircraft before ground-support missions. Bombs are consecrated. Pilots receive last rites as a precaution. The aircraft that return report their payloads hit harder, scattered enemy morale more effectively, and in several documented cases, caused Infernal units to rout without impact."
+	year = 1908
+	cost = 2500
+	category = air
+	required = { type = air_doctrine value = 201 }
+
+	available = { has_country_flag = air_doctrine_cas }
+
+	command = { type = close_air_support value = 0.1 }
+	command = { type = morale_damage value = 0.15 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 203 }
+	name = "Tactical Bomber — Ground Attack"
+	desc = "Aircraft designed specifically to attack ground targets in direct support of advancing infantry — flying low, flying fast, dropping precision loads on enemy trenches, strongpoints, and artillery. Dangerous work. Essential work."
+	year = 1909
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 202 }
+
+	available = { has_country_flag = air_doctrine_cas }
+
+	command = { type = close_air_support value = 0.2 }
+	command = { type = ground_attack value = 0.15 }
+	activate_unit = tactical_bomber
+}
+
+technology = {
+	id = { type = air_doctrine value = 204 }
+	name = "Air-Ground Communication Doctrine"
+	desc = "Radio sets in aircraft coordinating directly with forward infantry commanders. The ability to call in air support from the trench line itself. A revolution in combined arms — and in the speed at which things can go catastrophically wrong."
+	year = 1910
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 203 }
+
+	available = { has_country_flag = air_doctrine_cas }
+
+	command = { type = close_air_support value = 0.1 }
+	command = { type = attack value = 0.1 }
+	command = { type = recon value = 0.1 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 205 }
+	name = "Escort Fighter Doctrine"
+	desc = "CAS aircraft are vulnerable without protection. Escort fighters fly alongside tactical bombers, clearing enemy interceptors and allowing the bombers to work. The doctrine that makes CAS sustainable against an enemy with a real air force."
+	year = 1912
+	cost = 3500
+	category = air
+	required = { type = air_doctrine value = 204 }
+
+	available = { has_country_flag = air_doctrine_cas }
+
+	command = { type = close_air_support value = 0.1 }
+	command = { type = air_superiority value = 0.15 }
+	activate_unit = escort_fighter
+}
+
+# --- CAS APEX: HOLY ---
+technology = {
+	id = { type = air_doctrine value = 206 }
+	name = "Specialist Ordnance"
+	desc = "Not merely blessed explosives. The Holy Bomb is a theological weapon — a shell casing containing concentrated sacred essence, relics dissolved in blessed oil, prayers inscribed on every internal surface. On detonation it does not merely destroy. It consecrates. Ground struck by Holy Bombs becomes hostile to Infernal entities for days afterward. Demonic units caught in the blast do not simply die — they are diminished, unmade in part, forced to reform from a more distant hell."
+	year = 1913
+	cost = 7000
+	category = air
+	required = { type = air_doctrine value = 205 }
+
+	available = {
+		has_country_flag = air_doctrine_cas
+		ideology = democratic
+	}
+
+	command = { type = close_air_support value = 0.25 }
+	command = { type = hard_attack value = 0.25 }
+	command = { type = morale_damage value = 0.2 }
+	activate_unit = holy_bomb_squadron
+}
+
+# --- CAS APEX: INFERNAL ---
+technology = {
+	id = { type = air_doctrine value = 207 }
+	name = "Specialist Ordnance"
+	desc = "A tactical hell portal, miniaturised and weaponised. The Hell Bomb does not explode conventionally — it opens a brief aperture to the Infernal realm on impact, venting heat, screaming, and hungry entities into a small area before collapsing. The area of effect is modest. The psychological effect is not. Holy troops caught in a Hell Bomb strike require extensive spiritual recovery before returning to combat effectiveness."
+	year = 1913
+	cost = 7000
+	category = air
+	required = { type = air_doctrine value = 205 }
+
+	available = {
+		has_country_flag = air_doctrine_cas
+		ideology = fascist
+	}
+
+	command = { type = close_air_support value = 0.2 }
+	command = { type = soft_attack value = 0.2 }
+	command = { type = morale_damage value = 0.3 }
+	activate_unit = hell_bomb_squadron
+}
+
+# ============================================================
+# DEVASTATION DOCTRINE
+# Focus: strategic bombing, hell portals, daylight precision raids
+# Best for: Infernal powers, England, Heretic Legion, Samael
+# ============================================================
+
+technology = {
+	id = { type = air_doctrine value = 301 }
+	name = "Devastation — First Principles"
+	desc = "Wars are won by breaking the enemy's will and capacity to fight. Not by holding trenches. Not by supporting infantry. By reaching past the front and destroying what sustains the enemy's war effort — factories, cities, supply lines, and the spirit of the people who build and supply the armies. Devastation doctrine is the most controversial of the three paths. It is also, potentially, the most decisive."
+	year = 1907
+	cost = 2000
+	category = air
+	required = { type = air_doctrine value = 4 }
+
+	available = { has_country_flag = air_doctrine_devastation }
+
+	command = { type = strategic_bombing value = 0.15 }
+	command = { type = industry_damage value = 0.1 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 302 }
+	name = "Bomber Zeppelin"
+	desc = "The heavy airship adapted entirely for strategic bombing — larger gas envelope, heavier bomb load, longer range. Slow and vulnerable to interceptors, but capable of reaching targets no fighter can carry ordnance to. A formation darkening the sky is one of the defining images of the coming war."
+	year = 1908
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 301 }
+
+	available = { has_country_flag = air_doctrine_devastation }
+
+	command = { type = strategic_bombing value = 0.2 }
+	activate_unit = bomber_zeppelin
+}
+
+technology = {
+	id = { type = air_doctrine value = 303 }
+	name = "Daylight Precision Bombing"
+	desc = "Bombing in daylight, navigating by sight to specific targets rather than releasing loads over general areas. More accurate. More dangerous for crews. The doctrine holds that precision strikes on key industrial nodes are worth the losses — one factory destroyed is worth ten fields bombed."
+	year = 1909
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 302 }
+
+	available = { has_country_flag = air_doctrine_devastation }
+
+	command = { type = strategic_bombing value = 0.15 }
+	command = { type = industry_damage value = 0.15 }
+	activate_unit = quadplane_bomber
+}
+
+technology = {
+	id = { type = air_doctrine value = 304 }
+	name = "Terror Bombing Doctrine"
+	desc = "The deliberate targeting of civilian populations and symbolic sites to break enemy morale. Deeply controversial. Highly effective. Both Holy and Infernal powers practice it and condemn it when the other does."
+	year = 1910
+	cost = 3500
+	category = air
+	required = { type = air_doctrine value = 303 }
+
+	available = { has_country_flag = air_doctrine_devastation }
+
+	command = { type = strategic_bombing value = 0.1 }
+	command = { type = morale_damage value = 0.2 }
+	command = { type = dissent_bonus value = 0.15 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 305 }
+	name = "Deep Strike Coordination"
+	desc = "Zeppelins and quadplane bombers operating together — Zeppelins providing the heavy payload, quadplanes providing accuracy and fighter suppression. The combined arms of strategic bombing."
+	year = 1912
+	cost = 4000
+	category = air
+	required = { type = air_doctrine value = 304 }
+
+	available = { has_country_flag = air_doctrine_devastation }
+
+	command = { type = strategic_bombing value = 0.2 }
+	command = { type = industry_damage value = 0.1 }
+	command = { type = air_superiority value = 0.1 }
+}
+
+# --- DEVASTATION APEX: HOLY ---
+technology = {
+	id = { type = air_doctrine value = 306 }
+	name = "Strategic Apex"
+	desc = "The apex of Holy Devastation doctrine. Aircraft carrying payloads of concentrated divine light — not fire in the conventional sense but radiance, the kind that does not warm but reveals and destroys what should not exist. Infernal industrial sites struck by Daylight of Heaven do not merely burn. They are cleansed. The workers inside — those who are still human — are unharmed. Those who are not, are not."
+	year = 1913
+	cost = 7000
+	category = air
+	required = { type = air_doctrine value = 305 }
+
+	available = {
+		has_country_flag = air_doctrine_devastation
+		ideology = democratic
+	}
+
+	command = { type = strategic_bombing value = 0.3 }
+	command = { type = industry_damage value = 0.3 }
+	command = { type = hard_attack value = 0.2 }
+	activate_unit = daylight_squadron
+}
+
+# --- DEVASTATION APEX: INFERNAL ---
+technology = {
+	id = { type = air_doctrine value = 307 }
+	name = "Strategic Apex"
+	desc = "The Hell Portal miniaturised for aerial deployment is not a bomb. It is a gate. Opened at altitude above an enemy city or industrial centre, it allows Infernal entities to pour through at scale — not the small aperture of a Hell Bomb but a sustained opening, held for minutes rather than seconds, through which something substantial can arrive. The portal closes when the aircraft is destroyed or withdraws. What came through does not go back."
+	year = 1913
+	cost = 8000
+	category = air
+	required = { type = air_doctrine value = 305 }
+
+	available = {
+		has_country_flag = air_doctrine_devastation
+		ideology = fascist
+	}
+
+	command = { type = strategic_bombing value = 0.25 }
+	command = { type = morale_damage value = 0.35 }
+	command = { type = industry_damage value = 0.2 }
+	activate_unit = hell_portal_carrier
+}
+
+# ============================================================
+# MARID: SEA-BORN AVIATION (special branch, no doctrine lock)
+# ============================================================
+
+technology = {
+	id = { type = air_doctrine value = 401 }
+	name = "Storm Riding"
+	desc = "The Marid have always commanded weather over the sea. Their aviation doctrine extends this — aircraft and djinn that fly within storm systems, guided by wind-riders, striking from clouds no enemy can safely enter."
+	year = 1908
+	cost = 3000
+	category = air
+	required = { type = air_doctrine value = 2 }
+
+	available = { tag = MRD }
+
+	command = { type = air_superiority value = 0.1 }
+	command = { type = naval_air value = 0.2 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 402 }
+	name = "Djinn Wind-Rider"
+	desc = "The Marid do not need aircraft in the conventional sense. Their djinn ride the wind itself — fast, invisible within storms, capable of carrying weapons and striking with lightning. Wind-Riders are immune to conventional AA fire and difficult to intercept in bad weather."
+	year = 1911
+	cost = 4000
+	category = air
+	required = { type = air_doctrine value = 401 }
+
+	available = { tag = MRD }
+
+	activate_unit = wind_rider
+	command = { type = air_superiority value = 0.2 }
+	command = { type = naval_air value = 0.15 }
+}
+
+technology = {
+	id = { type = air_doctrine value = 403 }
+	name = "The Tempest Unleashed"
+	desc = "The Marid's ultimate aerial expression — not aircraft but weather itself, weaponised and directed. Storms that appear on command over enemy fleets and coastlines, lightning that strikes with supernatural precision, winds that tear Zeppelins from the sky. The sea has always belonged to the Marid. Now the sky above it does too."
+	year = 1913
+	cost = 6000
+	category = air
+	required = { type = air_doctrine value = 402 }
+
+	available = { tag = MRD }
+
+	command = { type = air_superiority value = 0.25 }
+	command = { type = naval_air value = 0.25 }
+	command = { type = strategic_bombing value = 0.15 }
+	activate_unit = tempest_caller
+}

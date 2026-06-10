@@ -1,0 +1,41 @@
+# ITA — Ministers
+# db/ministers/ITA.txt
+
+minister = {
+	name = "Overseer-General Beleth the Investor"
+	id = { type = 2 id = 140101 }
+	country = ITA
+	ideology = fascist
+	position = head_of_government
+	loyalty = 9
+	start_year = 1900
+	end_year = 1940
+	traits = { logistics_wizard }
+	# Mammon's administrator. Everything has a price. He knows all of them.
+}
+
+minister = {
+	name = "Director Marchosias of the Red Brigade"
+	id = { type = 2 id = 140102 }
+	country = ITA
+	ideology = fascist
+	position = chief_of_army
+	loyalty = 9
+	start_year = 1900
+	end_year = 1935
+	traits = { decisive_battle_doctrine }
+}
+
+minister = {
+	name = "Chief Accountant Forcas"
+	id = { type = 2 id = 140103 }
+	country = ITA
+	ideology = fascist
+	position = armament_minister
+	loyalty = 10
+	start_year = 1900
+	end_year = 1940
+	traits = { administrative_genius }
+	# The Legion's industrial output is extraordinary. He explains this with spreadsheets.
+}
+

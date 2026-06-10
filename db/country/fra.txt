@@ -1,0 +1,3 @@
+# FRA - vanilla stub
+color = { 148 70 170 }
+graphical_culture = western_european

@@ -1,0 +1,32 @@
+# ENG — Country History
+# England — premier naval power, highest IC
+# 1905 Start
+
+capital = 61
+manpower = 200
+
+# Policy Sliders
+democratic = 6
+political_left = 5
+freedom = 7
+open_society = 6
+interventionism = 4
+professional_army = 6
+defence_lobby = 7
+market_economy = 6
+
+# Technology
+techteam = {
+	land_tech = 4
+	naval_tech = 6
+	air_tech = 2
+	industry_tech = 5
+	infra_tech = 5
+	supernatural_tech = 2
+}
+
+# Dissent
+dissent = 2
+
+# Industrial Capacity
+industrial_capacity = 52

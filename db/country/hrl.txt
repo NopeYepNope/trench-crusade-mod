@@ -1,0 +1,20 @@
+# Heretic Legion
+# Humans who have sworn allegiance to Hell, organized along Imperial German military lines
+# The most conventionally powerful Infernal human faction
+
+color = { 160 20 20 }
+
+graphical_culture = central_european
+
+# Capital: mapped to vanilla Berlin province
+capital = 64
+
+government = totalitarian_dictatorship
+
+ideology = Infernal
+
+# The Heretic Legion serves as Hell's most organized military force in Europe
+# Sub-factions represent different demonic patrons within the Legion:
+# - Red Brigade (Mammon-aligned, industrial/economic)
+# - Procession of the Sacred Affliction (Beelzebub-aligned, biological horror)
+# - Cavalcade of the Tenth Plague (Samael-aligned, death-focused)
