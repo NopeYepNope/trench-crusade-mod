@@ -12,7 +12,7 @@ capital = 388
 
 government = absolute_monarchy		# the Marid King rules the deep
 
-ideology = Infernal
+ideology = fascism
 
 # The Marid are ancient beyond Hell itself - sea djinn who CHOSE Infernal alignment
 # They are not demons by nature but by allegiance

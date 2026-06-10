@@ -9,4 +9,4 @@ capital = 500
 
 government = absolute_monarchy
 
-ideology = Unaligned
+ideology = neutrality

@@ -9,4 +9,4 @@ capital = 460
 
 government = absolute_monarchy
 
-ideology = Holy
+ideology = democratic

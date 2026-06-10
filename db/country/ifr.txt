@@ -9,4 +9,4 @@ capital = 830
 
 government = tribal_dictatorship
 
-ideology = Infernal
+ideology = fascism

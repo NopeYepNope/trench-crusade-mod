@@ -9,4 +9,4 @@ capital = 465
 
 government = tribal_dictatorship
 
-ideology = Holy
+ideology = democratic

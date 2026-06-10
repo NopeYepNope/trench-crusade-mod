@@ -9,4 +9,4 @@ capital = 801
 
 government = theocracy
 
-ideology = Holy
+ideology = democratic

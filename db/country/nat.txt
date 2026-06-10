@@ -14,7 +14,7 @@ capital = 799
 government = constitutional_monarchy
 
 # Alignment
-ideology = Holy
+ideology = democratic
 
 # Factions SER can form or lead
 # - Papal States Intervention Force (POR units embedded)

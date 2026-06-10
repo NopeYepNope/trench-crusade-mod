@@ -9,4 +9,4 @@ capital = 200
 
 government = tribal_dictatorship
 
-ideology = Unaligned
+ideology = neutrality

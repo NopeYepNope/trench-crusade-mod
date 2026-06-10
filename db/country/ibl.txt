@@ -9,4 +9,4 @@ capital = 820
 
 government = totalitarian_dictatorship
 
-ideology = Infernal
+ideology = fascism

@@ -9,4 +9,4 @@ capital = 64
 
 government = military_dictatorship
 
-ideology = Holy
+ideology = democratic

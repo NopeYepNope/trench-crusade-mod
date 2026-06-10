@@ -9,4 +9,4 @@ capital = 160
 
 government = absolute_monarchy
 
-ideology = Infernal
+ideology = fascism

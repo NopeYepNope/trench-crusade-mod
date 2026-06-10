@@ -13,7 +13,7 @@ capital = 812
 
 government = tribal_dictatorship	# placeholder - replaced by unique gov type via event
 
-ideology = Infernal				# starting alignment - can shift to Unaligned via events
+ideology = fascism				# starting alignment - can shift to Unaligned via events
 
 # Key event flags:
 # LIL_resentment		- tracks Lilith's growing independence
