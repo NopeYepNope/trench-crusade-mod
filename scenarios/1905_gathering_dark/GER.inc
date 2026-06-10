@@ -1,6 +1,6 @@
 country = {
   tag = GER
-  capital = 64
+  capital = 1
   manpower = 0
   energy = 0
   metal = 0
