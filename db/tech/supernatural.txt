@@ -11,24 +11,24 @@
 # ================================
 
 technology = {
-	id = { type = supernatural value = 1 }
+	id = { type = secret_weapons value = 1 }
 	name = "The Numinous Recognised"
 	desc = "The formal acknowledgement within military doctrine that supernatural forces are real, measurable, and can be systematised. Every power on earth reached this conclusion centuries ago. But doctrine lags behind reality. This is the moment it catches up."
 	year = 1900
 	cost = 500
-	category = supernatural
+	category = secret_weapons
 
 	command = { type = morale value = 0.05 }
 }
 
 technology = {
-	id = { type = supernatural value = 2 }
+	id = { type = secret_weapons value = 2 }
 	name = "Supernatural Intelligence"
 	desc = "Dedicated units and doctrines for identifying, categorising, and tracking supernatural entities and phenomena on the battlefield. Know what you are fighting. Know what it can do."
 	year = 1903
 	cost = 1000
-	category = supernatural
-	required = { type = supernatural value = 1 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 1 }
 
 	command = { type = recon value = 0.1 }
 }
@@ -38,13 +38,13 @@ technology = {
 # ================================
 
 technology = {
-	id = { type = supernatural value = 101 }
+	id = { type = secret_weapons value = 101 }
 	name = "Battlefield Consecration"
 	desc = "Priests and chaplains attached to military units, consecrating ground before advances and holding rites over the fallen. Consecrated ground slows demonic movement and strengthens Holy defenders."
 	year = 1903
 	cost = 1500
-	category = supernatural
-	required = { type = supernatural value = 2 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 2 }
 
 	available = { ideology = democratic }
 
@@ -52,13 +52,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 102 }
+	id = { type = secret_weapons value = 102 }
 	name = "Relic Warfare — First Principles"
 	desc = "The systematic study of how holy relics affect the battlefield. Fragment of bone, drop of blood, scrap of cloth — each carries weight against the Infernal. The question is how to deploy them efficiently."
 	year = 1905
 	cost = 2000
-	category = supernatural
-	required = { type = supernatural value = 101 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 101 }
 
 	available = { ideology = democratic }
 
@@ -67,13 +67,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 103 }
+	id = { type = secret_weapons value = 103 }
 	name = "Miracle Healers"
 	desc = "Field medics trained in both conventional medicine and the laying on of hands. Miracle healers dramatically reduce casualties — wounds close faster, infections yield to prayer, and the dying sometimes do not die. Not always. But sometimes."
 	year = 1907
 	cost = 2500
-	category = supernatural
-	required = { type = supernatural value = 102 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 102 }
 
 	available = { ideology = democratic }
 
@@ -82,13 +82,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 104 }
+	id = { type = secret_weapons value = 104 }
 	name = "Angelic Communications"
 	desc = "Whether through relic-amplified radio, trained prayer-scribes, or genuine divine intermediary is unclear. The result is clear: Holy units communicate faster, coordinate better, and respond to threats before conventional intelligence would detect them."
 	year = 1909
 	cost = 3000
-	category = supernatural
-	required = { type = supernatural value = 103 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 103 }
 
 	available = { ideology = democratic }
 
@@ -98,13 +98,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 105 }
+	id = { type = secret_weapons value = 105 }
 	name = "Divine Wrath — Channelled"
 	desc = "The apex of Holy supernatural doctrine. Units trained and equipped to channel divine power directly into offensive action — not merely blessed weapons but soldiers who are themselves briefly instruments of Heaven. Rare. Terrible. Effective."
 	year = 1913
 	cost = 6000
-	category = supernatural
-	required = { type = supernatural value = 104 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 104 }
 
 	available = { ideology = democratic }
 
@@ -118,13 +118,13 @@ technology = {
 # ================================
 
 technology = {
-	id = { type = supernatural value = 201 }
+	id = { type = secret_weapons value = 201 }
 	name = "Corruption Doctrine"
 	desc = "The systematic use of Infernal corruption as a weapon — corrupted water sources, desecrated ground, cursed supply lines. Corruption does not kill quickly. It makes the enemy less able to fight, less willing to fight, less human."
 	year = 1903
 	cost = 1500
-	category = supernatural
-	required = { type = supernatural value = 2 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 2 }
 
 	available = { ideology = fascist }
 
@@ -132,13 +132,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 202 }
+	id = { type = secret_weapons value = 202 }
 	name = "Daemon Binding — Minor"
 	desc = "The binding of minor daemons into weapons, tools, and vehicles. A bound daemon makes the object it inhabits more effective — and more dangerous to handle. Infernal engineers lose fingers. They consider this acceptable."
 	year = 1905
 	cost = 2000
-	category = supernatural
-	required = { type = supernatural value = 201 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 201 }
 
 	available = { ideology = fascist }
 
@@ -147,13 +147,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 203 }
+	id = { type = secret_weapons value = 203 }
 	name = "Plague Craft"
 	desc = "Beelzebub's particular art, spread to other Infernal powers through the Pact. Manufactured diseases that spread faster than natural illness, resist treatment, and carry a subtle Infernal taint that makes the afflicted more susceptible to corruption."
 	year = 1907
 	cost = 2500
-	category = supernatural
-	required = { type = supernatural value = 202 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 202 }
 
 	available = { ideology = fascist }
 
@@ -162,13 +162,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 204 }
+	id = { type = secret_weapons value = 204 }
 	name = "Soul Harvesting — Industrial Scale"
 	desc = "The collection and use of human souls as a fuel source, taken to its logical industrial conclusion. Soul furnaces power factories. Soul batteries animate daemon engines. The Infernal economy runs on what the Holy side buries."
 	year = 1909
 	cost = 3000
-	category = supernatural
-	required = { type = supernatural value = 203 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 203 }
 
 	available = { ideology = fascist }
 
@@ -177,13 +177,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 205 }
+	id = { type = secret_weapons value = 205 }
 	name = "Infernal Ascendancy — The Dark Blessing"
 	desc = "The most powerful Infernal supernatural doctrine — a direct blessing from one of the great warlords upon their armies. Soldiers touched by this are faster, stronger, and harder to kill. They are also no longer entirely human. The Infernal powers consider this an improvement."
 	year = 1913
 	cost = 6000
-	category = supernatural
-	required = { type = supernatural value = 204 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 204 }
 
 	available = { ideology = fascist }
 
@@ -197,13 +197,13 @@ technology = {
 # ================================
 
 technology = {
-	id = { type = supernatural value = 301 }
+	id = { type = secret_weapons value = 301 }
 	name = "Warding"
 	desc = "The Unmarked and Lilith's forces have learned to protect themselves from both Holy and Infernal supernatural power. Wards do not call on Heaven or Hell — they simply push back. It is neither miraculous nor damned. It works."
 	year = 1903
 	cost = 1500
-	category = supernatural
-	required = { type = supernatural value = 2 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 2 }
 
 	available = {
 		OR = {
@@ -217,13 +217,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 302 }
+	id = { type = secret_weapons value = 302 }
 	name = "Blood Pacts"
 	desc = "Binding agreements made with supernatural entities of ambiguous allegiance — not quite Holy, not quite Infernal. These pacts grant power at a cost, but the Unaligned are accustomed to paying costs."
 	year = 1906
 	cost = 2500
-	category = supernatural
-	required = { type = supernatural value = 301 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 301 }
 
 	available = {
 		OR = {
@@ -237,13 +237,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 303 }
+	id = { type = secret_weapons value = 303 }
 	name = "Forbidden Knowledge"
 	desc = "The Unmarked have collected forbidden texts from both sides — Holy scripture deemed too dangerous, Infernal rituals too difficult to control. In the right hands, this knowledge is a weapon. In the wrong hands, it is a catastrophe."
 	year = 1909
 	cost = 3500
-	category = supernatural
-	required = { type = supernatural value = 302 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 302 }
 
 	available = {
 		OR = {
@@ -262,13 +262,13 @@ technology = {
 # ================================
 
 technology = {
-	id = { type = supernatural value = 401 }
+	id = { type = secret_weapons value = 401 }
 	name = "Sacred Names — First Study"
 	desc = "The Hebrew Knights' supernatural tradition is rooted in the divine names — the true names of God and of created things. A soldier who knows the true name of a demon can unmake it. The study of sacred names is the foundation of Hebrew Knight supernatural doctrine."
 	year = 1904
 	cost = 2000
-	category = supernatural
-	required = { type = supernatural value = 101 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 101 }
 
 	available = { tag = HBK }
 
@@ -277,13 +277,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 402 }
+	id = { type = secret_weapons value = 402 }
 	name = "Sefirot Combat Doctrine"
 	desc = "The ten sefirot of the Kabbalistic tree mapped onto military organisation and individual combat. Each unit in the Hebrew Knights army is structured around a sefirot — Gevurah for assault units, Chesed for support, Keter for command. The result is a military structure of unusual coherence and resilience."
 	year = 1907
 	cost = 3000
-	category = supernatural
-	required = { type = supernatural value = 401 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 401 }
 
 	available = { tag = HBK }
 
@@ -293,13 +293,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 403 }
+	id = { type = secret_weapons value = 403 }
 	name = "The Unspeakable Name"
 	desc = "The highest level of Kabbalistic military doctrine. A single use, requiring years of preparation and the willing sacrifice of great scholars. When invoked correctly, the Unspeakable Name can unmake a demonic entity entirely — not banish, not bind, but return it to the nothing from which it came. It has been used twice in recorded history. Both times, it worked."
 	year = 1913
 	cost = 8000
-	category = supernatural
-	required = { type = supernatural value = 402 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 402 }
 
 	available = { tag = HBK }
 
@@ -312,13 +312,13 @@ technology = {
 # ================================
 
 technology = {
-	id = { type = supernatural value = 501 }
+	id = { type = secret_weapons value = 501 }
 	name = "Djinn Contract Law"
 	desc = "The Iron Sultanate's approach to the supernatural is fundamentally legal — djinn are not summoned but contracted, their service obtained through binding agreements that both parties must honour. This makes Sultanate supernatural doctrine more reliable than most, if less spectacular."
 	year = 1904
 	cost = 2000
-	category = supernatural
-	required = { type = supernatural value = 101 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 101 }
 
 	available = { tag = IRS }
 
@@ -327,13 +327,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 502 }
+	id = { type = secret_weapons value = 502 }
 	name = "Alchemical Augmentation"
 	desc = "The House of Wisdom has developed alchemical preparations that enhance human physical capability — not through Infernal corruption but through scientific application of esoteric natural law. Enhanced soldiers are stronger, faster, and more resistant to both physical and supernatural harm."
 	year = 1907
 	cost = 3000
-	category = supernatural
-	required = { type = supernatural value = 501 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 501 }
 
 	available = { tag = IRS }
 
@@ -342,13 +342,13 @@ technology = {
 }
 
 technology = {
-	id = { type = supernatural value = 503 }
+	id = { type = secret_weapons value = 503 }
 	name = "The Geometric Key"
 	desc = "The Sultanate's greatest supernatural discovery — that certain geometric configurations, derived from mathematical first principles, create zones of supernatural stability. Within a Geometric Key zone, Infernal powers are weakened and Holy powers are not required. It is neither faith nor darkness. It is mathematics. And it works."
 	year = 1911
 	cost = 5000
-	category = supernatural
-	required = { type = supernatural value = 502 }
+	category = secret_weapons
+	required = { type = secret_weapons value = 502 }
 
 	available = { tag = IRS }
 
